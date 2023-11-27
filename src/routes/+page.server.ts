@@ -1,6 +1,5 @@
-import type { PageServerLoad } from "./$types";
-import { supabase } from "$lib/server/supabase";
+// import type { PageServerLoad } from "./$types";
+// import { supabase } from "$lib/server/supabase";
 
-export const load: PageServerLoad = async () => {
-  console.log(supabase)
-};
+// export const load: PageServerLoad = async () => {
+// };

@@ -1,0 +1,1 @@
+export const serverErrMessage = 'Ups, da lief etwas schief. Bitte probiere es später nochmal.'
