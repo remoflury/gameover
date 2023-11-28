@@ -4,8 +4,8 @@ export type LeaderboardUsersProps = {
 }
 
 export type GameStoreProps = {
-  currentScenario: number | undefined,
-  userName: string | undefined,
+  currentScenario: number | null,
+  userName: string | null,
   score: {
     total: number,
     categories: {
