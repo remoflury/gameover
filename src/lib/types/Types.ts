@@ -23,7 +23,7 @@ export type GameStoreProps = {
 
 export type EventProps = {
   description: string,
-  effect: {
+  consequences: {
     economy: number,
     environment: number,
     society: number,
