@@ -40,7 +40,21 @@ export default {
         padding: {
           DEFAULT: '1rem'
         }
-      }
+      },
+      maxWidth: {
+        '1/4': "25%",
+        '1/2': '50%',
+        '3/4': '75%'
+      },
+      minHeight: {
+				screen: ['100vh /* fallback for Opera, IE and etc. */', '100dvh']
+			},
+      padding: {
+        'block-page': '2rem',
+      },
+      backgroundImage: (theme) => ({
+        'gradient-turqoise-to-top': `linear-gradient(0deg, ${theme('colors.turqoise.dark')} 0%, ${theme('colors.blue.glacier')} 100%)`
+      }),
     }
   },
   plugins: []

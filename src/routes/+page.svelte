@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<section class="bg-gradient-turqoise-to-top min-h-screen py-block-page">
+	<article class="container">
+		<figure class="max-w-1/2 mx-auto">
+			<img src="/assets/gameover-logo-white.svg" alt="Logo von GameOver?" />
+		</figure>
+		<p class="text-white-soft text-center mt-8">
+			Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac
+			tellus libero accumsan.
+		</p>
+	</article>
+</section>
