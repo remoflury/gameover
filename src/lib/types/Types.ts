@@ -20,3 +20,14 @@ export type GameStoreProps = {
   //index of played events
   playedEvents: number[]
 }
+
+export type EventProps = {
+  description: string,
+  effect: {
+    economy: number,
+    environment: number,
+    society: number,
+    health: number
+  },
+  effect: 'positive' |'negative'
+}
