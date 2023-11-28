@@ -16,3 +16,5 @@ export const gameStore = writable<GameStoreProps>({
   playedScenarios: [],
   playedEvents: []
 })
+
+export const showTutorial = writable(false)
