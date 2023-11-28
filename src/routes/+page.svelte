@@ -1,3 +1,5 @@
+<svelte:head><title>GameOver? | Start</title></svelte:head>
+
 <section class="bg-gradient-turqoise-to-top min-h-screen py-block-page">
 	<article class="container">
 		<figure class="max-w-1/2 mx-auto">
