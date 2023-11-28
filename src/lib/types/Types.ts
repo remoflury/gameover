@@ -7,13 +7,10 @@ export type GameStoreProps = {
   currentScenario: number | null,
   userName: string | null,
   score: {
-    total: number,
-    categories: {
       economy: number,
       environment: number,
       society: number,
       health: number,
-    }
   },
   //index of played scenarios
   playedScenarios: number[],
