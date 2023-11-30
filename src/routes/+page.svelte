@@ -1,6 +1,6 @@
 <script lang="ts">
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
-	import { gameStore, showTutorial } from '$lib/store/gameStore';
+	import { gameStore, showTutorial, scenarioStore } from '$lib/store/gameStore';
 	let nameValue = '';
 
 	const handleStartGame = () => {

@@ -1,5 +1,4 @@
 export type PrimaryButtonProps = {
-
   text: string,
   ariaLabel?: string,
   title?: string
