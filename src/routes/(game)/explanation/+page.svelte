@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
 	import { getTotalScore, updateGameScore } from '$lib/utils/generalUtils';
+	import PrimaryButton from '$lib/components/primaryButton.svelte';
 
 	$: console.log($gameStore);
 	const removeCurrentScenario = (index: number) => {
