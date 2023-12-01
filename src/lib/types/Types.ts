@@ -6,12 +6,7 @@ export type LeaderboardUsersProps = {
 export type GameStoreProps = {
   currentScenario: number | null,
   userName: string | null,
-  score: {
-      economy: number,
-      environment: number,
-      society: number,
-      health: number,
-  },
+  score: ConsequenceProps,
   //index of played scenarios
   playedScenarios: number[],
   //index of played events

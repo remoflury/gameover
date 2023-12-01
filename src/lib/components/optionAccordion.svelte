@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { createAccordionContext, getAccordionContext } from '$lib/store/accordionStore';
 	import { slide } from 'svelte/transition';
+	import { createEventDispatcher } from 'svelte';
 
 	export let description: string;
 
 	let isOpen = false;
+	const dispatch = createEventDispatcher();
 
 	// allows only one accordion to be open at a time
 	const { current } = getAccordionContext();
@@ -15,6 +17,7 @@
 	function handleClick() {
 		isOpen = !isOpen;
 		if (isOpen) $current = currentKey;
+		dispatch('selected');
 	}
 
 	$: if ($current != currentKey) isOpen = false;

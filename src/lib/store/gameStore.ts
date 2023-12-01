@@ -17,6 +17,8 @@ export const gameStore = writable<GameStoreProps>({
 
 export const scenarioStore = writable([...scenarios])
 
+export const selectedOption = writable<1 | 2 | undefined>(undefined)
+
 // if scenario store is empty, reset store with all scenarios
 scenarioStore.subscribe($scenarioStore => {
   if ($scenarioStore.length === 0) {
