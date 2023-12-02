@@ -25,19 +25,16 @@
 
 <article>
 	<button
-		class="max-h-12 flex gap-x-4 items-start border border-white-soft transition"
-		class:max-h-none={isOpen}
+		class="flex gap-x-4 items-start border border-white-soft transition"
 		class:bg-white-soft={isOpen}
 		on:click={handleClick}
 	>
-		{#if !isOpen}
-			<p class="text-left line-clamp-2">
+		<div class="transition-all duration-700 overflow-hidden">
+			<p class={`text-left ${isOpen ? '' : 'line-clamp-2'}`}>
 				{description}
 			</p>
-		{:else}
-			<p class="text-left" in:slide={{ duration: 250 }}>{description}</p>
-		{/if}
+		</div>
 
-		<p class="-rotate-90 transition" class:!rotate-90={isOpen}>></p>
+		<p class={`-rotate-90 transition-transform duration-250 ${isOpen ? 'rotate-90' : ''}`}>></p>
 	</button>
 </article>
