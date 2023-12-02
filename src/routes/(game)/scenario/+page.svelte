@@ -9,6 +9,7 @@
 	import OptionAccordion from '$lib/components/optionAccordion.svelte';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import ScenarioCard from '$lib/components/scenarioCard.svelte';
+	import { onMount } from 'svelte';
 
 	let randomIndex: number;
 	let currentScenario: ScenarioProps;
@@ -25,8 +26,9 @@
 
 	// function, to only be able to open one accordion at a time
 	createAccordionContext();
-
-	newRound();
+	onMount(() => {
+		newRound();
+	});
 
 	$: console.log($gameStore.currentScenario);
 </script>

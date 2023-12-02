@@ -5,16 +5,21 @@
 	import { getTotalScore, updateGameScore } from '$lib/utils/generalUtils';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 
-	$: console.log($gameStore);
-	const removeCurrentScenario = (index: number) => {
+	// remove current scenario from scenario store
+	const removeCurrentScenario = (index: number | null) => {
+		if (index === null) return alert('No index provided.');
 		$scenarioStore.splice(index, 1);
 		$scenarioStore = [...$scenarioStore];
 	};
 
-	onMount(() => {
-		// console.log('selectedOption ', $selectedOption);
-		// console.log('gameStore.currentScenario ', $gameStore.currentScenario);
+	const handleNextScenario = () => {
+		removeCurrentScenario($gameStore.currentScenario);
+		$gameStore.currentScenario = null;
+		$selectedOption = undefined;
+		goto('/scenario');
+	};
 
+	onMount(() => {
 		// if no option is selected or currentScenario is not set
 		if (!$selectedOption || $gameStore.currentScenario === null) return goto('/scenario');
 
@@ -42,6 +47,7 @@
 			</div>
 
 			<p>Dein aktueller Score: {getTotalScore($gameStore.playedScenarios.length)}</p>
+			<PrimaryButton buttonProps={{ text: 'Weiter' }} on:click={handleNextScenario} />
 		{/if}
 	</article>
 </section>
