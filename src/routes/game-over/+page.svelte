@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { gameStore } from '$lib/store/gameStore';
 	import { getTotalScore } from '$lib/utils/generalUtils';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		// if ()
+		if ($gameStore.isPlaying === false) goto('/');
 	});
 </script>
 
