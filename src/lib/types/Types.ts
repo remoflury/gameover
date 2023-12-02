@@ -4,6 +4,7 @@ export type LeaderboardUsersProps = {
 }
 
 export type GameStoreProps = {
+  isPlaying: boolean,
   currentScenario: number | null,
   userName: string | null,
   score: ConsequenceProps,

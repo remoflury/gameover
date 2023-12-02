@@ -27,10 +27,9 @@
 	// function, to only be able to open one accordion at a time
 	createAccordionContext();
 	onMount(() => {
+		if ($gameStore.isPlaying === false) goto('/');
 		newRound();
 	});
-
-	$: console.log($gameStore.currentScenario);
 </script>
 
 <section class="container py-block-page">

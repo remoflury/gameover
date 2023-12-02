@@ -6,6 +6,7 @@
 	const handleStartGame = () => {
 		$showTutorial = true;
 		$gameStore.userName = nameValue;
+		$gameStore.isPlaying = true;
 	};
 </script>
 

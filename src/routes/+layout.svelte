@@ -3,7 +3,7 @@
 	import Tutorial from '$lib/components/overlays/tutorial.svelte';
 	import { gameStore } from '$lib/store/gameStore';
 
-	$: console.log('current index ', $gameStore.currentScenario);
+	// $: console.log($gameStore.score);
 </script>
 
 <main class="relative min-h-screen">

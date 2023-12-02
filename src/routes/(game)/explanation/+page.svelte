@@ -20,8 +20,9 @@
 	};
 
 	onMount(() => {
-		// if no option is selected or currentScenario is not set
-		if (!$selectedOption || $gameStore.currentScenario === null) return goto('/scenario');
+		// if no option is selected or currentScenario is not set, or user is not playing
+		if ($gameStore.isPlaying === false || !$selectedOption || $gameStore.currentScenario === null)
+			return goto('/scenario');
 
 		// TODO: if one category score is smaller than 0, redirect to gameover screen?
 

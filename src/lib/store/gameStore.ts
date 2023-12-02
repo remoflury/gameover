@@ -3,6 +3,7 @@ import type { GameStoreProps } from "$lib/types/Types";
 import { writable } from "svelte/store";
 
 export const gameStore = writable<GameStoreProps>({
+  isPlaying: false,
   currentScenario: null,
   userName: null,
   score: {
