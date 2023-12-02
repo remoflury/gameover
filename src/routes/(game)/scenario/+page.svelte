@@ -20,6 +20,12 @@
 		currentScenario = $scenarioStore[randomIndex];
 	};
 
+	const handleSelection = (option: 1 | 2) => {
+		// function, to prevent clicking twice on the same option, without resetting the logic behind it
+		if ($selectedOption === option) return ($selectedOption = undefined);
+		return ($selectedOption = option);
+	};
+
 	const handleChoose = () => {
 		goto('/explanation');
 	};
@@ -37,11 +43,11 @@
 		<ScenarioCard description={currentScenario.description} />
 		<OptionAccordion
 			description={currentScenario.option1.description}
-			on:selected={() => ($selectedOption = 1)}
+			on:selected={() => handleSelection(1)}
 		/>
 		<OptionAccordion
 			description={currentScenario.option2.description}
-			on:selected={() => ($selectedOption = 2)}
+			on:selected={() => handleSelection(2)}
 		/>
 		{#if $selectedOption}
 			<div transition:fade={{ duration: 250, easing: cubicInOut }}>
