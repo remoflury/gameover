@@ -1,9 +1,12 @@
 <script lang="ts">
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
+	import { ToastContainer, FlatToast } from 'svelte-toasts';
 	import { gameStore, showTutorial, scenarioStore } from '$lib/store/gameStore';
+	import { showToast } from '$lib/utils/generalUtils';
 	let nameValue = '';
 
 	const handleStartGame = () => {
+		if (!nameValue.length) return showToast('Fehlender Name', 'Bitte gib einen Namen an', 'error');
 		$showTutorial = true;
 		$gameStore.userName = nameValue;
 		$gameStore.isPlaying = true;
@@ -24,8 +27,13 @@
 			tellus libero accumsan.
 		</p>
 		<PrimaryButton buttonProps={{ text: 'Start Game' }} on:click={handleStartGame} />
+
 		<input type="name" placeholder="Name" bind:value={nameValue} />
 	</article>
+
+	<ToastContainer placement="bottom-right" let:data>
+		<FlatToast {data} />
+	</ToastContainer>
 
 	<!-- desktop -->
 	<article class="hidden lg:block container">

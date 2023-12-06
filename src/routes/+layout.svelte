@@ -10,6 +10,8 @@
 	afterNavigate(() => {
 		path = $page.url.pathname;
 	});
+
+	const options = {};
 </script>
 
 {#key path}

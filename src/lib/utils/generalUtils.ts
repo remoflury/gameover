@@ -1,6 +1,7 @@
 import { PUBLIC_POINTS_MULTIPLIER } from "$env/static/public"
 import { gameStore } from "$lib/store/gameStore"
 import type { ConsequenceProps } from "$lib/types/Types"
+import { toasts } from "svelte-toasts"
 
 export const getRandomIndex = <T>(array: T[]): number => {
   return Math.floor(Math.random()*array.length)
@@ -25,3 +26,17 @@ export const updateGameScore = (newScores: ConsequenceProps, playedScenario: num
     };
   });
 }
+
+export const showToast = (title: string, description: string, type: 'info' | 'success' | 'error' | 'warning', duration: number = 2000) => {
+  return toasts.add({
+    title,
+    description,
+    duration, // 0 or negative to avoid auto-remove
+    placement: 'top-center',
+    type,
+    theme: 'dark',
+    // onClick: () => {},
+    // onRemove: () => {}
+    // component: BootstrapToast, // allows to override toast component/template per toast
+  });
+};
