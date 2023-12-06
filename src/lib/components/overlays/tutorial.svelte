@@ -9,6 +9,7 @@
 	<section transition:fly={{ duration: 350, y: -200 }} class="absolute inset-0 bg-white-soft">
 		<article class="container py-block-page">
 			<h1>Tutorial</h1>
+			<h2>Hallo {$gameStore.userName}</h2>
 			<PrimaryButton text="Hide Tutorial" type="button" on:click={() => ($showTutorial = false)} />
 			<PrimaryButton
 				text="Start Game"

@@ -14,7 +14,7 @@
 		};
 	};
 	let nameValue = '';
-	let isLoading = true;
+	let isLoading = false;
 
 	function isExtendedActionResult(result: ActionResult): result is ExtendedActionResult {
 		return (
