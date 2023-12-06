@@ -1,41 +1,66 @@
-<span class="loader"></span>
+<div class="lds-ellipsis">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
 
 <style lang="postcss">
-	.loader,
-	.loader:before,
-	.loader:after {
-		@apply rounded-[50%] w-10 h-10;
-		animation-fill-mode: both;
-		animation: bblFadInOut 1.8s infinite ease-in-out;
+	.lds-ellipsis {
+		--height: 80px;
+		--width: var(--height);
+		display: inline-block;
+		position: relative;
+		width: var(--width);
+		height: var(--height);
 	}
-	.loader {
-		@apply text-white-soft text-[7px] relative;
-		text-indent: -9999em;
-		transform: translateZ(0);
-		animation-delay: -0.16s;
-	}
-	.loader:before,
-	.loader:after {
-		content: '';
+	.lds-ellipsis div {
 		position: absolute;
-		top: 0;
+		top: 33px;
+		width: 13px;
+		height: 13px;
+		border-radius: 50%;
+		background: #fff;
+		animation-timing-function: cubic-bezier(0, 1, 1, 0);
 	}
-	.loader:before {
-		left: -3.5em;
-		animation-delay: -0.32s;
+	.lds-ellipsis div:nth-child(1) {
+		left: 8px;
+		animation: lds-ellipsis1 0.6s infinite;
 	}
-	.loader:after {
-		left: 3.5em;
+	.lds-ellipsis div:nth-child(2) {
+		left: 8px;
+		animation: lds-ellipsis2 0.6s infinite;
 	}
-
-	@keyframes bblFadInOut {
-		0%,
-		80%,
-		100% {
-			box-shadow: 0 2.5em 0 -1.3em;
+	.lds-ellipsis div:nth-child(3) {
+		left: 32px;
+		animation: lds-ellipsis2 0.6s infinite;
+	}
+	.lds-ellipsis div:nth-child(4) {
+		left: 56px;
+		animation: lds-ellipsis3 0.6s infinite;
+	}
+	@keyframes lds-ellipsis1 {
+		0% {
+			transform: scale(0);
 		}
-		40% {
-			box-shadow: 0 2.5em 0 0;
+		100% {
+			transform: scale(1);
+		}
+	}
+	@keyframes lds-ellipsis3 {
+		0% {
+			transform: scale(1);
+		}
+		100% {
+			transform: scale(0);
+		}
+	}
+	@keyframes lds-ellipsis2 {
+		0% {
+			transform: translate(0, 0);
+		}
+		100% {
+			transform: translate(24px, 0);
 		}
 	}
 </style>
