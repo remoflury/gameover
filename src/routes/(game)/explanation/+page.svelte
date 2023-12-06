@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
-	import { getTotalScore, updateGameScore } from '$lib/utils/generalUtils';
+	import { getTotalScore } from '$lib/utils/generalUtils';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 
 	// remove current scenario from scenario store
@@ -12,11 +12,29 @@
 		$scenarioStore = [...$scenarioStore];
 	};
 
-	const handleNextScenario = () => {
+	const handleNextScenario = (
+		economy: number,
+		environment: number,
+		society: number,
+		health: number
+	) => {
+		updateGameStore(economy, environment, society, health);
 		removeCurrentScenario($gameStore.currentScenario);
 		$gameStore.currentScenario = null;
 		$selectedOption = undefined;
 		goto('/scenario');
+	};
+
+	const updateGameStore = (
+		economy: number,
+		environment: number,
+		society: number,
+		health: number
+	) => {
+		$gameStore.score.economy += economy;
+		$gameStore.score.environment += environment;
+		$gameStore.score.society += society;
+		$gameStore.score.health += health;
 	};
 
 	onMount(() => {
@@ -25,12 +43,14 @@
 			return goto('/scenario');
 
 		// TODO: if one category score is smaller than 0, redirect to gameover screen?
-
-		updateGameScore(
-			$scenarioStore[$gameStore.currentScenario][`option${$selectedOption}`].consequences,
-			$gameStore.currentScenario
-		);
 	});
+	// updateGameScore(
+	// 	$scenarioStore[$gameStore.currentScenario][`option${$selectedOption}`].consequences,
+	// 	$gameStore.currentScenario
+	// );
+
+	// TODO: update Game score will be run twice!
+	$: console.log($gameStore.score);
 </script>
 
 <section class="container py-block-page">
@@ -48,7 +68,17 @@
 			</div>
 
 			<p>Dein aktueller Score: {getTotalScore($gameStore.playedScenarios.length)}</p>
-			<PrimaryButton text="Weiter" type="button" on:click={handleNextScenario} />
+			<PrimaryButton
+				text="Weiter"
+				type="button"
+				on:click={() =>
+					handleNextScenario(
+						option.consequences.economy,
+						option.consequences.environment,
+						option.consequences.society,
+						option.consequences.health
+					)}
+			/>
 		{/if}
 	</article>
 </section>
