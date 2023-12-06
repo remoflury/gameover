@@ -26,7 +26,7 @@
 			Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac
 			tellus libero accumsan.
 		</p>
-		<PrimaryButton buttonProps={{ text: 'Start Game' }} on:click={handleStartGame} />
+		<PrimaryButton text="Start Game" on:click={handleStartGame} />
 
 		<input type="name" placeholder="Name" bind:value={nameValue} />
 	</article>

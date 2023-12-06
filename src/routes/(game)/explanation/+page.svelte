@@ -48,7 +48,7 @@
 			</div>
 
 			<p>Dein aktueller Score: {getTotalScore($gameStore.playedScenarios.length)}</p>
-			<PrimaryButton buttonProps={{ text: 'Weiter' }} on:click={handleNextScenario} />
+			<PrimaryButton text="Weiter" type="button" on:click={handleNextScenario} />
 		{/if}
 	</article>
 </section>

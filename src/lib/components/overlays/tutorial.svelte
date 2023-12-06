@@ -9,12 +9,10 @@
 	<section transition:fly={{ duration: 350, y: -200 }} class="absolute inset-0 bg-white-soft">
 		<article class="container py-block-page">
 			<h1>Tutorial</h1>
+			<PrimaryButton text="Hide Tutorial" type="button" on:click={() => ($showTutorial = false)} />
 			<PrimaryButton
-				buttonProps={{ text: 'Hide Tutorial' }}
-				on:click={() => ($showTutorial = false)}
-			/>
-			<PrimaryButton
-				buttonProps={{ text: 'Start Game' }}
+				text="Start Game"
+				type="button"
 				on:click={() => {
 					goto('/scenario');
 					$showTutorial = false;

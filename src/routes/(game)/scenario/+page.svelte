@@ -51,7 +51,7 @@
 		/>
 		{#if $selectedOption}
 			<div transition:fade={{ duration: 250, easing: cubicInOut }}>
-				<PrimaryButton buttonProps={{ text: 'Auswählen' }} on:click={handleChoose} />
+				<PrimaryButton text="Weiter" type="button" on:click={handleChoose} />
 			</div>
 		{/if}
 	{/if}
