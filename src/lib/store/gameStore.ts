@@ -6,6 +6,7 @@ export const gameStore = writable<GameStoreProps>({
   isPlaying: false,
   currentScenario: null,
   userName: null,
+  userId: null,
   score: {
     economy: 50,
     environment: 50,

@@ -13,3 +13,6 @@ export type PrimaryLinkProps = {
   target: '_blank' | ''
 }
 
+// export type FormResponse = {
+
+// }

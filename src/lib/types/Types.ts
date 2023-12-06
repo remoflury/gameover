@@ -7,6 +7,7 @@ export type GameStoreProps = {
   isPlaying: boolean,
   currentScenario: number | null,
   userName: string | null,
+  userId: number | null,
   score: ConsequenceProps,
   //index of played scenarios
   playedScenarios: number[],
