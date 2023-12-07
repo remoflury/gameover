@@ -1,0 +1,91 @@
+<script lang="ts">
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
+	import { getTotalScore, showToast } from '$lib/utils/generalUtils';
+	import PrimaryButton from '$lib/components/primaryButton.svelte';
+
+	// remove current scenario from scenario store
+	const removeCurrentScenario = (index: number | null) => {
+		if (index === null) return showToast('Error', 'No index provided.', 'error');
+		$scenarioStore.splice(index, 1);
+		$scenarioStore = [...$scenarioStore];
+	};
+
+	const handleNextScenario = (
+		economy: number,
+		environment: number,
+		society: number,
+		health: number
+	) => {
+		// updateGameStore(economy, environment, society, health);
+		removeCurrentScenario($gameStore.currentScenario);
+		$gameStore.currentScenario = null;
+		$selectedOption = undefined;
+		goto('/scenario');
+	};
+
+	const updateGameStore = (
+		economy: number,
+		environment: number,
+		society: number,
+		health: number
+	) => {
+		$gameStore.score.economy += economy;
+		$gameStore.score.environment += environment;
+		$gameStore.score.society += society;
+		$gameStore.score.health += health;
+	};
+
+	onMount(() => {
+		// if no option is selected or currentScenario is not set, or user is not playing
+		if ($gameStore.isPlaying === false || !$selectedOption || $gameStore.currentScenario === null)
+			return goto('/scenario');
+
+		// TODO: if one category score is smaller than 0, redirect to gameover screen?
+		setTimeout(() => {
+			if ($gameStore.currentScenario === null) return;
+			if ($selectedOption === undefined) return;
+			const option = $scenarioStore[$gameStore.currentScenario][`option${$selectedOption}`];
+			updateGameStore(
+				option.consequences.economy,
+				option.consequences.environment,
+				option.consequences.society,
+				option.consequences.health
+			);
+		}, 1000);
+	});
+
+	// TODO: update Game score will be run twice!
+	$: console.log($gameStore.score);
+</script>
+
+<section class="container py-block-page">
+	<article class="bg-white-soft">
+		<h1>Erklärung</h1>
+		{#if $selectedOption && $gameStore.currentScenario !== null}
+			{@const option = $scenarioStore[$gameStore.currentScenario][`option${$selectedOption}`]}
+			{option.explanation}
+
+			<div class="mt-8">
+				<p>economy: {option.consequences.economy}</p>
+				<p>environment: {option.consequences.environment}</p>
+				<p>society: {option.consequences.society}</p>
+				<p>health: {option.consequences.health}</p>
+			</div>
+
+			<p>Dein aktueller Score: {getTotalScore($gameStore.playedScenarios.length)}</p>
+			<PrimaryButton
+				text="Weiter"
+				type="button"
+				on:click={() =>
+					handleNextScenario(
+						option.consequences.economy,
+						option.consequences.environment,
+						option.consequences.society,
+						option.consequences.health
+					)}
+			/>
+		{/if}
+	</article>
+</section>
