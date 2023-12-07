@@ -41,6 +41,8 @@
 		// if no option is selected or currentScenario is not set, or user is not playing
 		if ($gameStore.isPlaying === false || !$selectedOption || $gameStore.currentScenario === null)
 			return goto('/scenario');
+		// set played scenarios to gamestore, so that total score can be calculated
+		if ($gameStore.currentScenario) $gameStore.playedScenarios.push($gameStore.currentScenario);
 
 		// TODO: if one category score is smaller than 0, redirect to gameover screen?
 		setTimeout(() => {
