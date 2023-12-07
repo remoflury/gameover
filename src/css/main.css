@@ -5,4 +5,8 @@
 @tailwind utilities;
 
 @layer base {
+
+  input {
+    @apply block w-full
+  }
 }

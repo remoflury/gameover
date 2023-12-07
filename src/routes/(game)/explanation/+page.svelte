@@ -2,12 +2,12 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
-	import { getTotalScore } from '$lib/utils/generalUtils';
+	import { getTotalScore, showToast } from '$lib/utils/generalUtils';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 
 	// remove current scenario from scenario store
 	const removeCurrentScenario = (index: number | null) => {
-		if (index === null) return alert('No index provided.');
+		if (index === null) return showToast('Error', 'No index provided.', 'error');
 		$scenarioStore.splice(index, 1);
 		$scenarioStore = [...$scenarioStore];
 	};
@@ -18,7 +18,7 @@
 		society: number,
 		health: number
 	) => {
-		updateGameStore(economy, environment, society, health);
+		// updateGameStore(economy, environment, society, health);
 		removeCurrentScenario($gameStore.currentScenario);
 		$gameStore.currentScenario = null;
 		$selectedOption = undefined;
@@ -43,11 +43,18 @@
 			return goto('/scenario');
 
 		// TODO: if one category score is smaller than 0, redirect to gameover screen?
+		setTimeout(() => {
+			if ($gameStore.currentScenario === null) return;
+			if ($selectedOption === undefined) return;
+			const option = $scenarioStore[$gameStore.currentScenario][`option${$selectedOption}`];
+			updateGameStore(
+				option.consequences.economy,
+				option.consequences.environment,
+				option.consequences.society,
+				option.consequences.health
+			);
+		}, 1000);
 	});
-	// updateGameScore(
-	// 	$scenarioStore[$gameStore.currentScenario][`option${$selectedOption}`].consequences,
-	// 	$gameStore.currentScenario
-	// );
 
 	// TODO: update Game score will be run twice!
 	$: console.log($gameStore.score);
