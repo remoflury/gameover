@@ -10,6 +10,7 @@ export default {
       gray: "#D4D9DD",
       beige: "#BAB6B5",
       white: {
+        plain: '#FFFFFF',
         soft: "#F1F1F1"
       },
       green: {

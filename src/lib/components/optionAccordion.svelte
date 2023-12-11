@@ -23,7 +23,7 @@
 	$: if ($current != currentKey) isOpen = false;
 </script>
 
-<article>
+<!-- <article>
 	<button
 		class="flex gap-x-4 items-start border border-white-soft transition"
 		class:bg-white-soft={isOpen}
@@ -37,4 +37,4 @@
 
 		<p class={`-rotate-90 transition-transform duration-250 ${isOpen ? 'rotate-90' : ''}`}>></p>
 	</button>
-</article>
+</article> -->

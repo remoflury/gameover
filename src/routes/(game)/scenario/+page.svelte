@@ -10,6 +10,7 @@
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import ScenarioCard from '$lib/components/scenarioCard.svelte';
 	import { onMount } from 'svelte';
+	import OptionCard from '$lib/components/optionCard.svelte';
 
 	let randomIndex: number;
 	let currentScenario: ScenarioProps;
@@ -40,19 +41,16 @@
 	});
 </script>
 
-<section class="container py-block-page">
+<section class="container gap-y-4 py-block-page">
 	{#if currentScenario}
 		<ScenarioCard description={currentScenario.description} />
-		<OptionAccordion
-			description={currentScenario.option1.description}
-			on:selected={() => handleSelection(1)}
-		/>
-		<OptionAccordion
-			description={currentScenario.option2.description}
-			on:selected={() => handleSelection(2)}
-		/>
+		<OptionCard text={currentScenario.option1.description} on:selected={() => handleSelection(1)} />
+		<OptionCard text={currentScenario.option2.description} on:selected={() => handleSelection(2)} />
 		{#if $selectedOption}
-			<div transition:fade={{ duration: 250, easing: cubicInOut }}>
+			<div
+				class="grid place-content-center"
+				transition:fade={{ duration: 250, easing: cubicInOut }}
+			>
 				<PrimaryButton text="Weiter" type="button" on:click={handleChoose} />
 			</div>
 		{/if}
