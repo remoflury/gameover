@@ -54,7 +54,7 @@
 <svelte:head><title>GameOver? | Start</title></svelte:head>
 
 <section
-	class=" min-h-screen py-block-page bg-[url('/assets/start-image.png')] bg-no-repeat bg-cover relative"
+	class=" min-h-screen py-block-page bg-[url('/assets/start-image.png')] bg-no-repeat bg-cover relative bg-center lg:bg-top"
 >
 	<!-- mobile -->
 	<article class="container lg:hidden">
@@ -99,9 +99,11 @@
 
 	<!-- desktop -->
 	<article class="hidden lg:block container">
-		<figure class="max-w-1/2 mx-auto">
+		<figure class="max-w-1/4 mx-auto">
 			<img src="/assets/gameover-logo-white.svg" alt="Logo von GameOver?" />
 		</figure>
-		<h1>Bitte öffne diese Seite auf einem mobilen Gerät.</h1>
+		<h1 class="text-white-soft text-center mt-20">
+			Bitte öffne diese Seite auf einem mobilen Gerät.
+		</h1>
 	</article>
 </section>
