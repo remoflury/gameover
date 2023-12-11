@@ -1,6 +1,7 @@
 export type LeaderboardUsersProps = {
   name: string,
-  score: number
+  score: number,
+  id?: number
 }
 
 export type GameStoreProps = {
@@ -38,4 +39,10 @@ export type ScenarioOptionProps = {
   description: string,
   explanation: string,
   consequences: ConsequenceProps
+}
+
+export type ServerAPIResponseProps = {
+  status: 200 | 201 | 400 | 401 | 401 | 402 | 403 | 404 | 500,
+  message?: string,
+  data?: any
 }

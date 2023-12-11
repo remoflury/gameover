@@ -1,26 +1,51 @@
 <script lang="ts">
-	import type { LeaderboardUsersProps } from '$lib/types/Types.js';
+	import { goto } from '$app/navigation';
+	import { gameStore } from '$lib/store/gameStore';
+	import type { LeaderboardUsersProps, ServerAPIResponseProps } from '$lib/types/Types.js';
+	import { serverErrMessage } from '$lib/utils/generalVariables';
+	import { onMount } from 'svelte';
 
-	export let data;
+	let errorMsg: string;
+	let rankedUsers: LeaderboardUsersProps[];
+	let scoreCurrentUser: LeaderboardUsersProps | undefined;
+	let rankCurrentUser: number | undefined;
 
-	const users = data.users;
+	const fetchLeaderboardData = async () => {
+		const response = await fetch(`/api/leaderboard`);
+		const data: ServerAPIResponseProps = await response.json();
 
-	const getLeaderboardResult = (users: LeaderboardUsersProps[]) => {
-		// return {
-		// 	place,
-		// 	firstTen
-		// }
+		if (data.status >= 400) return (errorMsg = data.message || serverErrMessage);
+		const users: LeaderboardUsersProps[] = data.data;
+
+		[rankedUsers, scoreCurrentUser, rankCurrentUser] = getRanking(users, $gameStore.userId);
 	};
-	console.log(data);
+
+	const getRanking = (
+		users: LeaderboardUsersProps[],
+		userId: number | null
+	): [LeaderboardUsersProps[], LeaderboardUsersProps | undefined, number | undefined] => {
+		// Sort the array by score in descending order
+		const rankedUsers = users.sort((a, b) => b.score - a.score);
+
+		// Find the item with the specified id, if provided
+		const rankCurrentUser = rankedUsers.findIndex((user) => user.id === userId) + 1;
+		const scoreCurrentUser = users.find((user) => user.id === userId);
+
+		return [rankedUsers.slice(0, 10), scoreCurrentUser, rankCurrentUser];
+	};
+
+	onMount(() => {
+		if ($gameStore.isPlaying === false) return goto('/');
+	});
 </script>
 
 <section class="container py-block-page">
-	{#each data.users as user}
-		<ol>
-			<li>
-				{user.name}
-				{user.score}
-			</li>
-		</ol>
-	{/each}
+	{#await fetchLeaderboardData()}
+		<p>await</p>
+	{:then}
+		<p>{rankCurrentUser}. Dein Score {scoreCurrentUser?.score}</p>
+		{#each rankedUsers as user, index}
+			<p>{index + 1}. {user.name} {user.score}</p>
+		{/each}
+	{/await}
 </section>

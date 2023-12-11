@@ -1,7 +1,9 @@
 import { PUBLIC_POINTS_MULTIPLIER } from "$env/static/public"
+import { gameStore } from "$lib/store/gameStore"
 // import { gameStore } from "$lib/store/gameStore"
 // import type { ConsequenceProps } from "$lib/types/Types"
 import { toasts } from "svelte-toasts"
+import { get } from "svelte/store"
 
 export const getRandomIndex = <T>(array: T[]): number => {
   return Math.floor(Math.random()*array.length)
@@ -40,4 +42,25 @@ export const showToast = (title: string, description: string, type: 'info' | 'su
     // onRemove: () => {}
     // component: BootstrapToast, // allows to override toast component/template per toast
   });
+};
+
+
+// check if Game is over
+// export const isGameOver = (): boolean => {
+//   if ($gameStore.score.economy <= 0) return true;
+//   if ($gameStore.score.environment <= 0) return true;
+//   if ($gameStore.score.society <= 0) return true;
+//   if ($gameStore.score.health <= 0) return true;
+
+//   return false;
+// };
+export const isGameOver = (): boolean => {
+  const gameStoreValue = get(gameStore);
+
+  if (gameStoreValue.score.economy <= 0) return true;
+  if (gameStoreValue.score.environment <= 0) return true;
+  if (gameStoreValue.score.society <= 0) return true;
+  if (gameStoreValue.score.health <= 0) return true;
+
+  return false;
 };

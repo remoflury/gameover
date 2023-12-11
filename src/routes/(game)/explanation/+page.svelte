@@ -2,9 +2,11 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
-	import { getTotalScore, showToast } from '$lib/utils/generalUtils';
+	import { getTotalScore, isGameOver, showToast } from '$lib/utils/generalUtils';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
+	import { fade } from 'svelte/transition';
 
+	let isButtonVisible = false;
 	// remove current scenario from scenario store
 	const removeCurrentScenario = (index: number | null) => {
 		if (index === null) return showToast('Error', 'No index provided.', 'error');
@@ -12,17 +14,14 @@
 		$scenarioStore = [...$scenarioStore];
 	};
 
-	const handleNextScenario = (
-		economy: number,
-		environment: number,
-		society: number,
-		health: number
-	) => {
+	const handleNextScenario = () => {
 		// updateGameStore(economy, environment, society, health);
 		removeCurrentScenario($gameStore.currentScenario);
 		$gameStore.currentScenario = null;
 		$selectedOption = undefined;
-		goto('/scenario');
+
+		if (isGameOver()) goto('/game-over');
+		else goto('/scenario');
 	};
 
 	const updateGameStore = (
@@ -41,6 +40,12 @@
 		// if no option is selected or currentScenario is not set, or user is not playing
 		if ($gameStore.isPlaying === false || !$selectedOption || $gameStore.currentScenario === null)
 			return goto('/scenario');
+		// set played scenarios to gamestore, so that total score can be calculated
+		if ($gameStore.currentScenario !== null)
+			$gameStore.playedScenarios.push($gameStore.currentScenario);
+
+		// prevent go back
+		if (isGameOver()) return goto('/game-over');
 
 		// TODO: if one category score is smaller than 0, redirect to gameover screen?
 		setTimeout(() => {
@@ -53,11 +58,9 @@
 				option.consequences.society,
 				option.consequences.health
 			);
+			isButtonVisible = true;
 		}, 1000);
 	});
-
-	// TODO: update Game score will be run twice!
-	$: console.log($gameStore.score);
 </script>
 
 <section class="container py-block-page">
@@ -75,17 +78,11 @@
 			</div>
 
 			<p>Dein aktueller Score: {getTotalScore($gameStore.playedScenarios.length)}</p>
-			<PrimaryButton
-				text="Weiter"
-				type="button"
-				on:click={() =>
-					handleNextScenario(
-						option.consequences.economy,
-						option.consequences.environment,
-						option.consequences.society,
-						option.consequences.health
-					)}
-			/>
+			{#if isButtonVisible}
+				<div transition:fade={{ duration: 350 }}>
+					<PrimaryButton text="Weiter" type="button" on:click={() => handleNextScenario()} />
+				</div>
+			{/if}
 		{/if}
 	</article>
 </section>
