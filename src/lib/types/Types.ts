@@ -39,3 +39,8 @@ export type ScenarioOptionProps = {
   explanation: string,
   consequences: ConsequenceProps
 }
+
+export type ServerAPIResponseProps = {
+  status: 200 | 201 | 400 | 401 | 401 | 402 | 403 | 404 | 500,
+  message?: string,
+}

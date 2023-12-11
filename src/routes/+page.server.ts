@@ -24,7 +24,6 @@ export const actions: Actions = {
     return {
       id: data.id,
       name: data.name
-      // data
     }
 
   }
