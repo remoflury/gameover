@@ -4,7 +4,9 @@
 	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
 	import { getTotalScore, showToast } from '$lib/utils/generalUtils';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
+	import { fade } from 'svelte/transition';
 
+	let isButtonVisible = false;
 	// remove current scenario from scenario store
 	const removeCurrentScenario = (index: number | null) => {
 		if (index === null) return showToast('Error', 'No index provided.', 'error');
@@ -22,7 +24,9 @@
 		removeCurrentScenario($gameStore.currentScenario);
 		$gameStore.currentScenario = null;
 		$selectedOption = undefined;
-		goto('/scenario');
+
+		if (isGameOver()) goto('/game-over');
+		else goto('/scenario');
 	};
 
 	const updateGameStore = (
@@ -35,6 +39,16 @@
 		$gameStore.score.environment += environment;
 		$gameStore.score.society += society;
 		$gameStore.score.health += health;
+	};
+
+	// check if Game is over
+	const isGameOver = (): boolean => {
+		if ($gameStore.score.economy <= 0) return true;
+		if ($gameStore.score.environment <= 0) return true;
+		if ($gameStore.score.society <= 0) return true;
+		if ($gameStore.score.health <= 0) return true;
+
+		return false;
 	};
 
 	onMount(() => {
@@ -55,10 +69,10 @@
 				option.consequences.society,
 				option.consequences.health
 			);
+			isButtonVisible = true;
 		}, 1000);
 	});
 
-	// TODO: update Game score will be run twice!
 	$: console.log($gameStore.score);
 </script>
 
@@ -77,17 +91,21 @@
 			</div>
 
 			<p>Dein aktueller Score: {getTotalScore($gameStore.playedScenarios.length)}</p>
-			<PrimaryButton
-				text="Weiter"
-				type="button"
-				on:click={() =>
-					handleNextScenario(
-						option.consequences.economy,
-						option.consequences.environment,
-						option.consequences.society,
-						option.consequences.health
-					)}
-			/>
+			{#if isButtonVisible}
+				<div transition:fade={{ duration: 350 }}>
+					<PrimaryButton
+						text="Weiter"
+						type="button"
+						on:click={() =>
+							handleNextScenario(
+								option.consequences.economy,
+								option.consequences.environment,
+								option.consequences.society,
+								option.consequences.health
+							)}
+					/>
+				</div>
+			{/if}
 		{/if}
 	</article>
 </section>
