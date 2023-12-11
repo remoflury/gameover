@@ -14,12 +14,7 @@
 		$scenarioStore = [...$scenarioStore];
 	};
 
-	const handleNextScenario = (
-		economy: number,
-		environment: number,
-		society: number,
-		health: number
-	) => {
+	const handleNextScenario = () => {
 		// updateGameStore(economy, environment, society, health);
 		removeCurrentScenario($gameStore.currentScenario);
 		$gameStore.currentScenario = null;
@@ -46,7 +41,8 @@
 		if ($gameStore.isPlaying === false || !$selectedOption || $gameStore.currentScenario === null)
 			return goto('/scenario');
 		// set played scenarios to gamestore, so that total score can be calculated
-		if ($gameStore.currentScenario) $gameStore.playedScenarios.push($gameStore.currentScenario);
+		if ($gameStore.currentScenario !== null)
+			$gameStore.playedScenarios.push($gameStore.currentScenario);
 
 		// prevent go back
 		if (isGameOver()) return goto('/game-over');
@@ -65,8 +61,6 @@
 			isButtonVisible = true;
 		}, 1000);
 	});
-
-	$: console.log($gameStore.score);
 </script>
 
 <section class="container py-block-page">
@@ -86,17 +80,7 @@
 			<p>Dein aktueller Score: {getTotalScore($gameStore.playedScenarios.length)}</p>
 			{#if isButtonVisible}
 				<div transition:fade={{ duration: 350 }}>
-					<PrimaryButton
-						text="Weiter"
-						type="button"
-						on:click={() =>
-							handleNextScenario(
-								option.consequences.economy,
-								option.consequences.environment,
-								option.consequences.society,
-								option.consequences.health
-							)}
-					/>
+					<PrimaryButton text="Weiter" type="button" on:click={() => handleNextScenario()} />
 				</div>
 			{/if}
 		{/if}

@@ -17,6 +17,7 @@
 	const newRound = () => {
 		randomIndex = getRandomIndex($scenarioStore);
 		$gameStore.currentScenario = randomIndex;
+		// $gameStore.playedScenarios.push(randomIndex);
 		currentScenario = $scenarioStore[randomIndex];
 	};
 

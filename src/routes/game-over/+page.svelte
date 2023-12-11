@@ -12,6 +12,7 @@
 <section class="container py-block-page">
 	<article>
 		<h1>GameOver!</h1>
+		<p>{$gameStore.userName}, leider hast du verloren...</p>
 		<p>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt maiores nemo libero
 			cupiditate aliquid autem maxime similique architecto minus!
