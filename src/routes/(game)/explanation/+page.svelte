@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
-	import { getTotalScore, showToast } from '$lib/utils/generalUtils';
+	import { getTotalScore, isGameOver, showToast } from '$lib/utils/generalUtils';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import { fade } from 'svelte/transition';
 
@@ -41,22 +41,15 @@
 		$gameStore.score.health += health;
 	};
 
-	// check if Game is over
-	const isGameOver = (): boolean => {
-		if ($gameStore.score.economy <= 0) return true;
-		if ($gameStore.score.environment <= 0) return true;
-		if ($gameStore.score.society <= 0) return true;
-		if ($gameStore.score.health <= 0) return true;
-
-		return false;
-	};
-
 	onMount(() => {
 		// if no option is selected or currentScenario is not set, or user is not playing
 		if ($gameStore.isPlaying === false || !$selectedOption || $gameStore.currentScenario === null)
 			return goto('/scenario');
 		// set played scenarios to gamestore, so that total score can be calculated
 		if ($gameStore.currentScenario) $gameStore.playedScenarios.push($gameStore.currentScenario);
+
+		// prevent go back
+		if (isGameOver()) return goto('/game-over');
 
 		// TODO: if one category score is smaller than 0, redirect to gameover screen?
 		setTimeout(() => {

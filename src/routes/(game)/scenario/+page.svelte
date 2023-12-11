@@ -5,7 +5,7 @@
 	import { cubicInOut } from 'svelte/easing';
 	import { createAccordionContext } from '$lib/store/accordionStore';
 	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
-	import { getRandomIndex } from '$lib/utils/generalUtils';
+	import { getRandomIndex, isGameOver } from '$lib/utils/generalUtils';
 	import OptionAccordion from '$lib/components/optionAccordion.svelte';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import ScenarioCard from '$lib/components/scenarioCard.svelte';
@@ -33,7 +33,8 @@
 	// function, to only be able to open one accordion at a time
 	createAccordionContext();
 	onMount(() => {
-		if ($gameStore.isPlaying === false) goto('/');
+		if ($gameStore.isPlaying === false) return goto('/');
+		if (isGameOver()) return goto('/game-over');
 		newRound();
 	});
 </script>
