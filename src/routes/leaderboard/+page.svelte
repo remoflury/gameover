@@ -31,12 +31,8 @@
 		const rankCurrentUser = rankedUsers.findIndex((user) => user.id === userId) + 1;
 		const scoreCurrentUser = users.find((user) => user.id === userId);
 
-		return [rankedUsers, scoreCurrentUser, rankCurrentUser];
+		return [rankedUsers.slice(0, 10), scoreCurrentUser, rankCurrentUser];
 	};
-
-	$: console.log(rankedUsers);
-	$: console.log(scoreCurrentUser);
-	$: console.log(rankCurrentUser);
 
 	onMount(() => {
 		if ($gameStore.isPlaying === false) return goto('/');
@@ -47,14 +43,9 @@
 	{#await fetchLeaderboardData()}
 		<p>await</p>
 	{:then}
-		<p>loaded</p>
+		<p>{rankCurrentUser}. Dein Score {scoreCurrentUser?.score}</p>
+		{#each rankedUsers as user, index}
+			<p>{index + 1}. {user.name} {user.score}</p>
+		{/each}
 	{/await}
-	<!-- {#each data.users as user}
-		<ol>
-			<li>
-				{user.name}
-				{user.score}
-			</li>
-		</ol>
-	{/each} -->
 </section>
