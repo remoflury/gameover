@@ -6,7 +6,27 @@
 
 @layer base {
 
+  html {
+    @apply scroll-smooth
+  }
+
+  h1 {
+    @apply font-lilita text-3xl
+  }
+
+  p {
+    @apply font-dm-sans text-base text-black-plain
+  }
+
+  .container {
+    @apply grid grid-cols-4 gap-x-4;
+  }
+
+  .container > * {
+    @apply col-span-full
+  }
+
   input {
-    @apply block w-full
+    @apply block w-full px-4 py-2 bg-white-soft outline-none focus:outline focus:outline-1 focus:outline-turqoise-dark placeholder:text-gray rounded-max
   }
 }

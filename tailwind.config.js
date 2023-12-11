@@ -41,6 +41,9 @@ export default {
           DEFAULT: '1rem'
         }
       },
+      borderRadius: {
+        max: '100vmax'
+      },
       maxWidth: {
         '1/4': "25%",
         '1/2': '50%',

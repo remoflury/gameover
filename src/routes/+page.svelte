@@ -6,6 +6,7 @@
 	import { applyAction, enhance } from '$app/forms';
 	import type { ActionResult } from '@sveltejs/kit';
 	import LoadingSpinner from '$lib/components/loadingSpinner.svelte';
+	import Link from '$lib/components/link.svelte';
 
 	type ExtendedActionResult = ActionResult & {
 		data: {
@@ -52,32 +53,44 @@
 
 <svelte:head><title>GameOver? | Start</title></svelte:head>
 
-<section class="bg-gradient-turqoise-to-top min-h-screen py-block-page">
+<section
+	class=" min-h-screen py-block-page bg-[url('/assets/start-image.png')] bg-no-repeat bg-cover relative"
+>
 	<!-- mobile -->
 	<article class="container lg:hidden">
-		<figure class="max-w-1/2 mx-auto">
-			<img src="/assets/gameover-logo-white.svg" alt="Logo von GameOver?" />
-		</figure>
 		<h1 hidden>GameOver?</h1>
-		<p class="text-white-soft text-center mt-8">
-			Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac
-			tellus libero accumsan.
-		</p>
-		<form
-			action="?/startgame"
-			method="post"
-			use:enhance={() => {
-				isLoading = true;
-				return async ({ result }) => handleAction(result);
-			}}
+		<figure class="max-w-3/4 w-full mx-auto">
+			<img
+				class="object-contain w-full"
+				src="/assets/gameover-logo-white.svg"
+				alt="Logo des Spiels GameOver?"
+			/>
+		</figure>
+		<div
+			class="max-w-3/4 w-full mx-auto absolute left-1/2 -translate-x-1/2 bottom-0 pb-block-page flex flex-col gap-y-4 items-center"
 		>
-			<input type="name" name="name" placeholder="Name" bind:value={nameValue} />
-			{#if !isLoading}
-				<PrimaryButton text="Start Game" />
-			{:else}
-				<LoadingSpinner />
-			{/if}
-		</form>
+			<form
+				class="flex flex-col gap-y-4 items-center"
+				action="?/startgame"
+				method="post"
+				use:enhance={() => {
+					isLoading = true;
+					return async ({ result }) => handleAction(result);
+				}}
+			>
+				<input type="name" name="name" placeholder="Name" bind:value={nameValue} />
+				{#if !isLoading}
+					<PrimaryButton text="Spiel starten" />
+				{:else}
+					<LoadingSpinner />
+				{/if}
+			</form>
+
+			<div class="flex justify-between items-center gap-x-4 w-full">
+				<Link href="/source" text="Quellen" />
+				<Link href="/about" text="Über uns" />
+			</div>
+		</div>
 	</article>
 
 	<ToastContainer placement="bottom-right" let:data>

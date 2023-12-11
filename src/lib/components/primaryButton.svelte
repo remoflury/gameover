@@ -1,9 +1,8 @@
 <script lang="ts">
-	// import type { PrimaryButtonProps } from '$lib/types/Content';
+	import ArrowIcon from '$lib/assets/arrowIcon.svelte';
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 
-	// export let buttonProps: PrimaryButtonProps;
 	export let text: string;
 	export let ariaLabel: string = '';
 	export let title: string = '';
@@ -11,11 +10,14 @@
 </script>
 
 <button
-	class="bg-yellow-dirty text-black-plain py-2 px-4"
+	class="bg-turqoise-dark text-white-soft font-bold rounded-max py-3 px-12 flex gap-x-4 items-center"
 	{title}
 	{type}
 	aria-label={ariaLabel}
 	on:click={() => dispatch('click')}
 >
-	<p>{text}</p>
+	<p class="text-white-soft">{text}</p>
+	<figure class="w-3" role="presentation">
+		<ArrowIcon />
+	</figure>
 </button>
