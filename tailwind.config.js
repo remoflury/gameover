@@ -41,8 +41,12 @@ export default {
           DEFAULT: '1rem'
         }
       },
+      aspectRatio: {
+        '4/3': '4/3'
+      },
       borderRadius: {
-        max: '100vmax'
+        max: '100vmax',
+        card: '1.25rem'
       },
       maxWidth: {
         '1/4': "25%",

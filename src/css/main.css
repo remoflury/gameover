@@ -11,7 +11,7 @@
   }
 
   h1 {
-    @apply font-lilita text-3xl
+    @apply font-lilita text-3xl mb-4 uppercase
   }
 
   p {
