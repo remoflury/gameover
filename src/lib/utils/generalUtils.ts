@@ -37,7 +37,7 @@ export const showToast = (title: string, description: string, type: 'info' | 'su
     duration, // 0 or negative to avoid auto-remove
     placement: 'top-center',
     type,
-    theme: 'dark',
+    theme: "dark"
     // onClick: () => {},
     // onRemove: () => {}
     // component: BootstrapToast, // allows to override toast component/template per toast
@@ -45,15 +45,6 @@ export const showToast = (title: string, description: string, type: 'info' | 'su
 };
 
 
-// check if Game is over
-// export const isGameOver = (): boolean => {
-//   if ($gameStore.score.economy <= 0) return true;
-//   if ($gameStore.score.environment <= 0) return true;
-//   if ($gameStore.score.society <= 0) return true;
-//   if ($gameStore.score.health <= 0) return true;
-
-//   return false;
-// };
 export const isGameOver = (): boolean => {
   const gameStoreValue = get(gameStore);
 
