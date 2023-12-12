@@ -19,26 +19,27 @@
 		if (data.status >= 400) console.error(data.message);
 	};
 
-	const getGameOverImage = () => {
-		// score = get(gameStore).score; // Get the current value of the store
+	// const getGameOverImage = () => {
+	// 	// score = get(gameStore).score; // Get the current value of the store
 
-		// Initialize with a high value and an empty property name
-		let lowestValue = Number.MAX_VALUE;
-		let lowestProp: ConsequenceProps;
+	// 	// Initialize with a high value and an empty property name
+	// 	let lowestValue = Number.MAX_VALUE;
+	// 	let lowestProp: ConsequenceProps;
 
-		// Loop through each property in the score object
-		for (const prop in $gameStore.score) {
-			if ($gameStore.score[prop] < lowestValue) {
-				lowestValue = $gameStore.score[prop];
-				lowestProp = prop;
-			}
-		}
+	// 	// Loop through each property in the score object
+	// 	for (const prop in $gameStore.score) {
+	// 		if ($gameStore.score[prop] < lowestValue) {
+	// 			lowestValue = $gameStore.score[prop];
+	// 			lowestProp = prop;
+	// 		}
+	// 	}
 
-		return lowestProp;
-	};
+	// 	return lowestProp;
+	// };
 
-	console.log(getGameOverImage());
+	// console.log(getGameOverImage());
 	onMount(async () => {
+		//TODO: ent-comment next line
 		// if ($gameStore.isPlaying === false) return goto('/');
 		await writeResultToDB();
 	});

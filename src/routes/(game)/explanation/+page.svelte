@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
-	import { getTotalScore, isGameOver, showToast } from '$lib/utils/generalUtils';
-	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import { fade } from 'svelte/transition';
+	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
+	import { isGameOver, showToast } from '$lib/utils/generalUtils';
+	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import ExplanationCard from '$lib/components/explanationCard.svelte';
+	import { category100PercentValue } from '$lib/utils/generalVariables';
 
 	let isButtonVisible = false;
 	// remove current scenario from scenario store
@@ -31,10 +32,37 @@
 		society: number,
 		health: number
 	) => {
-		$gameStore.score.economy += economy;
-		$gameStore.score.environment += environment;
-		$gameStore.score.society += society;
-		$gameStore.score.health += health;
+		$gameStore.score.economy = cutOffIfOverMaxValue(
+			$gameStore.score.economy,
+			economy,
+			category100PercentValue
+		);
+		$gameStore.score.environment = cutOffIfOverMaxValue(
+			$gameStore.score.environment,
+			environment,
+			category100PercentValue
+		);
+		$gameStore.score.society = cutOffIfOverMaxValue(
+			$gameStore.score.society,
+			society,
+			category100PercentValue
+		);
+		$gameStore.score.health = cutOffIfOverMaxValue(
+			$gameStore.score.health,
+			health,
+			category100PercentValue
+		);
+	};
+
+	$: console.log($gameStore.score.environment);
+
+	const cutOffIfOverMaxValue = (
+		inputValue: number,
+		consequenceValue: number,
+		maxValue: number
+	): number => {
+		if (inputValue + consequenceValue >= maxValue) return maxValue;
+		return inputValue + consequenceValue;
 	};
 
 	onMount(() => {
@@ -48,7 +76,6 @@
 		// prevent go back
 		if (isGameOver()) return goto('/game-over');
 
-		// TODO: if one category score is smaller than 0, redirect to gameover screen?
 		setTimeout(() => {
 			if ($gameStore.currentScenario === null) return;
 			if ($selectedOption === undefined) return;
