@@ -8,7 +8,7 @@ export const gameStore = writable<GameStoreProps>({
   userName: null,
   userId: null,
   score: {
-    economy: 50,
+    economy: 0,
     environment: 50,
     society: 50,
     health: 50,

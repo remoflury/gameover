@@ -3,6 +3,7 @@ import type { ScenarioProps } from "$lib/types/Types";
 export const scenarios: ScenarioProps[] = [
   {
     description: "Die Klimaerwärmung führt zu schmelzenden Polkappen, was zu steigendem Meeresspiegel führt.",
+    image: 'bildname.png',
     option1: {
       description: "Mit einem Flugzeug sprühst du Chemikalien in die Stratosphäre, um die Sonneneinstrahlung zu reduzieren.",
       explanation: "Indem das Sonnenlicht zurück ins Weltall reflektiert wird, wird die Erderwärmung verlangsamt. Die verhindert kurzfristig ein weiteres Schmelzen der Polkappen. Die Chemikalien sind jedoch keine nachhaltige Lösung, da sie den Ausstoss der Treibhausgase nicht verringern. Zudem musst du für einen konkreten Einfluss der Chemikalien jährlich ca. 2.25 Mia. Dollar investieren.",
@@ -26,6 +27,7 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     description: "Durch die Bildungsschere von Erst- & Drittweltländern droht eine weitere grosse Flüchtlingswelle. Du willst den Zugang zu Bildung für viele Menschen leichter zugänglich machen.",
+    image: 'bildname.png',
     option1: {
       description: "Du förderst den Ausbau von Schulen in unterentwickelten Regionen.",
       explanation: "Durch das Einstellen von qualifizierten Lehrkräften und dem Verwenden von modernen Lehrmitteln, erhöht sich die Bildungsqualität. Der Zugang zu Bildung wird erleichtert, und die Bildungsschere wird kleiner. Langfristig führt es zu einer Abnahme der Armut. Die Investitition kostet jedoch.",

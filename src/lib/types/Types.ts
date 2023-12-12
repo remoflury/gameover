@@ -33,6 +33,7 @@ export type CategoryProps = 'economy' | 'environment' | 'society' | 'health'
 
 export type ScenarioProps = {
   description: string,
+  image: string,
   option1: ScenarioOptionProps,
   option2: ScenarioOptionProps,
 }
