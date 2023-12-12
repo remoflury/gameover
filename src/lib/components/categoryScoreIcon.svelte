@@ -6,8 +6,8 @@
 	import { cubicOut } from 'svelte/easing';
 	import EconomyIconMask from '$lib/assets/category/economyIconMask.svelte';
 	import EnvironmentIconMask from '$lib/assets/category/environmentIconMask.svelte';
-	import SocietyIconMask from '$lib/assets/category/SocietyIconMask.svelte';
 	import HealthIconMask from '$lib/assets/category/healthIconMask.svelte';
+	import SocietyIconMask from '$lib/assets/category/societyIconMask.svelte';
 
 	export let category: CategoryProps;
 	export let currentScore: number;

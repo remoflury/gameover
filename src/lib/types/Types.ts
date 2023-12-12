@@ -49,3 +49,7 @@ export type ServerAPIResponseProps = {
   message?: string,
   data?: any
 }
+
+export type GameOverTextProps = {
+  [key in keyof ConsequenceProps]: string
+}
