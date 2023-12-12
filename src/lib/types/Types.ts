@@ -29,6 +29,8 @@ export type ConsequenceProps = {
   health: number
 } 
 
+export type CategoryProps = 'economy' | 'environment' | 'society' | 'health'
+
 export type ScenarioProps = {
   description: string,
   option1: ScenarioOptionProps,

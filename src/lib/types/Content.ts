@@ -1,10 +1,3 @@
-// export type PrimaryButtonProps = {
-//   text: string,
-//   ariaLabel?: string,
-//   title?: string
-//   type?: 'button' | 'submit'
-// }
-
 export type PrimaryLinkProps = {
   text: string,
   ariaLabel?: string,
@@ -12,7 +5,3 @@ export type PrimaryLinkProps = {
   href: string,
   target: '_blank' | ''
 }
-
-// export type FormResponse = {
-
-// }

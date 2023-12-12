@@ -5,6 +5,7 @@
 	import { getTotalScore, isGameOver, showToast } from '$lib/utils/generalUtils';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import { fade } from 'svelte/transition';
+	import ExplanationCard from '$lib/components/explanationCard.svelte';
 
 	let isButtonVisible = false;
 	// remove current scenario from scenario store
@@ -64,25 +65,20 @@
 </script>
 
 <section class="container py-block-page">
-	<article class="bg-white-soft">
-		<h1>Erklärung</h1>
-		{#if $selectedOption && $gameStore.currentScenario !== null}
-			{@const option = $scenarioStore[$gameStore.currentScenario][`option${$selectedOption}`]}
-			{option.explanation}
+	{#if $selectedOption && $gameStore.currentScenario !== null}
+		{@const option = $scenarioStore[$gameStore.currentScenario][`option${$selectedOption}`]}
+		<ExplanationCard
+			explanation={option.explanation}
+			economy={option.consequences.economy}
+			environment={option.consequences.environment}
+			society={option.consequences.society}
+			health={option.consequences.health}
+		/>
 
-			<div class="mt-8">
-				<p>economy: {option.consequences.economy}</p>
-				<p>environment: {option.consequences.environment}</p>
-				<p>society: {option.consequences.society}</p>
-				<p>health: {option.consequences.health}</p>
+		{#if isButtonVisible}
+			<div class="flex justify-end mt-4" transition:fade={{ duration: 350 }}>
+				<PrimaryButton text="Weiter" type="button" on:click={() => handleNextScenario()} />
 			</div>
-
-			<p>Dein aktueller Score: {getTotalScore($gameStore.playedScenarios.length)}</p>
-			{#if isButtonVisible}
-				<div transition:fade={{ duration: 350 }}>
-					<PrimaryButton text="Weiter" type="button" on:click={() => handleNextScenario()} />
-				</div>
-			{/if}
 		{/if}
-	</article>
+	{/if}
 </section>

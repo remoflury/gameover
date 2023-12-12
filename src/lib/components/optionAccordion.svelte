@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { createAccordionContext, getAccordionContext } from '$lib/store/accordionStore';
 	import { slide } from 'svelte/transition';
 	import { createEventDispatcher } from 'svelte';
@@ -21,7 +21,7 @@
 	}
 
 	$: if ($current != currentKey) isOpen = false;
-</script>
+</script> -->
 
 <!-- <article>
 	<button

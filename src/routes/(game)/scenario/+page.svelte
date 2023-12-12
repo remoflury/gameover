@@ -47,10 +47,7 @@
 		<OptionCard text={currentScenario.option1.description} on:selected={() => handleSelection(1)} />
 		<OptionCard text={currentScenario.option2.description} on:selected={() => handleSelection(2)} />
 		{#if $selectedOption}
-			<div
-				class="grid place-content-center"
-				transition:fade={{ duration: 250, easing: cubicInOut }}
-			>
+			<div class="flex justify-end" transition:fade={{ duration: 250, easing: cubicInOut }}>
 				<PrimaryButton text="Weiter" type="button" on:click={handleChoose} />
 			</div>
 		{/if}
