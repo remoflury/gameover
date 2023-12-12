@@ -1,4 +1,5 @@
 <script lang="ts">
+	import LightBulb from '$lib/assets/lightBulb.svelte';
 	import EffectCategory from './categories/effectCategory.svelte';
 	import CurrentScore from './currentScore.svelte';
 
@@ -11,6 +12,9 @@
 </script>
 
 <article class="rounded-card bg-white-soft p-6 overflow-hidden">
+	<div class="max-w-[3rem] flex justify-center mb-8 mx-auto">
+		<LightBulb />
+	</div>
 	<h1 class="text-center">Erklärung</h1>
 	<p class="text-center">{explanation}</p>
 	<div class="my-8 grid grid-cols-2 gap-8 px-6">

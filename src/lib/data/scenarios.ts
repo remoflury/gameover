@@ -5,7 +5,7 @@ export const scenarios: ScenarioProps[] = [
     description: "Die Klimaerwärmung führt zu schmelzenden Polkappen, was zu steigendem Meeresspiegel führt.",
     option1: {
       description: "Mit einem Flugzeug sprühst du Chemikalien in die Stratosphäre, um die Sonneneinstrahlung zu reduzieren.",
-      explanation: "Indem das Sonnenlicht zurück ins Weltall reflektiert wrid, wird die Erderwärmung verlangsamt. Die verhindert kurzfristig ein weiteres Schmelzen der Polkappen. Die Chemikalien sind jedoch keine nachhaltige Lösung, da sie den Ausstoss der Treibhausgase nicht verringern. Zudem musst du für einen konkreten Einfluss der Chemikalien jährlich ca. 2.25 Mia. Dollar investieren.",
+      explanation: "Indem das Sonnenlicht zurück ins Weltall reflektiert wird, wird die Erderwärmung verlangsamt. Die verhindert kurzfristig ein weiteres Schmelzen der Polkappen. Die Chemikalien sind jedoch keine nachhaltige Lösung, da sie den Ausstoss der Treibhausgase nicht verringern. Zudem musst du für einen konkreten Einfluss der Chemikalien jährlich ca. 2.25 Mia. Dollar investieren.",
       consequences: {
         economy: -20,
         environment: -5,
