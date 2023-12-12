@@ -53,7 +53,7 @@
 
 	onMount(async () => {
 		//TODO: ent-comment next line
-		// if ($gameStore.isPlaying === false) return goto('/');
+		if ($gameStore.isPlaying === false) return goto('/');
 		await writeResultToDB();
 	});
 </script>

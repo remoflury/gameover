@@ -2,16 +2,17 @@ import { scenarios } from "$lib/data/scenarios";
 import type { GameStoreProps } from "$lib/types/Types";
 import { writable } from "svelte/store";
 
+export const initialScore = 50
 export const gameStore = writable<GameStoreProps>({
   isPlaying: false,
   currentScenario: null,
   userName: null,
   userId: null,
   score: {
-    economy: 0,
-    environment: 50,
-    society: 50,
-    health: 50,
+    economy: initialScore,
+    environment: initialScore,
+    society: initialScore,
+    health: initialScore,
   },
   playedScenarios: [],
   playedEvents: []
