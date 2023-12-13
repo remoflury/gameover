@@ -6,7 +6,7 @@ export const scenarios: ScenarioProps[] = [
     image: 'klimaerwaermung.png',
     option1: {
       description: "Ich sprühe mit einem Flugzeug Chemikalien in die Stratosphäre, um die Sonneneinstrahlung zu reduzieren.",
-      explanation: "Indem das Sonnenlicht zurück ins Weltall reflektiert wird, wird die Erderwärmung verlangsamt. Dies verhindert kurzfristig ein weiteres Schmelzen der Polkappen. Die Chemikalien sind jedoch keine nachhaltige Lösung, da sie den Ausstoß der Treibhausgase nicht verringern. Zudem musst du für einen konkreten Einfluss der Chemikalien jährlich ca. 2.25 Mia. Dollar investieren.",
+      explanation: "Indem das Sonnenlicht zurück ins Weltall reflektiert wird, wird die Erderwärmung verlangsamt. Dies verhindert kurzfristig ein weiteres Schmelzen der Polkappen. Die Chemikalien sind jedoch keine nachhaltige Lösung, da sie den Ausstoss der Treibhausgase nicht verringern. Zudem musst du für einen konkreten Einfluss der Chemikalien jährlich ca. 2.25 Mia. Dollar investieren.",
       consequences: {
         economy: -20,
         environment: -5,
@@ -26,7 +26,7 @@ export const scenarios: ScenarioProps[] = [
     }
   },
   {
-    description: "Durch die Bildungsschere von Erst- & Drittweltländern droht eine weitere große Flüchtlingswelle. Du willst den Zugang zu Bildung für viele Menschen leichter zugänglich machen.",
+    description: "Durch die Bildungsschere von Erst- & Drittweltländern droht eine weitere grosse Flüchtlingswelle. Du willst den Zugang zu Bildung für viele Menschen leichter zugänglich machen.",
     image: 'bildungsschere.png',
     option1: {
       description: "Ich fördere den Ausbau von Schulen in unterentwickelten Regionen.",
@@ -40,7 +40,7 @@ export const scenarios: ScenarioProps[] = [
     },
     option2: {
       description: "Ich unterstütze die Entwicklung von global zugänglichen Online-Bildungsplattformen.",
-      explanation: "Die Entwicklung der Online-Plattformen ist relativ kostengünstig. Vor allem Menschen in unterentwickelten Regionen haben so Zugriff zu qualitativ hochwertiger Bildung, ohne auf eine physische Schule angewiesen zu sein. Dich kostet jedoch die Einführung der dafür notwendigen Infrastruktur eine Menge Geld, da alle Zugang zum Internet haben sollen. Langfristig führt die Maßnahme zu einer Abnahme der Armut.",
+      explanation: "Die Entwicklung der Online-Plattformen ist relativ kostengünstig. Vor allem Menschen in unterentwickelten Regionen haben so Zugriff zu qualitativ hochwertiger Bildung, ohne auf eine physische Schule angewiesen zu sein. Dich kostet jedoch die Einführung der dafür notwendigen Infrastruktur eine Menge Geld, da alle Zugang zum Internet haben sollen. Langfristig führt die Massnahme zu einer Abnahme der Armut.",
       consequences: {
         economy: -10,
         environment: 0,
@@ -54,7 +54,7 @@ export const scenarios: ScenarioProps[] = [
     image: 'lebensmittelkrise.png',
     option1: {
       description: "Mit der Unterstützung von Erstweltländern führe ich in Hafghanistan moderne, nachhaltige Landwirtschaftstechniken und -praktiken ein.",
-      explanation: "Die Investition in fortschrittliche und ressourceneffiziente Landwirtschaftstechnologien zeigt Wirkung, doch erst bei der nächsten Ernte. Das Programm zur Schulung von Bauern findet jedoch Anklang und verhindert so soziale Unruhen. Da die Maßnahmen schnell passieren mussten, kostet es dich eine ganze Stange Geld.",
+      explanation: "Die Investition in fortschrittliche und ressourceneffiziente Landwirtschaftstechnologien zeigt Wirkung, doch erst bei der nächsten Ernte. Das Programm zur Schulung von Bauern findet jedoch Anklang und verhindert so soziale Unruhen. Da die Massnahmen schnell passieren mussten, kostet es dich eine ganze Stange Geld.",
       consequences: {
         economy: -20,
         environment: 10,
@@ -63,8 +63,8 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description: "Schnelle Maßnahmen sind gefragt: Sofort schicke ich tausende Lastwagen mit günstigen Lebensmitteln ins Land.",
-      explanation: "Die schnelle Maßnahme zeigt Wirkung. Weniger Menschen verhungern und sichern vorübergehend die Nahrungsmittelversorgung. Das riesige Aufgebot an Lastwagen hat aber auch Nachteile: Es wird eine Unmenge an CO2 ausgestoßen. Und ein möglicher Ernteausfall im nächsten Jahr kann mit dieser Lösung nicht verhindert werden.",
+      description: "Schnelle Massnahmen sind gefragt: Sofort schicke ich tausende Lastwagen mit günstigen Lebensmitteln ins Land.",
+      explanation: "Die schnelle Massnahme zeigt Wirkung. Weniger Menschen verhungern und sichern vorübergehend die Nahrungsmittelversorgung. Das riesige Aufgebot an Lastwagen hat aber auch Nachteile: Es wird eine Unmenge an CO2 ausgestossen. Und ein möglicher Ernteausfall im nächsten Jahr kann mit dieser Lösung nicht verhindert werden.",
       consequences: {
         economy: -15,
         environment: -10,
@@ -88,7 +88,7 @@ export const scenarios: ScenarioProps[] = [
     },
     option2: {
       description: "Ich investiere in den Ausbau des öffentlichen Nahverkehrs und in die Förderung von Elektromobilität.",
-      explanation: "Diese Investition würde den Bedarf an individuellem Autoverkehr reduzieren und die Luftverschmutzung verringern. Der Ausbau des öffentlichen Nahverkehrs würde es den Bürgern erleichtern, auf umweltfreundlichere Verkehrsmittel umzusteigen. Diese Maßnahme würde auch langfristig zur Verbesserung der städtischen Infrastruktur beitragen.",
+      explanation: "Diese Investition würde den Bedarf an individuellem Autoverkehr reduzieren und die Luftverschmutzung verringern. Der Ausbau des öffentlichen Nahverkehrs würde es den Bürgern erleichtern, auf umweltfreundlichere Verkehrsmittel umzusteigen. Diese Massnahme würde auch langfristig zur Verbesserung der städtischen Infrastruktur beitragen.",
       consequences: {
         economy: -10,
         environment: 20,
@@ -125,7 +125,7 @@ export const scenarios: ScenarioProps[] = [
     description: "In der schnell wachsenden Stadt Mumabi in Indoria leiden die Einwohner unter Wasserknappheit und mangelnder sanitärer Infrastruktur, was zu Gesundheitsrisiken und Umweltproblemen führt.",
     image: 'bildname.png',
     option1: {
-      description: "Ich starte einen großangelegten Bau von Staudämmen zur Wasserregulierung und zur Energiegewinnung.",
+      description: "Ich starte einen grossangelegten Bau von Staudämmen zur Wasserregulierung und zur Energiegewinnung.",
       explanation: "Während die Lösung das Wasserproblem und die Energieversorgung beheben kann, hat es potenziell negative Auswirkungen auf die Umwelt. Der Stausee zerstört Ökosysteme und führt zur Umsiedlung von Gemeinden. Es besteht zudem das Risiko, dass landwirtschaftliche Flächen flussabwärts austrocknen.",
       consequences: {
         economy: 10,
@@ -135,7 +135,7 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description: "Um die Investitionen und die Effizienz zu steigern, führe ich eine großflächige Wasserprivatisierung ein.",
+      description: "Um die Investitionen und die Effizienz zu steigern, führe ich eine grossflächige Wasserprivatisierung ein.",
       explanation: "Die Lösung führt zu einer verbesserten Infrastruktur und Versorgung. Die Wasserpreise steigen jedoch und der Zugang zu sauberem Wasser für arme Haushalte wird somit eingeschränkt. Umweltstandards und nachhaltige Praktiken werden bei der Umsetzung vernachlässigt.",
       consequences: {
         economy: -5,
@@ -170,7 +170,7 @@ export const scenarios: ScenarioProps[] = [
     },
   },
   {
-    description: "In einer ländlichen Gemeinde in Mongoria sind Mädchen und Frauen unverhältnismäßig von Bildungsmangel, frühzeitiger Heirat und geschlechtsspezifischer Gewalt betroffen. Du musst dich entscheiden, um die Ungleichheit zu bekämpfen.",
+    description: "In einer ländlichen Gemeinde in Mongoria sind Mädchen und Frauen unverhältnismässig von Bildungsmangel, frühzeitiger Heirat und geschlechtsspezifischer Gewalt betroffen. Du musst dich entscheiden, um die Ungleichheit zu bekämpfen.",
     image: 'bildname.png',
     option1: {
       description: "Ich konzentriere mich auf Bildungsprogramme in den betroffenen Regionen, um Mädchen und jungen Frauen Zugang zu Schulbildung und Berufsausbildung zu ermöglichen.",
@@ -183,7 +183,7 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description: "Ich setze mich für Maßnahmen zur Bekämpfung von geschlechtsspezifischer Gewalt ein, einschließlich Sensibilisierungskampagnen und Unterstützungsdiensten für Opfer.",
+      description: "Ich setze mich für Massnahmen zur Bekämpfung von geschlechtsspezifischer Gewalt ein, einschliesslich Sensibilisierungskampagnen und Unterstützungsdiensten für Opfer.",
       explanation: "Die erhöhte Sicherheit von Frauen führt zu einer höhere Beteiligung der Frauen am Arbeitsmarkt. Durch die Stärkung des Rechtsschutzes für Frauen ergibt sich ein kultureller Wandel, hin bis zu mehr Geschlechtergerechtigkeit. Auch sind weniger Frauen physischer und psychischer Gewalt ausgesetzt.",
       consequences: {
         economy: 5,
@@ -245,7 +245,7 @@ export const scenarios: ScenarioProps[] = [
     description: "Die schmelzenden Polkappen sind eine direkte Folge der Erderwärmung. Nun drohen küstennahe Städte wie Mumabi oder Fidney unterzugehen. Millionen von Menschen würden ihr Zuhause verlieren.",
     image: 'bildname.png',
     option1: {
-      description: "Ich nutze meine gesamten Ressourcen, um die Millionen Menschen umzusiedeln. Leider bleibt kein Geld für weitere Maßnahmen.",
+      description: "Ich nutze meine gesamten Ressourcen, um die Millionen Menschen umzusiedeln. Leider bleibt kein Geld für weitere Massnahmen.",
       explanation: "Das Unterfangen ist extrem ressourcenintensiv, da Unterkunft und Umsiedlung für Millionen von Menschen organisiert werden muss. Die Menschen freuts, da sie eine neue Bleibe haben und die Weltregierung um sie kümmert - niemand stirbt. Jedoch führt der Anstieg des Meeresspiegels dazu, dass viel Müll aus den neu überschwemmten Gebieten im Meer landet.",
       consequences: {
         economy: -10,
@@ -255,7 +255,7 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description: "Ich nutze meine gesamten Ressourcen, um das Fortschreiten der schmelzenden Polkappen zu verhindern. Leider bleibt kein Geld für weitere Maßnahmen.",
+      description: "Ich nutze meine gesamten Ressourcen, um das Fortschreiten der schmelzenden Polkappen zu verhindern. Leider bleibt kein Geld für weitere Massnahmen.",
       explanation: "Du investierst in CO2-Speicherung, um einen anhaltenden Effekt zu erzielen. Es ist teuer, aber eine nachhaltige Lösung für die Umwelt. Die Menschen fühlen sich in ihrer bedrohten Lage jedoch nicht von der Regierung wahrgenommen und entsprechend unsicher.",
       consequences: {
         economy: -10,
