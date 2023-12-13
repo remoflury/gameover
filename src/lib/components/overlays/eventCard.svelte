@@ -6,7 +6,8 @@
 	import { browser } from '$app/environment';
 	import EffectCategory from '../categories/effectCategory.svelte';
 	import PrimaryButton from '../primaryButton.svelte';
-	import { showToast, updateGameStore } from '$lib/utils/generalUtils';
+	import { isGameOver, showToast, updateGameStore } from '$lib/utils/generalUtils';
+	import { goto } from '$app/navigation';
 
 	let scrollY: number;
 
@@ -23,6 +24,7 @@
 		removeCurrentEvent($currentEvent.index);
 		setTimeout(() => {
 			updateGameStore(economy, environment, society, health);
+			if (isGameOver()) return goto('/game-over');
 		}, 1000);
 	};
 
