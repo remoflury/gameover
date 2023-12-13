@@ -52,7 +52,6 @@
 	const src = getImgPathForGameOverScreen(lowestKey);
 
 	onMount(async () => {
-		//TODO: ent-comment next line
 		if ($gameStore.isPlaying === false) return goto('/');
 		await writeResultToDB();
 	});

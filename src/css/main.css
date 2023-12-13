@@ -23,6 +23,10 @@
     @apply font-dm-sans text-base text-black-plain
   }
 
+  p.tutorial {
+    @apply font-lilita text-2xl uppercase text-center text-white-soft
+  }
+
   a.link {
     @apply underline underline-offset-2 hover:opacity-80 transition
   }

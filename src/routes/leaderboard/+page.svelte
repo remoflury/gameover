@@ -59,8 +59,7 @@
 		goto('/');
 	};
 	onMount(() => {
-		// TODO uncomment next line
-		// if ($gameStore.isPlaying === false) return goto('/');
+		if ($gameStore.isPlaying === false) return goto('/');
 	});
 </script>
 
