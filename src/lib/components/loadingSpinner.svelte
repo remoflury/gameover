@@ -1,8 +1,12 @@
+<script lang="ts">
+	export let isWhite = true;
+</script>
+
 <div class="lds-ellipsis">
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
+	<div class:bg-white-soft={isWhite} class:bg-turqoise-dark={!isWhite}></div>
+	<div class:bg-white-soft={isWhite} class:bg-turqoise-dark={!isWhite}></div>
+	<div class:bg-white-soft={isWhite} class:bg-turqoise-dark={!isWhite}></div>
+	<div class:bg-white-soft={isWhite} class:bg-turqoise-dark={!isWhite}></div>
 </div>
 
 <style lang="postcss">
@@ -20,7 +24,6 @@
 		width: 13px;
 		height: 13px;
 		border-radius: 50%;
-		background: #fff;
 		animation-timing-function: cubic-bezier(0, 1, 1, 0);
 	}
 	.lds-ellipsis div:nth-child(1) {

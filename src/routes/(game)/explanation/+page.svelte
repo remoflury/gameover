@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
-	import { getTotalScore, isGameOver, showToast } from '$lib/utils/generalUtils';
-	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import { fade } from 'svelte/transition';
+	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
+	import { isGameOver, showToast, updateGameStore } from '$lib/utils/generalUtils';
+	import PrimaryButton from '$lib/components/primaryButton.svelte';
+	import ExplanationCard from '$lib/components/explanationCard.svelte';
 
 	let isButtonVisible = false;
 	// remove current scenario from scenario store
@@ -24,17 +25,42 @@
 		else goto('/scenario');
 	};
 
-	const updateGameStore = (
-		economy: number,
-		environment: number,
-		society: number,
-		health: number
-	) => {
-		$gameStore.score.economy += economy;
-		$gameStore.score.environment += environment;
-		$gameStore.score.society += society;
-		$gameStore.score.health += health;
-	};
+	// const updateGameStore = (
+	// 	economy: number,
+	// 	environment: number,
+	// 	society: number,
+	// 	health: number
+	// ) => {
+	// 	$gameStore.score.economy = cutOffIfOverMaxValue(
+	// 		$gameStore.score.economy,
+	// 		economy,
+	// 		category100PercentValue
+	// 	);
+	// 	$gameStore.score.environment = cutOffIfOverMaxValue(
+	// 		$gameStore.score.environment,
+	// 		environment,
+	// 		category100PercentValue
+	// 	);
+	// 	$gameStore.score.society = cutOffIfOverMaxValue(
+	// 		$gameStore.score.society,
+	// 		society,
+	// 		category100PercentValue
+	// 	);
+	// 	$gameStore.score.health = cutOffIfOverMaxValue(
+	// 		$gameStore.score.health,
+	// 		health,
+	// 		category100PercentValue
+	// 	);
+	// };
+
+	// const cutOffIfOverMaxValue = (
+	// 	inputValue: number,
+	// 	consequenceValue: number,
+	// 	maxValue: number
+	// ): number => {
+	// 	if (inputValue + consequenceValue >= maxValue) return maxValue;
+	// 	return inputValue + consequenceValue;
+	// };
 
 	onMount(() => {
 		// if no option is selected or currentScenario is not set, or user is not playing
@@ -47,7 +73,6 @@
 		// prevent go back
 		if (isGameOver()) return goto('/game-over');
 
-		// TODO: if one category score is smaller than 0, redirect to gameover screen?
 		setTimeout(() => {
 			if ($gameStore.currentScenario === null) return;
 			if ($selectedOption === undefined) return;
@@ -64,25 +89,20 @@
 </script>
 
 <section class="container py-block-page">
-	<article class="bg-white-soft">
-		<h1>Erklärung</h1>
-		{#if $selectedOption && $gameStore.currentScenario !== null}
-			{@const option = $scenarioStore[$gameStore.currentScenario][`option${$selectedOption}`]}
-			{option.explanation}
+	{#if $selectedOption && $gameStore.currentScenario !== null}
+		{@const option = $scenarioStore[$gameStore.currentScenario][`option${$selectedOption}`]}
+		<ExplanationCard
+			explanation={option.explanation}
+			economy={option.consequences.economy}
+			environment={option.consequences.environment}
+			society={option.consequences.society}
+			health={option.consequences.health}
+		/>
 
-			<div class="mt-8">
-				<p>economy: {option.consequences.economy}</p>
-				<p>environment: {option.consequences.environment}</p>
-				<p>society: {option.consequences.society}</p>
-				<p>health: {option.consequences.health}</p>
+		{#if isButtonVisible}
+			<div class="flex justify-end mt-4" transition:fade={{ duration: 350 }}>
+				<PrimaryButton text="Weiter" type="button" on:click={() => handleNextScenario()} />
 			</div>
-
-			<p>Dein aktueller Score: {getTotalScore($gameStore.playedScenarios.length)}</p>
-			{#if isButtonVisible}
-				<div transition:fade={{ duration: 350 }}>
-					<PrimaryButton text="Weiter" type="button" on:click={() => handleNextScenario()} />
-				</div>
-			{/if}
 		{/if}
-	</article>
+	{/if}
 </section>

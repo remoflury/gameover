@@ -6,7 +6,40 @@
 
 @layer base {
 
+  html {
+    @apply scroll-smooth bg-white-plain
+  }
+
+  h1,
+  .h1 {
+    @apply font-lilita text-3xl mb-4 uppercase
+  }
+
+  h2 {
+    @apply font-lilita text-2xl mb-3 uppercase
+  }
+
+  p {
+    @apply font-dm-sans text-base text-black-plain
+  }
+
+  a.link {
+    @apply underline underline-offset-2 hover:opacity-80 transition
+  }
+
+  .redactor p {
+    @apply mt-4 first:mt-0
+  }
+
+  .container {
+    @apply grid grid-cols-4 gap-x-4;
+  }
+
+  .container > * {
+    @apply col-span-full
+  }
+
   input {
-    @apply block w-full
+    @apply block w-full px-4 py-2 bg-white-soft outline-none focus:outline focus:outline-1 focus:outline-turqoise-dark placeholder:text-gray rounded-max
   }
 }

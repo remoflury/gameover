@@ -10,6 +10,7 @@ export default {
       gray: "#D4D9DD",
       beige: "#BAB6B5",
       white: {
+        plain: '#FFFFFF',
         soft: "#F1F1F1"
       },
       green: {
@@ -40,6 +41,13 @@ export default {
         padding: {
           DEFAULT: '1rem'
         }
+      },
+      aspectRatio: {
+        '4/3': '4/3'
+      },
+      borderRadius: {
+        max: '100vmax',
+        card: '1.25rem'
       },
       maxWidth: {
         '1/4': "25%",

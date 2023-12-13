@@ -17,10 +17,15 @@ export type GameStoreProps = {
 }
 
 export type EventProps = {
+  id: number,
+  title: string,
   description: string,
   consequences: ConsequenceProps,
-  effect: 'positive' |'negative'
+  effect: EventEffectProps,
+  image: string,
 }
+
+export type EventEffectProps = 'positive' |'negative'
 
 export type ConsequenceProps = {
   economy: number,
@@ -29,8 +34,11 @@ export type ConsequenceProps = {
   health: number
 } 
 
+export type CategoryProps = 'economy' | 'environment' | 'society' | 'health'
+
 export type ScenarioProps = {
   description: string,
+  image: string,
   option1: ScenarioOptionProps,
   option2: ScenarioOptionProps,
 }
@@ -45,4 +53,13 @@ export type ServerAPIResponseProps = {
   status: 200 | 201 | 400 | 401 | 401 | 402 | 403 | 404 | 500,
   message?: string,
   data?: any
+}
+
+export type GameOverTextProps = {
+  [key in keyof ConsequenceProps]: string
+}
+
+export type CurrentEventProps = {
+  index: number | null;
+  event: EventProps | null
 }

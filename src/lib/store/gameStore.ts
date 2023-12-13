@@ -1,6 +1,9 @@
+import { events } from "$lib/data/events";
 import { scenarios } from "$lib/data/scenarios";
-import type { GameStoreProps } from "$lib/types/Types";
+import type { CurrentEventProps, GameStoreProps } from "$lib/types/Types";
+import { initialScore } from "$lib/utils/generalVariables";
 import { writable } from "svelte/store";
+
 
 export const gameStore = writable<GameStoreProps>({
   isPlaying: false,
@@ -8,10 +11,10 @@ export const gameStore = writable<GameStoreProps>({
   userName: null,
   userId: null,
   score: {
-    economy: 50,
-    environment: 50,
-    society: 50,
-    health: 50,
+    economy: initialScore,
+    environment: initialScore,
+    society: initialScore,
+    health: initialScore,
   },
   playedScenarios: [],
   playedEvents: []
@@ -28,4 +31,21 @@ scenarioStore.subscribe($scenarioStore => {
   }
 });
 
+export const eventsStore = writable([...events])
+
+// if event store is empty, reset store with all events
+eventsStore.subscribe($eventsStore => {
+  if ($eventsStore.length === 0) {
+    eventsStore.set([...events]);
+  }
+});
+
+
 export const showTutorial = writable(false)
+
+export const showEvent = writable(false)
+
+export const currentEvent = writable<CurrentEventProps>({
+  index: null,
+  event: null
+})

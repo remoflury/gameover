@@ -1,0 +1,8 @@
+import type { GameOverTextProps } from "$lib/types/Types";
+
+export const gameOverText: GameOverTextProps = {
+  economy: "Die wirtschaftliche Stabilität der Welt ist zusammengebrochen. Deine Entscheidungen haben zu Finanzkrisen, Arbeitslosigkeit und wirtschaftlichem Chaos geführt. Die Wirtschaftskategorie ist auf null gefallen, und die Welt steht vor einem wirtschaftlichen Kollaps. Das Spiel ist vorbei, und die Menschen kämpfen um ihre Existenzgrundlagen in einer instabilen wirtschaftlichen Umgebung.",
+  environment: "Die Umwelt leidet unter den langfristigen Auswirkungen deiner Entscheidungen. Raubbau an natürlichen Ressourcen, unkontrollierte Umweltverschmutzung und mangelnde Nachhaltigkeit haben dazu geführt, dass die Ökosysteme der Welt kollabieren. Die Natur kann nicht länger mit den Belastungen Schritt halten, und die Umweltkategorie ist auf null gefallen. Das Spiel ist vorbei, und die Erde steht vor einer ökologischen Katastrophe.",
+  society: "Die sozialen Strukturen der Welt sind zerbrochen. Deine Entscheidungen haben zu sozialer Ungerechtigkeit, Armut, und Konflikten geführt. Die Menschen sind unzufrieden und fühlen sich vernachlässigt. Die Gesellschaftskategorie ist auf null gefallen, und das Vertrauen zwischen den Menschen ist zerstört. Das Spiel ist vorbei, und die Welt leidet unter sozialen Spannungen.",
+  health: "Die Gesundheit der Bevölkerung ist kritisch gefährdet. Deine Entscheidungen haben zu einem Zusammenbruch des Gesundheitssystems geführt, unzureichende medizinische Versorgung und Ausbreitung von Krankheiten. Die Medizinkategorie ist auf null gefallen, und die Welt steht vor einer globalen Gesundheitskrise. Das Spiel ist vorbei, und die Menschen leiden unter unzureichender medizinischer Versorgung."
+}

@@ -4,6 +4,7 @@ import { gameStore } from "$lib/store/gameStore"
 // import type { ConsequenceProps } from "$lib/types/Types"
 import { toasts } from "svelte-toasts"
 import { get } from "svelte/store"
+import { category100PercentValue } from "./generalVariables"
 
 export const getRandomIndex = <T>(array: T[]): number => {
   return Math.floor(Math.random()*array.length)
@@ -13,22 +14,96 @@ export const getTotalScore = (number: number) => {
   return Math.floor(number * parseInt(PUBLIC_POINTS_MULTIPLIER)) + 1
 }
 
-// export const updateGameScore = (newScores: ConsequenceProps, playedScenario: number) => {
-//   console.log('run')
-//   gameStore.update(currentStore => {
-//     // Create a new object for the updated store
-//     return {
-//       ...currentStore,
-//       playedScenarios: [...currentStore.playedScenarios, playedScenario],
-//       score: {
-//         economy: currentStore.score.economy + newScores.economy,
-//         environment: currentStore.score.environment + newScores.environment,
-//         society: currentStore.score.society + newScores.society,
-//         health: currentStore.score.health + newScores.health,
-//       }
-//     };
+export const cutOffIfOverMaxValue = (
+  inputValue: number,
+  consequenceValue: number,
+  maxValue: number
+): number => {
+  if (inputValue + consequenceValue >= maxValue) return maxValue;
+  return inputValue + consequenceValue;
+};
+
+export const updateGameStore = (
+  economy: number,
+  environment: number,
+  society: number,
+  health: number
+) => {
+  gameStore.update($gameStore => {
+    $gameStore.score.economy = cutOffIfOverMaxValue(
+        $gameStore.score.economy,
+        economy,
+        category100PercentValue
+    );
+    $gameStore.score.environment = cutOffIfOverMaxValue(
+        $gameStore.score.environment,
+        environment,
+        category100PercentValue
+    );
+    $gameStore.score.society = cutOffIfOverMaxValue(
+        $gameStore.score.society,
+        society,
+        category100PercentValue
+    );
+    $gameStore.score.health = cutOffIfOverMaxValue(
+        $gameStore.score.health,
+        health,
+        category100PercentValue
+    );
+    return $gameStore;
+});
+  // $gameStore.score.economy = cutOffIfOverMaxValue(
+  //   $gameStore.score.economy,
+  //   economy,
+  //   category100PercentValue
+  // );
+  // $gameStore.score.environment = cutOffIfOverMaxValue(
+  //   $gameStore.score.environment,
+  //   environment,
+  //   category100PercentValue
+  // );
+  // $gameStore.score.society = cutOffIfOverMaxValue(
+  //   $gameStore.score.society,
+  //   society,
+  //   category100PercentValue
+  // );
+  // $gameStore.score.health = cutOffIfOverMaxValue(
+  //   $gameStore.score.health,
+  //   health,
+  //   category100PercentValue
+  // );
+};
+
+// export const updateGameStore = (
+//   economy: number,
+//   environment: number,
+//   society: number,
+//   health: number
+// ) => {
+//   gameStore.update($gameStore => {
+//       $gameStore.score.economy = cutOffIfOverMaxValue(
+//           $gameStore.score.economy,
+//           economy,
+//           category100PercentValue
+//       );
+//       $gameStore.score.environment = cutOffIfOverMaxValue(
+//           $gameStore.score.environment,
+//           environment,
+//           category100PercentValue
+//       );
+//       $gameStore.score.society = cutOffIfOverMaxValue(
+//           $gameStore.score.society,
+//           society,
+//           category100PercentValue
+//       );
+//       $gameStore.score.health = cutOffIfOverMaxValue(
+//           $gameStore.score.health,
+//           health,
+//           category100PercentValue
+//       );
+//       return $gameStore;
 //   });
-// }
+// };
 
 export const showToast = (title: string, description: string, type: 'info' | 'success' | 'error' | 'warning', duration: number = 2000) => {
   return toasts.add({
@@ -37,7 +112,7 @@ export const showToast = (title: string, description: string, type: 'info' | 'su
     duration, // 0 or negative to avoid auto-remove
     placement: 'top-center',
     type,
-    theme: 'dark',
+    theme: "dark"
     // onClick: () => {},
     // onRemove: () => {}
     // component: BootstrapToast, // allows to override toast component/template per toast
@@ -45,15 +120,6 @@ export const showToast = (title: string, description: string, type: 'info' | 'su
 };
 
 
-// check if Game is over
-// export const isGameOver = (): boolean => {
-//   if ($gameStore.score.economy <= 0) return true;
-//   if ($gameStore.score.environment <= 0) return true;
-//   if ($gameStore.score.society <= 0) return true;
-//   if ($gameStore.score.health <= 0) return true;
-
-//   return false;
-// };
 export const isGameOver = (): boolean => {
   const gameStoreValue = get(gameStore);
 

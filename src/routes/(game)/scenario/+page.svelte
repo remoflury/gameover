@@ -1,15 +1,27 @@
 <script lang="ts">
-	import type { ScenarioProps } from '$lib/types/Types';
+	import type { EventEffectProps, ScenarioProps } from '$lib/types/Types';
 	import { goto } from '$app/navigation';
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import { createAccordionContext } from '$lib/store/accordionStore';
-	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
+	import {
+		currentEvent,
+		eventsStore,
+		gameStore,
+		scenarioStore,
+		selectedOption,
+		showEvent
+	} from '$lib/store/gameStore';
 	import { getRandomIndex, isGameOver } from '$lib/utils/generalUtils';
-	import OptionAccordion from '$lib/components/optionAccordion.svelte';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import ScenarioCard from '$lib/components/scenarioCard.svelte';
 	import { onMount } from 'svelte';
+	import OptionCard from '$lib/components/optionCard.svelte';
+	import {
+		eventThreshholdForNegativeEvent,
+		eventThreshholdForPositiveEvent,
+		eventsAfterRounds
+	} from '$lib/utils/generalVariables';
 
 	let randomIndex: number;
 	let currentScenario: ScenarioProps;
@@ -19,12 +31,65 @@
 		$gameStore.currentScenario = randomIndex;
 		// $gameStore.playedScenarios.push(randomIndex);
 		currentScenario = $scenarioStore[randomIndex];
+
+		// if the count of played scenarios exceeds a certain count of rounds,
+		// check if a event is needed
+		if ($gameStore.playedScenarios.length >= eventsAfterRounds) {
+			// chance fo 50% for an event
+			if (Math.random() < 0.5) return;
+
+			const event = checkForEvent(
+				$gameStore.score.economy,
+				$gameStore.score.environment,
+				$gameStore.score.society,
+				$gameStore.score.health
+			);
+			if (event) loadEvent(event);
+		}
 	};
 
 	const handleSelection = (option: 1 | 2) => {
 		// function, to prevent clicking twice on the same option, without resetting the logic behind it
 		if ($selectedOption === option) return ($selectedOption = undefined);
 		return ($selectedOption = option);
+	};
+
+	const checkForEvent = (
+		economy: number,
+		environment: number,
+		society: number,
+		health: number
+	): EventEffectProps | false => {
+		const negTreshhold = eventThreshholdForNegativeEvent;
+		const posTreshold = eventThreshholdForPositiveEvent;
+
+		// if one of the categories is below the treshhold, return the need for a positive event
+		if (
+			economy <= negTreshhold ||
+			environment <= negTreshhold ||
+			society <= negTreshhold ||
+			health <= negTreshhold
+		)
+			return 'positive';
+		// if one of the categories is over the treshhold, return the need for a negative event
+		if (
+			economy >= posTreshold ||
+			environment >= posTreshold ||
+			society >= posTreshold ||
+			health >= posTreshold
+		)
+			return 'negative';
+
+		// if no event is needed, return false
+		return false;
+	};
+
+	const loadEvent = (effect: EventEffectProps) => {
+		const desiredEvents = $eventsStore.filter((event) => event.effect == effect);
+		const randomIndex = getRandomIndex(desiredEvents);
+		$currentEvent.index = desiredEvents[randomIndex].id;
+		$currentEvent.event = desiredEvents[randomIndex];
+		$showEvent = true;
 	};
 
 	const handleChoose = () => {
@@ -40,19 +105,13 @@
 	});
 </script>
 
-<section class="container py-block-page">
+<section class="container gap-y-4 py-block-page">
 	{#if currentScenario}
 		<ScenarioCard description={currentScenario.description} />
-		<OptionAccordion
-			description={currentScenario.option1.description}
-			on:selected={() => handleSelection(1)}
-		/>
-		<OptionAccordion
-			description={currentScenario.option2.description}
-			on:selected={() => handleSelection(2)}
-		/>
+		<OptionCard text={currentScenario.option1.description} on:selected={() => handleSelection(1)} />
+		<OptionCard text={currentScenario.option2.description} on:selected={() => handleSelection(2)} />
 		{#if $selectedOption}
-			<div transition:fade={{ duration: 250, easing: cubicInOut }}>
+			<div class="flex justify-end" transition:fade={{ duration: 250, easing: cubicInOut }}>
 				<PrimaryButton text="Weiter" type="button" on:click={handleChoose} />
 			</div>
 		{/if}
