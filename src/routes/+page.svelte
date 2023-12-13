@@ -86,9 +86,9 @@
 				{/if}
 			</form>
 
-			<div class="flex justify-between items-center gap-x-4 w-full">
-				<Link href="/source" text="Quellen" />
-				<Link href="/about" text="Über uns" />
+			<div class="flex justify-between items-center gap-x-4 w-full mt-2">
+				<Link href="/sources" text="Quellen" />
+				<Link href="/about" text="Über GameOver?" isTextAlignedRight={true} />
 			</div>
 		</div>
 	</article>

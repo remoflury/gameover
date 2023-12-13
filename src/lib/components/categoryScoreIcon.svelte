@@ -46,7 +46,7 @@
 </script>
 
 <figure
-	class="w-8 aspect-square bg-turqoise-light relative isolate overflow-hidden"
+	class="w-12 aspect-square bg-turqoise-light relative isolate overflow-hidden"
 	bind:this={elem}
 >
 	<svelte:component this={getIcon()}></svelte:component>

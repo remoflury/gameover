@@ -6,9 +6,9 @@
 	import LoadingSpinner from '$lib/components/loadingSpinner.svelte';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import { scenarios } from '$lib/data/scenarios';
-	import { gameStore, initialScore, scenarioStore, selectedOption } from '$lib/store/gameStore';
+	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
 	import type { LeaderboardUsersProps, ServerAPIResponseProps } from '$lib/types/Types.js';
-	import { serverErrMessage } from '$lib/utils/generalVariables';
+	import { initialScore, serverErrMessage } from '$lib/utils/generalVariables';
 	import { onMount } from 'svelte';
 	import { sineIn } from 'svelte/easing';
 	import { slide } from 'svelte/transition';

@@ -15,8 +15,20 @@
     @apply font-lilita text-3xl mb-4 uppercase
   }
 
+  h2 {
+    @apply font-lilita text-2xl mb-3 uppercase
+  }
+
   p {
     @apply font-dm-sans text-base text-black-plain
+  }
+
+  a.link {
+    @apply underline underline-offset-2 hover:opacity-80 transition
+  }
+
+  .redactor p {
+    @apply mt-4 first:mt-0
   }
 
   .container {

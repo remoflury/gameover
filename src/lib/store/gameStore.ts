@@ -1,8 +1,9 @@
 import { scenarios } from "$lib/data/scenarios";
 import type { GameStoreProps } from "$lib/types/Types";
+import { initialScore } from "$lib/utils/generalVariables";
 import { writable } from "svelte/store";
 
-export const initialScore = 50
+
 export const gameStore = writable<GameStoreProps>({
   isPlaying: false,
   currentScenario: null,
