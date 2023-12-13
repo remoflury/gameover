@@ -17,10 +17,15 @@ export type GameStoreProps = {
 }
 
 export type EventProps = {
+  id: number,
+  title: string,
   description: string,
   consequences: ConsequenceProps,
-  effect: 'positive' |'negative'
+  effect: EventEffectProps,
+  image: string,
 }
+
+export type EventEffectProps = 'positive' |'negative'
 
 export type ConsequenceProps = {
   economy: number,
@@ -52,4 +57,9 @@ export type ServerAPIResponseProps = {
 
 export type GameOverTextProps = {
   [key in keyof ConsequenceProps]: string
+}
+
+export type CurrentEventProps = {
+  index: number | null;
+  event: EventProps | null
 }

@@ -3,10 +3,9 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
-	import { isGameOver, showToast } from '$lib/utils/generalUtils';
+	import { isGameOver, showToast, updateGameStore } from '$lib/utils/generalUtils';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import ExplanationCard from '$lib/components/explanationCard.svelte';
-	import { category100PercentValue } from '$lib/utils/generalVariables';
 
 	let isButtonVisible = false;
 	// remove current scenario from scenario store
@@ -26,44 +25,42 @@
 		else goto('/scenario');
 	};
 
-	const updateGameStore = (
-		economy: number,
-		environment: number,
-		society: number,
-		health: number
-	) => {
-		$gameStore.score.economy = cutOffIfOverMaxValue(
-			$gameStore.score.economy,
-			economy,
-			category100PercentValue
-		);
-		$gameStore.score.environment = cutOffIfOverMaxValue(
-			$gameStore.score.environment,
-			environment,
-			category100PercentValue
-		);
-		$gameStore.score.society = cutOffIfOverMaxValue(
-			$gameStore.score.society,
-			society,
-			category100PercentValue
-		);
-		$gameStore.score.health = cutOffIfOverMaxValue(
-			$gameStore.score.health,
-			health,
-			category100PercentValue
-		);
-	};
+	// const updateGameStore = (
+	// 	economy: number,
+	// 	environment: number,
+	// 	society: number,
+	// 	health: number
+	// ) => {
+	// 	$gameStore.score.economy = cutOffIfOverMaxValue(
+	// 		$gameStore.score.economy,
+	// 		economy,
+	// 		category100PercentValue
+	// 	);
+	// 	$gameStore.score.environment = cutOffIfOverMaxValue(
+	// 		$gameStore.score.environment,
+	// 		environment,
+	// 		category100PercentValue
+	// 	);
+	// 	$gameStore.score.society = cutOffIfOverMaxValue(
+	// 		$gameStore.score.society,
+	// 		society,
+	// 		category100PercentValue
+	// 	);
+	// 	$gameStore.score.health = cutOffIfOverMaxValue(
+	// 		$gameStore.score.health,
+	// 		health,
+	// 		category100PercentValue
+	// 	);
+	// };
 
-	$: console.log($gameStore.score.environment);
-
-	const cutOffIfOverMaxValue = (
-		inputValue: number,
-		consequenceValue: number,
-		maxValue: number
-	): number => {
-		if (inputValue + consequenceValue >= maxValue) return maxValue;
-		return inputValue + consequenceValue;
-	};
+	// const cutOffIfOverMaxValue = (
+	// 	inputValue: number,
+	// 	consequenceValue: number,
+	// 	maxValue: number
+	// ): number => {
+	// 	if (inputValue + consequenceValue >= maxValue) return maxValue;
+	// 	return inputValue + consequenceValue;
+	// };
 
 	onMount(() => {
 		// if no option is selected or currentScenario is not set, or user is not playing
