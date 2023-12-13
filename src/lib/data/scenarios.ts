@@ -1,5 +1,30 @@
 import type { ScenarioProps } from "$lib/types/Types";
 
+export const tutorialScenario: ScenarioProps = {
+  description: "Die Klimaerwärmung führt zu schmelzenden Polkappen, was zu steigendem Meeresspiegel führt.",
+  image: 'klimaerwaermung.png',
+  option1: {
+    description: "Ich sprühe mit einem Flugzeug Chemikalien in die Stratosphäre, um die Sonneneinstrahlung zu reduzieren.",
+    explanation: "Indem das Sonnenlicht zurück ins Weltall reflektiert wird, wird die Erderwärmung verlangsamt. Dies verhindert kurzfristig ein weiteres Schmelzen der Polkappen. Die Chemikalien sind jedoch keine nachhaltige Lösung, da sie den Ausstoss der Treibhausgase nicht verringern. Zudem musst du für einen konkreten Einfluss der Chemikalien jährlich ca. 2.25 Mia. Dollar investieren.",
+    consequences: {
+      economy: -20,
+      environment: -5,
+      society: 0,
+      health: 0
+    }
+  },
+  option2: {
+    description: "Ich nehme die führenden Personen aller Länder bei der Hand und führe ein verpflichtendes Klimaabkommen ein, das zu einer drastischen Reduzierung der CO2-Emissionen weltweit führen soll.",
+    explanation: "Im Gegensatz zum Pariser Klimaabkommen ist dein neues Abkommen ein bindendes Abkommen für alle Staaten. Die Einführung führt zu Spannungen und dauert lange. Der langfristige Effekt auf die Umwelt ist jedoch positiv, da die CO2 Bilanz verbessert wird. Die Investitionen aller Länder kosten jedoch viel Geld. Langfristig stärken sie die Wirtschaft jedoch, da neue Arbeitsplätze geschaffen werden.",
+    consequences: {
+      economy: 5,
+      environment: 20,
+      society: -10,
+      health: 0
+    }
+  }
+}
+
 export const scenarios: ScenarioProps[] = [
   {
     description: "Die Klimaerwärmung führt zu schmelzenden Polkappen, was zu steigendem Meeresspiegel führt.",

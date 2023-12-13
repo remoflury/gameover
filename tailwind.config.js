@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ['./src/**/*.{html,svg,js,svelte,ts}'],
   theme: {
     colors: {
       black: {
@@ -29,7 +29,8 @@ export default {
       turqoise: {
         light: "#76BCB2",
         dark: "#3A7F85"
-      }
+      },
+      transparent: 'transparent'
     },
     fontFamily: {
       "lilita": ["Lilita", "sans-serif"],

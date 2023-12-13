@@ -9,9 +9,15 @@
 	export let environment: number;
 	export let society: number;
 	export let health: number;
+	export let isTutorial = false;
 </script>
 
-<article class="rounded-card bg-white-soft p-6 overflow-hidden">
+<article
+	class="rounded-card p-6 overflow-hidden"
+	class:bg-black-plain={isTutorial}
+	class:bg-opacity-5={isTutorial}
+	class:bg-white-soft={!isTutorial}
+>
 	<div class="max-w-[3rem] flex justify-center mb-8 mx-auto">
 		<LightBulb />
 	</div>
