@@ -41,7 +41,7 @@ eventsStore.subscribe($eventsStore => {
 });
 
 
-export const showTutorial = writable(true)
+export const showTutorial = writable(false)
 
 export const showEvent = writable(false)
 
