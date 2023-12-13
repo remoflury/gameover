@@ -63,14 +63,6 @@
 		const negTreshhold = eventThreshholdForNegativeEvent;
 		const posTreshold = eventThreshholdForPositiveEvent;
 
-		// if one of the categories is below the treshhold, return the need for a positive event
-		if (
-			economy <= negTreshhold ||
-			environment <= negTreshhold ||
-			society <= negTreshhold ||
-			health <= negTreshhold
-		)
-			return 'positive';
 		// if one of the categories is over the treshhold, return the need for a negative event
 		if (
 			economy >= posTreshold ||
@@ -79,6 +71,14 @@
 			health >= posTreshold
 		)
 			return 'negative';
+		// if one of the categories is below the treshhold, return the need for a positive event
+		if (
+			economy <= negTreshhold ||
+			environment <= negTreshhold ||
+			society <= negTreshhold ||
+			health <= negTreshhold
+		)
+			return 'positive';
 
 		// if no event is needed, return false
 		return false;
