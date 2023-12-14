@@ -219,6 +219,7 @@
 								type="button"
 								on:click={() => {
 									$showTutorial = false;
+									step = 1;
 									goto('/scenario');
 								}}
 							/>

@@ -74,37 +74,6 @@ export const updateGameStore = (
   // );
 };
 
-// export const updateGameStore = (
-//   economy: number,
-//   environment: number,
-//   society: number,
-//   health: number
-// ) => {
-//   gameStore.update($gameStore => {
-//       $gameStore.score.economy = cutOffIfOverMaxValue(
-//           $gameStore.score.economy,
-//           economy,
-//           category100PercentValue
-//       );
-//       $gameStore.score.environment = cutOffIfOverMaxValue(
-//           $gameStore.score.environment,
-//           environment,
-//           category100PercentValue
-//       );
-//       $gameStore.score.society = cutOffIfOverMaxValue(
-//           $gameStore.score.society,
-//           society,
-//           category100PercentValue
-//       );
-//       $gameStore.score.health = cutOffIfOverMaxValue(
-//           $gameStore.score.health,
-//           health,
-//           category100PercentValue
-//       );
-//       return $gameStore;
-//   });
-// };
-
 export const showToast = (title: string, description: string, type: 'info' | 'success' | 'error' | 'warning', duration: number = 2000) => {
   return toasts.add({
     title,

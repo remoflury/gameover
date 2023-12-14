@@ -6,7 +6,7 @@
 </script>
 
 <article class="p-6 bg-orange-dirty rounded-card overflow-hidden">
-	<h1 class="text-white-soft text-center">GameOver!</h1>
+	<h1 class="text-white-soft text-center">Game Over!</h1>
 	<p class="text-white-soft text-center">
 		{gameOverText[type]}
 	</p>
