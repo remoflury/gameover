@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { gameScore } from '$lib/store/gameStore';
 	import LightBulb from '$lib/assets/lightBulb.svelte';
 	import EffectCategory from './categories/effectCategory.svelte';
 	import CurrentScore from './currentScore.svelte';
@@ -17,6 +18,7 @@
 	class:bg-black-plain={isTutorial}
 	class:bg-opacity-5={isTutorial}
 	class:bg-white-soft={!isTutorial}
+	style={`margin-top: ${$gameScore.height}px`}
 >
 	<div class="max-w-[3rem] flex justify-center mb-8 mx-auto">
 		<LightBulb />

@@ -50,6 +50,9 @@ export default {
         max: '100vmax',
         card: '1.25rem'
       },
+      boxShadow: {
+        'game-score': '0 5px 10px 0px rgba(0, 0, 0, 0.15)',
+      },
       maxWidth: {
         '1/4': "25%",
         '1/2': '50%',

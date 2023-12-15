@@ -42,7 +42,7 @@
   .container > * {
     @apply col-span-full
   }
-
+  
   input {
     @apply block w-full px-4 py-2 bg-white-soft outline-none focus:outline focus:outline-1 focus:outline-turqoise-dark placeholder:text-gray rounded-max
   }

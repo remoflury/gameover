@@ -49,3 +49,8 @@ export const currentEvent = writable<CurrentEventProps>({
   index: null,
   event: null
 })
+
+export const gameScore = writable({
+  height: 0,
+  scrollY: 0
+})

@@ -7,6 +7,7 @@
 	import {
 		currentEvent,
 		eventsStore,
+		gameScore,
 		gameStore,
 		scenarioStore,
 		selectedOption,
@@ -108,7 +109,11 @@
 	});
 </script>
 
-<section class="container gap-y-4 py-block-page" class:bg-black-plain={$showTutorial}>
+<section
+	class="container gap-y-4 py-block-page"
+	class:bg-black-plain={$showTutorial}
+	class:-mt-8={$gameScore.height}
+>
 	{#if currentScenario}
 		<ScenarioCard
 			description={currentScenario.description}
