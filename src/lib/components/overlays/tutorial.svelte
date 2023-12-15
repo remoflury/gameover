@@ -44,7 +44,7 @@
 </script>
 
 <section transition:fly={{ duration: 350, y: -200 }} class="absolute inset-0 bg-white-plain">
-	<article class="bg-opacity-75 h-full relative z-10">
+	<article class="bg-opacity-75 min-h-screen relative z-10">
 		{#if step <= 4}
 			<!-- Game Score, step 2 -->
 			<div
