@@ -72,10 +72,12 @@
 			<div
 				class="relative aspect-video bg-[url('/assets/leaderboard-card.png')] bg-cover bg-center bg-no-repeat rounded-card overflow-hidden p-6"
 			>
-				<div class="max-w-3/4">
-					<h2 class="uppercase tracking-wide mb-2">{$gameStore.userName}</h2>
-					<p class="text-[22px] font-lilita uppercase mb-4">Rang {rankCurrentUser}!</p>
-					<p class="text-black-soft">Dein Score: {scoreCurrentUser?.score}</p>
+				<div class="max-w-3/4 flex flex-col gap-y-2 justify-between h-full">
+					<div>
+						<h2 class="uppercase tracking-wide mb-1">{$gameStore.userName}</h2>
+						<p class="text-3xl font-lilita uppercase">Rang {rankCurrentUser}!</p>
+					</div>
+					<p class="text-white-soft text-lg mt-auto">Dein Score: {scoreCurrentUser?.score}</p>
 				</div>
 				<div class="absolute bottom-6 flex justify-between gap-x-4 mt-auto">
 					<!-- <EconomyIconMask /> -->

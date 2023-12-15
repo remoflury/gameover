@@ -42,12 +42,6 @@
 			// chance fo 50% for an event
 			if (Math.random() < eventsChance) return;
 
-			// const event = checkForEvent(
-			// 	$gameStore.score.economy,
-			// 	$gameStore.score.environment,
-			// 	$gameStore.score.society,
-			// 	$gameStore.score.health
-			// );
 			loadEvent();
 		}
 	};
