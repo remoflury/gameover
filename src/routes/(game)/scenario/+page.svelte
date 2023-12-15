@@ -21,7 +21,8 @@
 	import {
 		eventThreshholdForNegativeEvent,
 		eventThreshholdForPositiveEvent,
-		eventsAfterRounds
+		eventsAfterRounds,
+		eventsChance
 	} from '$lib/utils/generalVariables';
 	import OpenTutorialButton from '$lib/components/openTutorialButton.svelte';
 
@@ -38,7 +39,7 @@
 		// check if a event is needed
 		if ($gameStore.playedScenarios.length >= eventsAfterRounds) {
 			// chance fo 50% for an event
-			if (Math.random() < 0.5) return;
+			if (Math.random() < eventsChance) return;
 
 			const event = checkForEvent(
 				$gameStore.score.economy,
