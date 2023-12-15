@@ -55,7 +55,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Bildung für Alle",
     description: "Durch die Bildungsschere von Erst- & Drittweltländern droht eine weitere grosse Flüchtlingswelle. Du willst den Zugang zu Bildung für viele Menschen leichter zugänglich machen.",
-    image: '14.png',
+    image: '14.jpg',
     option1: {
       description: "Ich fördere den Ausbau von Schulen in unterentwickelten Regionen.",
       explanation: "Durch das Einstellen von qualifizierten Lehrkräften und dem Verwenden von modernen Lehrmitteln, erhöht sich die Bildungsqualität. Der Zugang zu Bildung wird erleichtert, und die Bildungsschere wird kleiner. Langfristig führt es zu einer Abnahme der Armut. Die Investitition kostet jedoch.",  
@@ -205,7 +205,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Gleichstellung Mädchen und Frauen",
     description: "In einer ländlichen Gemeinde in Mongoria sind Mädchen und Frauen unverhältnismässig von Bildungsmangel, frühzeitiger Heirat und geschlechtsspezifischer Gewalt betroffen. Du musst dich entscheiden, um die Ungleichheit zu bekämpfen.",
-    image: '14.png',
+    image: '14.jpg',
     option1: {
       description: "Ich konzentriere mich auf Bildungsprogramme in den betroffenen Regionen, um Mädchen und jungen Frauen Zugang zu Schulbildung und Berufsausbildung zu ermöglichen.",
       explanation: "Durch die Erhöhung der Beschäftigungsfähigkeit und des Einkommenspotenzials der Frauen ergibt sich eine positivie, wirtschaftliche Entwicklung der Gemeinde. Durch nachhaltige Bildung & Gleichstellung der Geschlecher verringert sich die Anzahl von Kinderhochzeiten.",
@@ -355,7 +355,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Hauskatzen",
     description: "In Kuhan wurden bei Hauskatzen unbekannte Viren entdeckt, die auf Menschen übertragbar sind. Viele Menschen sind bereits infiziert, und besonders für Kinder kann die Krankheit tödlich sein. Die Besitzer der Katzern lehnen das Töten der Tiere ab.",
-    image: '29.png',
+    image: '29.jpg',
     option1: {
       description: "Ich setze auf alternative Massnahmen, um die Ausbreitung des Virus unter Katzen zu stoppen, ohne sie zu töten. Intensive Forschung und Entwicklung von Heilmitteln stehen im Fokus.",
       explanation: "Die Entscheidung, alternative Massnahmen gegen den Katzenvirus zu ergreifen, bewahrt das ökologische Gleichgewicht und fördert nachhaltige Lösungen. Trotzdem sind viele Kinder an der Infektion gestorben, was durch präventive Massnahmen hätte vermieden werden können.",
@@ -755,7 +755,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Derben vs. Grosovaren",
     description: "In Derbien sind Ausschreitungen zwischen Derben und Grosovaren ausgebrochen. Die Spannungen zwischen den beiden Gruppen haben sich verschärft, und die Situation eskaliert.",
-    image: '19.png',
+    image: '19.jpg',
     option1: {
       description: "Ich entscheide mich für einen Dialog zwischen den Derben und Grosovaren, um friedliche Lösungen zu finden. Vermittlungsbemühungen und Gespräche werden intensiviert, um zu einer friedlichen Koexistenz beizutragen.",
       explanation: "Die Entscheidung für einen Dialog zwischen den Derben und Grosovaren zeigt positive Auswirkungen auf die langfristige gesellschaftliche Stabilität. Durch Vermittlungsbemühungen und verstärkte Gespräche wird versucht, friedliche Lösungen zu finden. Diese Massnahmen tragen dazu bei, die Spannungen zu reduzieren und eine friedliche Koexistenz zwischen den Gruppen zu fördern. Die Aussicht auf langfristige Harmonie und Zusammenarbeit steigt, obwohl es Zeit und Geduld erfordert.",
@@ -780,7 +780,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Derben vs. Grosovaren",
     description: "In Derbien sind Ausschreitungen zwischen Derben und Grosovaren ausgebrochen. Die Spannungen zwischen den beiden Gruppen haben sich verschärft, und die Situation eskaliert.",
-    image: '19.png',
+    image: '19.jpg',
     option1: {
       description: "Ich entscheide mich für einen Dialog zwischen den Derben und Grosovaren, um friedliche Lösungen zu finden. Vermittlungsbemühungen und Gespräche werden intensiviert, um zu einer friedlichen Koexistenz beizutragen.",
       explanation: "Die Entscheidung für einen Dialog zwischen den Derben und Grosovaren zeigt positive Auswirkungen auf die langfristige gesellschaftliche Stabilität. Durch Vermittlungsbemühungen und verstärkte Gespräche wird versucht, friedliche Lösungen zu finden. Diese Massnahmen tragen dazu bei, die Spannungen zu reduzieren und eine friedliche Koexistenz zwischen den Gruppen zu fördern. Die Aussicht auf langfristige Harmonie und Zusammenarbeit steigt, obwohl es Zeit und Geduld erfordert.",
@@ -905,7 +905,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Heuschnupfen",
     description: "Steigende Temperaturen aufgrund des Klimawandels führen zu einer deutlichen Zunahme von Pollen in der Luft, was weltweit zu einem starken Anstieg von Heuschnupfenfällen führt. Die Symptome sind so stark, dass es aufgrund der Schwellungen in der Nase und im Rachen sogar zu Todesfällen kommt.",
-    image: '29.png',
+    image: '29.jpg',
     option1: {
       description:"Ich baue Krankenhäuser aus, stärke die Forschung im Bereich der Allergien aus und sorge für eine Versorgung von betroffenen Menschen.",
       explanation: "Durch den Ausbau von Krankenhäusern und die Stärkung der Allergieforschung verbesserst du die Gesundheitsversorgung und die Lebensqualität der Menschen. Die gesteigerte Forschung im Bereich Allergien ermöglicht eine bessere Diagnose und Behandlung von allergischen Erkrankungen, was die Gesundheit der betroffenen Bevölkerung positiv beeinflusst.",

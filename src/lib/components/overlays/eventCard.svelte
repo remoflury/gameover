@@ -40,7 +40,7 @@
 			<figure class="aspect-4/3 overflow-hidden max-w-full rounded-t-card">
 				<img
 					class="object-cover object-center w-full h-full"
-					src={event?.image}
+					src={`/assets/scenario/${event?.image}`}
 					alt="Design Element"
 					role="presentation"
 				/>
