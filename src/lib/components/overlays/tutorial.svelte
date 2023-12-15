@@ -236,8 +236,8 @@
 	</article>
 </section>
 
-<style lang="postcss">
+<!-- <style lang="postcss">
 	.bg-greyed-out {
 		@apply bg-black-plain bg-opacity-75;
 	}
-</style>
+</style> -->

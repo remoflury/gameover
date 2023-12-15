@@ -130,7 +130,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Soziale Gerechtigkeit in Brasolia",
     description: "In Brasolia gibt es wachsende Spannungen zwischen verschiedenen Bevölkerungsgruppen. Du suchst nach Wegen, um die Kluft zwischen Arm und Reich zu verringern und soziale Gerechtigkeit zu fördern.",
-    image: '5.jpg',
+    image: '05.jpg',
     option1: {
       description: "Ich führe ein Steuersystem ein, bei dem Reiche stärker besteuert werden (Progression). Zudem verteile ich die Einnahmen zur Unterstützung benachteiligter Gruppen um.",
       explanation: "Durch die Einführung von sozialen Programmen, Bildung und Gesundheitsdienste für einkommensschwache Gruppen wird die Einkommensungleichheit verringert. Gleichzeitig verbessert sich der Zugang zu grundlegenden Dienstleistungen. Das Steuersystem ist jedoch nicht komplett gerecht und effizient, weshalb es das wirtschaftliche Wachstum ein bisschen hemmt.",
@@ -505,7 +505,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Abfallmanagement",
     description: "In einer Küstenstadt in Hailand musst du entscheiden, wie das Abfallmanagement verbessert werden kann, um die Verschmutzung der Ozeane zu minimieren.",
-    image: '4.jpg',
+    image: '04.jpg',
     option1: {
       description: "Ich unterstütze ein Recyclingprogramm, das die Wiederverwendung von Materialien fördert und illegale Müllentsorgung streng bestraft. Dies könnte den Plastikmüll reduzieren und die Meeresumwelt schützen.",
       explanation:"Die Investition in ein effizientes Recyclingprogramm und die Förderung der Wiederverwendung von Materialien zeigen schnelle Erfolge. Plastikmüll wird reduziert, illegale Müllentsorgung wird durch strenge Strafen minimiert, und die Meeresumwelt erfährt eine positive Veränderung. Die Bevölkerung schätzt die Bemühungen zur Umweltschonung, und die Stadt wird als Vorreiter im nachhaltigen Abfallmanagement angesehen.",
@@ -680,7 +680,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Rassismus im Gesundheitswesen",
     description: "In Sheden stehst du vor der beunruhigenden Realität, dass schwarze Bürgerinnen und Bürger nicht den gleichen medizinischen Standard im Krankenhaus erhalten wie ihre weissen Mitbürgerinnen und Mitbürger. ",
-    image: '5.jpg',
+    image: '05.jpg',
     option1: {
       description: "Ich sensibilisiere medizinisches Personal, um Vorurteile abzubauen und die kulturelle Kompetenz zu stärken. Dabei werden klare Richtlinien eingeführt, um einen einheitlichen medizinischen Standard für alle Patienten sicherzustellen",
       explanation: "Obwohl die Sensibilisierungskampagne gestartet wurde, bleibt der Einfluss begrenzt. Die Schulungen zeigen nur geringe Fortschritte, und trotz klaren Richtlinien und Überwachungsmechanismen gibt es weiterhin Unterschiede in der medizinischen Behandlung. Die rassistische Ungleichheit im Gesundheitswesen von Sheden bleibt bestehen, und die erhofften Veränderungen treten nicht in dem Masse ein, wie erhofft.",
@@ -705,7 +705,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Schutz des Eukalyptuswaldes",
     description: "In Margentinien schreitet die rücksichtslose Abholzung eines bedeutenden Eukalyptuswaldes rasant voran. Die indigenen Völker verlieren ihren Lebensraum, was schwerwiegende Auswirkungen auf ihre traditionelle Lebensweise hat. Du musst Massnahmen ergreifen, um den Landraub und die Verletzung der indigenen Rechte zu stoppen.",
-    image: '2.jpg',
+    image: '02.jpg',
     option1: {
       description: "Ich verbiete sofort die Abholzung des Eukalyptuswaldes und schütze die indigenen Völker. Mit geschützten Gebieten und alternativen Einkommensquellen erhalte ich den sozialen Zusammenhalt und bewahre die Umweltintegrität des Waldes.",
       explanation: "Die Entscheidung für ein sofortiges Abholzungsverbot im Eukalyptuswald zeigt schnelle Erfolge. Die indigenen Völker behalten ihren Lebensraum, geschützte Gebiete fördern ihre Lebensweise, und alternative Einkommensquellen stärken den sozialen Zusammenhalt. Die Umweltintegrität des Waldes bleibt erhalten, und langfristig trägt dies zu einer nachhaltigen Entwicklung bei.",
@@ -830,7 +830,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Weltbevölkerung",
     description: "Die Weltbevölkerung wächst rasant und die Ressourcen werden knapper.",
-    image: '5.jpg',
+    image: '05.jpg',
     option1: {
       description: "Ich führe eine strenge Geburtenkontrolle ein, um das Bevölkerungswachstum zu verlangsamen.",
       explanation: "Geburtenkontrolle führt kurzfristig zu einem Bevölkerungsrückgang, der den Druck auf die Ressourcen verringert. Es gibt jedoch ethische Bedenken und soziale Unruhen.",
