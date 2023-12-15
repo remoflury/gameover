@@ -6,7 +6,7 @@
 	const options = {};
 </script>
 
-<main class="relative min-h-screen">
+<main class="relative min-h-screen overflow-x-hidden">
 	<slot />
 	{#if $showTutorial}
 		<Tutorial />
