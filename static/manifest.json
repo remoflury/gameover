@@ -1,0 +1,33 @@
+{
+	"short_name": "GameOver?",
+	"name": "GameOver?",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "pwa-icons/icon_pwa64x64.webp",
+			"type": "image/webp",
+			"sizes": "64x64"
+		},
+		{
+			"src": "pwa-icons/icon_pwa192x192.webp",
+			"type": "image/webp",
+			"sizes": "192x192"
+		},
+		{
+			"src": "pwa-icons/icon_pwa512x512.webp",
+			"type": "image/webp",
+			"sizes": "512x512"
+		},
+		{
+			"src": "pwa-icons/icon_pwa512x512.webp",
+			"type": "image/webp",
+			"purpose": "maskable",
+			"sizes": "512x512"
+		}
+	],
+	"background_color": "#F1F1F1",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#3A7F85",
+	"description": "Entscheidungen in Bezug auf die Nachhaltigkeit oft multifaktoriell und haben Einfluss auf viele Aspekte. Dieses Zusammenspiel und die Komplexität solcher Entscheidungen soll 'GameOver?' aufgezeigen."
+}
