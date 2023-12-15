@@ -35,7 +35,6 @@
 		gameScoreElemHeight = gameScoreElem?.clientHeight || 0;
 		scenarioCardBottomPos = scenarioCardElem?.getBoundingClientRect().bottom || 0;
 		optionCardTopPos = optionCardElem?.getBoundingClientRect().top || 0;
-		console.log(scenarioCardBottomPos);
 	};
 
 	const handleCloseTutorial = () => {

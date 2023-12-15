@@ -37,15 +37,15 @@
 	onMount(() => {
 		elemHeight = elem.clientHeight;
 		// Initially set the height
-		animatedHeight.set((currentScore / category100PercentValue) * elemHeight);
+		animatedHeight.set((currentScore / category100PercentValue) * elemHeight - 1);
 	});
 
 	$: if (elemHeight > 0) {
-		animatedHeight.set((currentScore / category100PercentValue) * elemHeight);
+		animatedHeight.set((currentScore / category100PercentValue) * elemHeight - 1);
 	}
 </script>
 
-<figure class="w-12 aspect-square relative" bind:this={elem}>
+<figure class="w-12 aspect-square relative overflow-hidden" bind:this={elem}>
 	<svelte:component this={getIcon()}></svelte:component>
 	<span class="absolute bg-turqoise-light inset-[1px] -z-20"></span>
 	<span
