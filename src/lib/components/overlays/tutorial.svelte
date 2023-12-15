@@ -135,7 +135,7 @@
 				{:else if step === 3}
 					<article
 						in:fade={{ duration }}
-						class="absolute"
+						class="absolute left-0 right-0"
 						style={`top: calc(${scenarioCardBottomPos}px + 70px)`}
 					>
 						<div class="absolute left-0 top-0 -translate-y-full -z-10">
@@ -152,7 +152,7 @@
 				{:else if step === 4}
 					<article
 						in:fade={{ duration }}
-						class="absolute"
+						class="absolute left-0 right-0"
 						style={`top: calc(${optionCardTopPos}px - 200px)`}
 					>
 						<div class="absolute right-0 -bottom-8 -translate-y-full -z-10 -rotate-180">
