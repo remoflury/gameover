@@ -205,7 +205,7 @@ export const scenarios: ScenarioProps[] = [
   {
     title: "Gleichstellung Mädchen und Frauen",
     description: "In einer ländlichen Gemeinde in Mongoria sind Mädchen und Frauen unverhältnismässig von Bildungsmangel, frühzeitiger Heirat und geschlechtsspezifischer Gewalt betroffen. Du musst dich entscheiden, um die Ungleichheit zu bekämpfen.",
-    image: '14.jpg',
+    image: '14.png',
     option1: {
       description: "Ich konzentriere mich auf Bildungsprogramme in den betroffenen Regionen, um Mädchen und jungen Frauen Zugang zu Schulbildung und Berufsausbildung zu ermöglichen.",
       explanation: "Durch die Erhöhung der Beschäftigungsfähigkeit und des Einkommenspotenzials der Frauen ergibt sich eine positivie, wirtschaftliche Entwicklung der Gemeinde. Durch nachhaltige Bildung & Gleichstellung der Geschlecher verringert sich die Anzahl von Kinderhochzeiten.",

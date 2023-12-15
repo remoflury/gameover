@@ -45,13 +45,11 @@
 	}
 </script>
 
-<figure
-	class="w-12 aspect-square bg-turqoise-light relative isolate overflow-hidden"
-	bind:this={elem}
->
+<figure class="w-12 aspect-square relative" bind:this={elem}>
 	<svelte:component this={getIcon()}></svelte:component>
+	<span class="absolute bg-turqoise-light inset-[1px] -z-20"></span>
 	<span
-		class="absolute left-0 right-0 bottom-0 bg-turqoise-dark -z-10 transition bar"
+		class="absolute left-[1px] right-[1px] bottom-[1px] bg-turqoise-dark -z-10 transition bar"
 		style={`height: ${$animatedHeight}px`}
 	>
 	</span>
