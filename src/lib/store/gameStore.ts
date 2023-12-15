@@ -41,11 +41,16 @@ eventsStore.subscribe($eventsStore => {
 });
 
 
-export const showTutorial = writable(false)
+export const showTutorial = writable(true)
 
 export const showEvent = writable(false)
 
 export const currentEvent = writable<CurrentEventProps>({
   index: null,
   event: null
+})
+
+export const gameScore = writable({
+  height: 0,
+  scrollY: 0
 })

@@ -61,7 +61,7 @@ export const events: EventProps[] = [
       economy: 0,
       environment: 0,
       society: 10,
-      health: 0
+      health: 10
     },
     image: '12.jpg',
     effect: 'positive'

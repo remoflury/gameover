@@ -453,7 +453,7 @@ export const scenarios: ScenarioProps[] = [
     }
   },
   {
-    title: "Autobahn im Gian Canyon",
+    title: "Autobahn im Giant Canyon",
     description: "Bürger in der Nähe des Giant Canyons wollen eine Autobahn quer durch die Felsen um schneller von A zu B zu kommen. Die gibt grosse Proteste von Naturschützern und Umweltaktivisten, welche gegen den Bau sind.",
     image: '23.jpg',
     option1: {

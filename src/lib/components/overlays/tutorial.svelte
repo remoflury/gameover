@@ -38,12 +38,23 @@
 		console.log(scenarioCardBottomPos);
 	};
 
-	$: if (step) getVariables();
+	const handleCloseTutorial = () => {
+		$showTutorial = false;
+		step = 1;
+		goto('/scenario');
+	};
 
-	$: console.log(optionCardTopPos);
+	$: if (step) getVariables();
 </script>
 
 <section transition:fly={{ duration: 350, y: -200 }} class="absolute inset-0 bg-white-plain">
+	<button
+		aria-label="Tutorial schliessen"
+		class="absolute right-4 top-4 z-50 bg-beige grid place-content-center rounded-max w-6 aspect-square p-[2px]"
+		on:click={handleCloseTutorial}
+	>
+		<p class="font-bold -translate-y-[1px]">x</p>
+	</button>
 	<article class="bg-opacity-75 min-h-screen relative z-10">
 		{#if step <= 4}
 			<!-- Game Score, step 2 -->
@@ -218,15 +229,7 @@
 						</div>
 						<p class="tutorial">Dein Punktestand aktualisiert sich dementsprechend</p>
 						<div class="grid place-content-center mt-4">
-							<PrimaryButton
-								text="Spiel starten"
-								type="button"
-								on:click={() => {
-									$showTutorial = false;
-									step = 1;
-									goto('/scenario');
-								}}
-							/>
+							<PrimaryButton text="Spiel starten" type="button" on:click={handleCloseTutorial} />
 						</div>
 					</article>
 				{/if}
@@ -234,9 +237,3 @@
 		{/if}
 	</article>
 </section>
-
-<!-- <style lang="postcss">
-	.bg-greyed-out {
-		@apply bg-black-plain bg-opacity-75;
-	}
-</style> -->

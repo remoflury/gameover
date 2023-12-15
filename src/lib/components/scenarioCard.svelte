@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { gameScore } from '$lib/store/gameStore';
 	import { fade } from 'svelte/transition';
 
 	export let description: string;
@@ -8,7 +9,10 @@
 	export let isTutorial = false;
 </script>
 
-<article class="rounded-card overflow-hidden bg-white-soft relative">
+<article
+	class="rounded-card overflow-hidden bg-white-soft relative"
+	style={`margin-top: ${$gameScore.height}px`}
+>
 	{#if isTutorial}
 		<span
 			transition:fade={{ duration: 350 }}
