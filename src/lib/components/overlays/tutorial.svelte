@@ -71,7 +71,12 @@
 				class="relative -z-10 transition container bg-black-plain bg-opacity-75"
 				bind:this={scenarioCardElem}
 			>
-				<ScenarioCard description={tutorialScenario.description} isTutorial={step !== 3} />
+				<ScenarioCard
+					description={tutorialScenario.description}
+					isTutorial={step !== 3}
+					img={tutorialScenario.image}
+					title={tutorialScenario.title}
+				/>
 			</div>
 
 			<!-- Scenario Options, step 4 -->

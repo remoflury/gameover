@@ -107,7 +107,11 @@
 
 <section class="container gap-y-4 py-block-page">
 	{#if currentScenario}
-		<ScenarioCard description={currentScenario.description} />
+		<ScenarioCard
+			description={currentScenario.description}
+			title={currentScenario.title}
+			img={currentScenario.image}
+		/>
 		<OptionCard text={currentScenario.option1.description} on:selected={() => handleSelection(1)} />
 		<OptionCard text={currentScenario.option2.description} on:selected={() => handleSelection(2)} />
 		{#if $selectedOption}
