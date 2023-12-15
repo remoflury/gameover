@@ -142,8 +142,7 @@
 							<TutorialArrow delay={duration} {duration} />
 						</div>
 						<p class="tutorial">
-							Hier siehst du deinen Punktestand der Kategorien Wirstschaft, Gesellschaft, Umwelt und
-							Gesundheit. Ziel ist es, dass du in keiner Kategorie unter null fällst.
+							Hier siehst du das Szenario, welches du bei dieser aufgabe lösen musst.
 						</p>
 						<div class="grid place-content-center mt-4">
 							<ButtonTutorial text="Ok" on:click={nextStep} />
