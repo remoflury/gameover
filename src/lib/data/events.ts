@@ -11,7 +11,7 @@ export const events: EventProps[] = [
       society: -10,
       health: -10
     },
-    image: '/assets/tutorial.jpg',
+    image: '36.jpg',
     effect: 'negative'
   },
   {
@@ -24,7 +24,7 @@ export const events: EventProps[] = [
       society: 10,
       health: 20
     },
-    image: '/assets/tutorial.jpg',
+    image: '26.jpg',
     effect: 'positive'
   },
   {
@@ -37,7 +37,7 @@ export const events: EventProps[] = [
       society: 0,
       health: 0
     },
-    image: '/assets/tutorial.jpg',
+    image: '35.jpg',
     effect: 'positive'
   },
   {
@@ -50,7 +50,7 @@ export const events: EventProps[] = [
       society: -10,
       health: -5
     },
-    image: '/assets/tutorial.jpg',
+    image: '12.jpg',
     effect: 'negative'
   },
   {
@@ -63,7 +63,7 @@ export const events: EventProps[] = [
       society: 10,
       health: 0
     },
-    image: '/assets/tutorial.jpg',
+    image: '12.jpg',
     effect: 'positive'
   },
   {
@@ -76,7 +76,7 @@ export const events: EventProps[] = [
       society: 0,
       health: 0
     },
-    image: '/assets/tutorial.jpg',
+    image: '34.jpg',
     effect: 'positive'
   },
   {
@@ -89,7 +89,7 @@ export const events: EventProps[] = [
       society: 0,
       health: 0
     },
-    image: '/assets/tutorial.jpg',
+    image: '33.jpg',
     effect: 'negative'
   },
   {
@@ -102,7 +102,7 @@ export const events: EventProps[] = [
       society: 0,
       health: -10
     },
-    image: '/assets/tutorial.jpg',
+    image: '29.jpg',
     effect: 'negative'
   },
   {
@@ -115,7 +115,7 @@ export const events: EventProps[] = [
       society: 0,
       health: -10
     },
-    image: '/assets/tutorial.jpg',
+    image: '03.jpg',
     effect: 'negative'
   },
   {
@@ -128,7 +128,7 @@ export const events: EventProps[] = [
       society: -10,
       health: -10
     },
-    image: '/assets/tutorial.jpg',
+    image: '08.jpg',
     effect: 'negative'
   },
   {
@@ -141,7 +141,7 @@ export const events: EventProps[] = [
       society: 10,
       health: 10
     },
-    image: '/assets/tutorial.jpg',
+    image: '06.jpg',
     effect: 'positive'
   },
 ]
