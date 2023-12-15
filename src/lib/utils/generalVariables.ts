@@ -9,4 +9,4 @@ export const initialScore = 40
 export const eventThreshholdForNegativeEvent = 20
 export const eventThreshholdForPositiveEvent = 80
 export const eventsAfterRounds = 2
-export const eventsChance = 0.5
+export const eventsChance = 0.4

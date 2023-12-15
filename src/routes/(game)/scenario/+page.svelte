@@ -42,13 +42,7 @@
 			// chance fo 50% for an event
 			if (Math.random() < eventsChance) return;
 
-			const event = checkForEvent(
-				$gameStore.score.economy,
-				$gameStore.score.environment,
-				$gameStore.score.society,
-				$gameStore.score.health
-			);
-			if (event) loadEvent(event);
+			loadEvent();
 		}
 	};
 
@@ -58,41 +52,48 @@
 		return ($selectedOption = option);
 	};
 
-	const checkForEvent = (
-		economy: number,
-		environment: number,
-		society: number,
-		health: number
-	): EventEffectProps | false => {
-		const negTreshhold = eventThreshholdForNegativeEvent;
-		const posTreshold = eventThreshholdForPositiveEvent;
+	// const checkForEvent = (
+	// 	economy: number,
+	// 	environment: number,
+	// 	society: number,
+	// 	health: number
+	// ): EventEffectProps | false => {
+	// 	const negTreshhold = eventThreshholdForNegativeEvent;
+	// 	const posTreshold = eventThreshholdForPositiveEvent;
 
-		// if one of the categories is over the treshhold, return the need for a negative event
-		if (
-			economy >= posTreshold ||
-			environment >= posTreshold ||
-			society >= posTreshold ||
-			health >= posTreshold
-		)
-			return 'negative';
-		// if one of the categories is below the treshhold, return the need for a positive event
-		if (
-			economy <= negTreshhold ||
-			environment <= negTreshhold ||
-			society <= negTreshhold ||
-			health <= negTreshhold
-		)
-			return 'positive';
+	// 	// if one of the categories is over the treshhold, return the need for a negative event
+	// 	if (
+	// 		economy >= posTreshold ||
+	// 		environment >= posTreshold ||
+	// 		society >= posTreshold ||
+	// 		health >= posTreshold
+	// 	)
+	// 		return 'negative';
+	// 	// if one of the categories is below the treshhold, return the need for a positive event
+	// 	if (
+	// 		economy <= negTreshhold ||
+	// 		environment <= negTreshhold ||
+	// 		society <= negTreshhold ||
+	// 		health <= negTreshhold
+	// 	)
+	// 		return 'positive';
 
-		// if no event is needed, return false
-		return false;
-	};
+	// 	// if no event is needed, return false
+	// 	return false;
+	// };
 
-	const loadEvent = (effect: EventEffectProps) => {
-		const desiredEvents = $eventsStore.filter((event) => event.effect == effect);
-		const randomIndex = getRandomIndex(desiredEvents);
-		$currentEvent.index = desiredEvents[randomIndex].id;
-		$currentEvent.event = desiredEvents[randomIndex];
+	// const loadEvent = (effect: EventEffectProps) => {
+	// 	const desiredEvents = $eventsStore.filter((event) => event.effect == effect);
+	// 	const randomIndex = getRandomIndex(desiredEvents);
+	// 	$currentEvent.index = desiredEvents[randomIndex].id;
+	// 	$currentEvent.event = desiredEvents[randomIndex];
+	// 	$showEvent = true;
+	// };
+
+	const loadEvent = () => {
+		const randomIndex = getRandomIndex($eventsStore);
+		$currentEvent.index = $eventsStore[randomIndex].id;
+		$currentEvent.event = $eventsStore[randomIndex];
 		$showEvent = true;
 	};
 

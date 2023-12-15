@@ -51,7 +51,7 @@ export default {
         card: '1.25rem'
       },
       boxShadow: {
-        'game-score': '0 5px 10px 0px rgba(0, 0, 0, 0.15)',
+        'game-score': '0 5px 10px 0px rgba(0, 0, 0, 0.10)',
       },
       maxWidth: {
         '1/4': "25%",
