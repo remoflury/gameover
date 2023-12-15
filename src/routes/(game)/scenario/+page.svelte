@@ -10,7 +10,8 @@
 		gameStore,
 		scenarioStore,
 		selectedOption,
-		showEvent
+		showEvent,
+		showTutorial
 	} from '$lib/store/gameStore';
 	import { getRandomIndex, isGameOver } from '$lib/utils/generalUtils';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
@@ -22,6 +23,7 @@
 		eventThreshholdForPositiveEvent,
 		eventsAfterRounds
 	} from '$lib/utils/generalVariables';
+	import OpenTutorialButton from '$lib/components/openTutorialButton.svelte';
 
 	let randomIndex: number;
 	let currentScenario: ScenarioProps;
@@ -105,9 +107,13 @@
 	});
 </script>
 
-<section class="container gap-y-4 py-block-page">
+<section class="container gap-y-4 py-block-page" class:bg-black-plain={$showTutorial}>
 	{#if currentScenario}
-		<ScenarioCard description={currentScenario.description} />
+		<ScenarioCard
+			description={currentScenario.description}
+			title={currentScenario.title}
+			img={currentScenario.image}
+		/>
 		<OptionCard text={currentScenario.option1.description} on:selected={() => handleSelection(1)} />
 		<OptionCard text={currentScenario.option2.description} on:selected={() => handleSelection(2)} />
 		{#if $selectedOption}
@@ -116,4 +122,5 @@
 			</div>
 		{/if}
 	{/if}
+	<OpenTutorialButton />
 </section>

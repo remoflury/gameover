@@ -6,6 +6,7 @@
 	import { isGameOver, showToast, updateGameStore } from '$lib/utils/generalUtils';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
 	import ExplanationCard from '$lib/components/explanationCard.svelte';
+	import OpenTutorialButton from '$lib/components/openTutorialButton.svelte';
 
 	let isButtonVisible = false;
 	// remove current scenario from scenario store
@@ -24,43 +25,6 @@
 		if (isGameOver()) goto('/game-over');
 		else goto('/scenario');
 	};
-
-	// const updateGameStore = (
-	// 	economy: number,
-	// 	environment: number,
-	// 	society: number,
-	// 	health: number
-	// ) => {
-	// 	$gameStore.score.economy = cutOffIfOverMaxValue(
-	// 		$gameStore.score.economy,
-	// 		economy,
-	// 		category100PercentValue
-	// 	);
-	// 	$gameStore.score.environment = cutOffIfOverMaxValue(
-	// 		$gameStore.score.environment,
-	// 		environment,
-	// 		category100PercentValue
-	// 	);
-	// 	$gameStore.score.society = cutOffIfOverMaxValue(
-	// 		$gameStore.score.society,
-	// 		society,
-	// 		category100PercentValue
-	// 	);
-	// 	$gameStore.score.health = cutOffIfOverMaxValue(
-	// 		$gameStore.score.health,
-	// 		health,
-	// 		category100PercentValue
-	// 	);
-	// };
-
-	// const cutOffIfOverMaxValue = (
-	// 	inputValue: number,
-	// 	consequenceValue: number,
-	// 	maxValue: number
-	// ): number => {
-	// 	if (inputValue + consequenceValue >= maxValue) return maxValue;
-	// 	return inputValue + consequenceValue;
-	// };
 
 	onMount(() => {
 		// if no option is selected or currentScenario is not set, or user is not playing
@@ -105,4 +69,6 @@
 			</div>
 		{/if}
 	{/if}
+
+	<OpenTutorialButton />
 </section>

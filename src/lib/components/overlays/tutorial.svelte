@@ -44,7 +44,7 @@
 </script>
 
 <section transition:fly={{ duration: 350, y: -200 }} class="absolute inset-0 bg-white-plain">
-	<article class="bg-opacity-75 h-full relative z-10">
+	<article class="bg-opacity-75 min-h-screen relative z-10">
 		{#if step <= 4}
 			<!-- Game Score, step 2 -->
 			<div
@@ -71,7 +71,12 @@
 				class="relative -z-10 transition container bg-black-plain bg-opacity-75"
 				bind:this={scenarioCardElem}
 			>
-				<ScenarioCard description={tutorialScenario.description} isTutorial={step !== 3} />
+				<ScenarioCard
+					description={tutorialScenario.description}
+					isTutorial={step !== 3}
+					img={tutorialScenario.image}
+					title={tutorialScenario.title}
+				/>
 			</div>
 
 			<!-- Scenario Options, step 4 -->
@@ -231,8 +236,8 @@
 	</article>
 </section>
 
-<style lang="postcss">
+<!-- <style lang="postcss">
 	.bg-greyed-out {
 		@apply bg-black-plain bg-opacity-75;
 	}
-</style>
+</style> -->
