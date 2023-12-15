@@ -1,9 +1,7 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte';
 	import { currentEvent, eventsStore, showEvent } from '$lib/store/gameStore';
-	import { fly, slide } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import { sineInOut } from 'svelte/easing';
-	import { browser } from '$app/environment';
 	import EffectCategory from '../categories/effectCategory.svelte';
 	import PrimaryButton from '../primaryButton.svelte';
 	import { isGameOver, showToast, updateGameStore } from '$lib/utils/generalUtils';
@@ -11,16 +9,9 @@
 
 	let scrollY: number;
 
-	$: if ($showEvent) toggleOverflowHidden();
-	// $: if (!$showEvent) toggleOverflowHidden();
-
-	const toggleOverflowHidden = () => {
-		if (browser) document.body.classList.toggle('overflow-y-hidden');
-	};
-
 	const closeEvent = (economy: number, environment: number, society: number, health: number) => {
 		$showEvent = false;
-		toggleOverflowHidden();
+		// toggleOverflowHidden();
 		removeCurrentEvent($currentEvent.index);
 		setTimeout(() => {
 			updateGameStore(economy, environment, society, health);
