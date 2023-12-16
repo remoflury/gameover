@@ -478,7 +478,7 @@ export const scenarios: ScenarioProps[] = [
     }
   },
   {
-    title: "Bing Bon Trend",
+    title: "Bing Bong Trend",
     description: "Ein Bing Bong Trend führt dazu, dass sich viele Menschen sich selber gröbere Verletzungen zutun, was zu einer Überbelastung der lokalen Krankenhäuser führt.",
     image: '31.jpg',
     option1: {
@@ -767,12 +767,12 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description: "Aufgrund der Schwierigkeiten, das Öl schnell und effektiv zu bekämpfen, entscheide ich mich dafür, die gefährdeten Küstenbereiche zu evakuieren. Gleichzeitig richte ich temporäre Schutzgebiete für bedrohte Meeresbewohner ein, um ihre Migration in saubere Gewässer zu fördern. So erhalten die Tiere vorübergehend geschützte Lebensräume.",
-      explanation: "Aufgrund der verzögerten Reaktion und Schwierigkeiten, das Öl schnell und effektiv zu bekämpfen, hat sich die Verschmutzung weiter ausgebreitet. Die Strände sind jetzt stärker von Öl bedeckt, und die Auswirkungen auf Fische, Meeressäuger und Seevögel sind noch verheerender. Die Evakuierung der gefährdeten Küstenbereiche und die Einrichtung temporärer Schutzgebiete erfolgt zwar, aber das Öl hat bereits einen erheblichen Schaden verursacht.",
+      description: "Ich setze auf eine härtere Gangart und verstärke die Sicherheitskräfte, um die Ausschreitungen zu unterdrücken.",
+      explanation: "Die Entscheidung für eine härtere Gangart und verstärkte Sicherheitskräfte bringt kurzfristige Ruhe, da Ausschreitungen unterdrückt werden. Jedoch eskaliert die Lage weiter, führt zu massiven Unruhen und stösst auf starken Widerstand in der Bevölkerung. Proteste brechen aus, Spaltungen vertiefen sich, und ein Putsch verschärft die Situation, was zu einem ernsthaften Zusammenbruch der Gesellschaft führt. Das erhöhte Misstrauen und der Unmut hinterlassen langanhaltende Instabilität und Unsicherheit in Derbien.",
       consequences: {
         economy: 0,
         environment: 0,
-        society: 10,
+        society: -10,
         health: 0
       }
     }
@@ -879,7 +879,7 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Walfang",
-    description: "Tschinesische Fischer wurden auf hoher See beim Walfang erwischt. Es wurde enthüllt, dass sie ein Untergrundnetzwerk für den Walfang etabliert und beträchtliche Gewinne daraus erzielt haben. Seit ihrem Auftreten hat der Walfang um drastisch zugenommen.",
+    description: "Tschinesische Fischer wurden auf hoher See beim Walfang erwischt. Es wurde enthüllt, dass sie ein Untergrundnetzwerk für den Walfang etabliert und beträchtliche Gewinne daraus erzielt haben. Seit ihrem Auftreten hat der Walfang drastisch zugenommen.",
     image: '25.jpg',
     option1: {
       description: "Ich erlasse ein weltweites Walfangverbot und setzte mich für den Schutz aller Walarten ein.",

@@ -5,8 +5,9 @@
 	import LeaderboardRank from '$lib/components/leaderboardRank.svelte';
 	import LoadingSpinner from '$lib/components/loadingSpinner.svelte';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
+	import { events } from '$lib/data/events';
 	import { scenarios } from '$lib/data/scenarios';
-	import { gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
+	import { eventsStore, gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
 	import type { LeaderboardUsersProps, ServerAPIResponseProps } from '$lib/types/Types.js';
 	import { initialScore, serverErrMessage } from '$lib/utils/generalVariables';
 	import { onMount } from 'svelte';
@@ -54,6 +55,7 @@
 		$gameStore.playedEvents = [];
 
 		$scenarioStore = [...scenarios];
+		$eventsStore = [...events];
 		$selectedOption = undefined;
 
 		goto('/');
