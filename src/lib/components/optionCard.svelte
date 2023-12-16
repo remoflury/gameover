@@ -24,7 +24,7 @@
 
 <button
 	aria-label="Szenario auswählen"
-	class="transition p-6 border border-gray rounded-card relative outline-none outline-offset-0 bg-white-soft"
+	class="transition p-6 border border-gray rounded-card relative outline-none outline-offset-0 outline-0 bg-white-soft"
 	class:border-turqoise-dark={isSelected}
 	class:outline-turqoise-dark={isSelected}
 	class:z-10={isSelected}

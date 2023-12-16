@@ -5,7 +5,7 @@
 <div class="grid place-content-start">
 	<button
 		aria-label="tutorial öffnen"
-		class="bg-white-soft rounded-max p-1 w-5 aspect-square grid place-content-center"
+		class="bg-white-soft rounded-max p-1 w-6 h-6 aspect-square grid place-content-center"
 		on:click={() => {
 			$showTutorial = true;
 			window.scrollTo(0, 0);
