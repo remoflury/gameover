@@ -40,11 +40,11 @@
 			case 'economy':
 				return '/assets/gameoverEconomy.jpg';
 			case 'environment':
-				return '/assets/gameoverEnvironment.jpg';
+				return '/assets/gameoverEnviroment.jpg';
 			case 'society':
 				return '/assets/gameoverSociety.jpg';
 			case 'health':
-				return '/assets/gameoverHealth.jpg';
+				return '/assets/gamoverHealth.jpg';
 		}
 	};
 
