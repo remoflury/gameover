@@ -7,9 +7,7 @@
 </script>
 
 <div class="flex justify-center items-center gap-x-4">
-	<figure
-		class="w-[26px] aspect-square rounded-max overflow-hidden bg-gray p-[6px] grid place-content-center"
-	>
+	<figure class="w-[26px] aspect-square rounded-max overflow-hidden bg-gray p-[6px]">
 		<StarIcon />
 	</figure>
 

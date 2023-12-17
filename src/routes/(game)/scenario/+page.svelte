@@ -52,44 +52,6 @@
 		return ($selectedOption = option);
 	};
 
-	// const checkForEvent = (
-	// 	economy: number,
-	// 	environment: number,
-	// 	society: number,
-	// 	health: number
-	// ): EventEffectProps | false => {
-	// 	const negTreshhold = eventThreshholdForNegativeEvent;
-	// 	const posTreshold = eventThreshholdForPositiveEvent;
-
-	// 	// if one of the categories is over the treshhold, return the need for a negative event
-	// 	if (
-	// 		economy >= posTreshold ||
-	// 		environment >= posTreshold ||
-	// 		society >= posTreshold ||
-	// 		health >= posTreshold
-	// 	)
-	// 		return 'negative';
-	// 	// if one of the categories is below the treshhold, return the need for a positive event
-	// 	if (
-	// 		economy <= negTreshhold ||
-	// 		environment <= negTreshhold ||
-	// 		society <= negTreshhold ||
-	// 		health <= negTreshhold
-	// 	)
-	// 		return 'positive';
-
-	// 	// if no event is needed, return false
-	// 	return false;
-	// };
-
-	// const loadEvent = (effect: EventEffectProps) => {
-	// 	const desiredEvents = $eventsStore.filter((event) => event.effect == effect);
-	// 	const randomIndex = getRandomIndex(desiredEvents);
-	// 	$currentEvent.index = desiredEvents[randomIndex].id;
-	// 	$currentEvent.event = desiredEvents[randomIndex];
-	// 	$showEvent = true;
-	// };
-
 	const loadEvent = () => {
 		const randomIndex = getRandomIndex($eventsStore);
 		$currentEvent.index = $eventsStore[randomIndex].id;
@@ -104,7 +66,8 @@
 	// function, to only be able to open one accordion at a time
 	createAccordionContext();
 	onMount(() => {
-		if ($gameStore.isPlaying === false) return goto('/');
+		// TODO uncomment next line
+		// if ($gameStore.isPlaying === false) return goto('/');
 		if (isGameOver()) return goto('/game-over');
 		newRound();
 	});
@@ -129,5 +92,5 @@
 			</div>
 		{/if}
 	{/if}
-	<OpenTutorialButton />
+	<!-- <OpenTutorialButton /> -->
 </section>

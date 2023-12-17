@@ -17,7 +17,6 @@
 	};
 
 	const handleNextScenario = () => {
-		// updateGameStore(economy, environment, society, health);
 		removeCurrentScenario($gameStore.currentScenario);
 		$gameStore.currentScenario = null;
 		$selectedOption = undefined;
@@ -70,5 +69,5 @@
 		{/if}
 	{/if}
 
-	<OpenTutorialButton />
+	<!-- <OpenTutorialButton /> -->
 </section>

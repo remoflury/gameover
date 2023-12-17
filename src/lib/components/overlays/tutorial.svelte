@@ -49,7 +49,7 @@
 <section transition:fly={{ duration: 350, y: -200 }} class="absolute inset-0 bg-white-plain">
 	<button
 		aria-label="Tutorial schliessen"
-		class="absolute right-4 top-4 z-50 bg-beige grid place-content-center rounded-max w-6 aspect-square p-[2px]"
+		class="absolute right-4 top-4 z-50 bg-beige grid place-content-center rounded-max w-6 h-6 aspect-square p-[2px]"
 		on:click={handleCloseTutorial}
 	>
 		<p class="font-bold -translate-y-[1px]">x</p>

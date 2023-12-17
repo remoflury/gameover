@@ -1,10 +1,13 @@
 import { PUBLIC_POINTS_MULTIPLIER } from "$env/static/public"
-import { gameStore } from "$lib/store/gameStore"
+import { eventsStore, gameStore, scenarioStore, selectedOption } from "$lib/store/gameStore"
 // import { gameStore } from "$lib/store/gameStore"
 // import type { ConsequenceProps } from "$lib/types/Types"
 import { toasts } from "svelte-toasts"
 import { get } from "svelte/store"
-import { category100PercentValue } from "./generalVariables"
+import { category100PercentValue, initialScore } from "./generalVariables"
+import { scenarios } from "$lib/data/scenarios"
+import { events } from "$lib/data/events"
+import { goto } from "$app/navigation"
 
 export const getRandomIndex = <T>(array: T[]): number => {
   return Math.floor(Math.random()*array.length)
@@ -52,26 +55,6 @@ export const updateGameStore = (
     );
     return $gameStore;
 });
-  // $gameStore.score.economy = cutOffIfOverMaxValue(
-  //   $gameStore.score.economy,
-  //   economy,
-  //   category100PercentValue
-  // );
-  // $gameStore.score.environment = cutOffIfOverMaxValue(
-  //   $gameStore.score.environment,
-  //   environment,
-  //   category100PercentValue
-  // );
-  // $gameStore.score.society = cutOffIfOverMaxValue(
-  //   $gameStore.score.society,
-  //   society,
-  //   category100PercentValue
-  // );
-  // $gameStore.score.health = cutOffIfOverMaxValue(
-  //   $gameStore.score.health,
-  //   health,
-  //   category100PercentValue
-  // );
 };
 
 export const showToast = (title: string, description: string, type: 'info' | 'success' | 'error' | 'warning', duration: number = 2000) => {
@@ -98,4 +81,36 @@ export const isGameOver = (): boolean => {
   if (gameStoreValue.score.health <= 0) return true;
 
   return false;
+};
+
+export const resetGame = () => {
+
+  gameStore.update(($gameStore) => {
+    $gameStore.isPlaying = false;
+    $gameStore.currentScenario = null;
+    $gameStore.userName = null;
+    ($gameStore.userId = null), ($gameStore.score.economy = initialScore);
+    $gameStore.score.environment = initialScore;
+    $gameStore.score.society = initialScore;
+    $gameStore.score.health = initialScore;
+    $gameStore.playedScenarios = [];
+    $gameStore.playedEvents = [];
+  
+    return $gameStore
+  })
+  scenarioStore.update(($scenarioStore) =>  {
+    $scenarioStore = [...scenarios]
+    return $scenarioStore 
+  })
+ 
+  eventsStore.update(($eventsStore) => {
+    $eventsStore = [...events];
+    return $eventsStore
+  })
+  selectedOption.update(($selectedOption) => {
+    $selectedOption = undefined;
+    return $selectedOption
+  })
+
+  goto('/');
 };
