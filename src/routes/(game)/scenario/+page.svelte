@@ -66,7 +66,8 @@
 	// function, to only be able to open one accordion at a time
 	createAccordionContext();
 	onMount(() => {
-		if ($gameStore.isPlaying === false) return goto('/');
+		// TODO uncomment next line
+		// if ($gameStore.isPlaying === false) return goto('/');
 		if (isGameOver()) return goto('/game-over');
 		newRound();
 	});
@@ -91,5 +92,5 @@
 			</div>
 		{/if}
 	{/if}
-	<OpenTutorialButton />
+	<!-- <OpenTutorialButton /> -->
 </section>

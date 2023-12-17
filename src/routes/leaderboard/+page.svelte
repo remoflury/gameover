@@ -1,15 +1,12 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import EconomyIconMask from '$lib/assets/category/economyIconMask.svelte';
-	import EconomyIconPlain from '$lib/assets/category/economyIconPlain.svelte';
 	import LeaderboardRank from '$lib/components/leaderboardRank.svelte';
 	import LoadingSpinner from '$lib/components/loadingSpinner.svelte';
 	import PrimaryButton from '$lib/components/primaryButton.svelte';
-	import { events } from '$lib/data/events';
-	import { scenarios } from '$lib/data/scenarios';
-	import { eventsStore, gameStore, scenarioStore, selectedOption } from '$lib/store/gameStore';
+	import { gameStore } from '$lib/store/gameStore';
 	import type { LeaderboardUsersProps, ServerAPIResponseProps } from '$lib/types/Types.js';
-	import { initialScore, serverErrMessage } from '$lib/utils/generalVariables';
+	import { resetGame } from '$lib/utils/generalUtils';
+	import { serverErrMessage } from '$lib/utils/generalVariables';
 	import { onMount } from 'svelte';
 	import { sineIn } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
@@ -43,23 +40,6 @@
 		return [rankedUsers.slice(0, 10), scoreCurrentUser, rankCurrentUser];
 	};
 
-	const resetGame = () => {
-		$gameStore.isPlaying = false;
-		$gameStore.currentScenario = null;
-		$gameStore.userName = null;
-		($gameStore.userId = null), ($gameStore.score.economy = initialScore);
-		$gameStore.score.environment = initialScore;
-		$gameStore.score.society = initialScore;
-		$gameStore.score.health = initialScore;
-		$gameStore.playedScenarios = [];
-		$gameStore.playedEvents = [];
-
-		$scenarioStore = [...scenarios];
-		$eventsStore = [...events];
-		$selectedOption = undefined;
-
-		goto('/');
-	};
 	onMount(() => {
 		if ($gameStore.isPlaying === false) return goto('/');
 	});
