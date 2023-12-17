@@ -51,7 +51,7 @@
 		$gameStore.score.environment = initialScore;
 		$gameStore.score.society = initialScore;
 		$gameStore.score.health = initialScore;
-		$gameStore.playedEvents = [];
+		$gameStore.playedScenarios = [];
 		$gameStore.playedEvents = [];
 
 		$scenarioStore = [...scenarios];
