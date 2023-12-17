@@ -12,11 +12,13 @@
 
 	const options = {};
 	let showModal = false;
+	let showTutorialBtn = $page.url.pathname == '/scenario' || $page.url.pathname == '/explanation';
 	let scrollY = 0;
 	afterNavigate(() => {
 		if (browser) window.scrollTo(0, 0);
 	});
 
+	$: showTutorialBtn = $page.url.pathname == '/scenario' || $page.url.pathname == '/explanation';
 	$: if (browser) document.body.classList.toggle('overflow-y-hidden', showModal);
 </script>
 
@@ -28,7 +30,11 @@
 		<Tutorial />
 	{/if}
 	{#if $page.url.pathname != '/'}
-		<div class="container pb-block-page flex justify-between items-center gap-x-4">
+		<div
+			class="container pb-block-page flex items-center gap-x-4"
+			class:justify-end={!showTutorialBtn}
+			class:justify-between={showTutorialBtn}
+		>
 			<button
 				type="button"
 				aria-label="Zur Startseite"
@@ -37,7 +43,9 @@
 			>
 				<HomeIcon />
 			</button>
-			<OpenTutorialButton />
+			{#if showTutorialBtn}
+				<OpenTutorialButton />
+			{/if}
 		</div>
 	{/if}
 
