@@ -27,7 +27,7 @@ export const actions: Actions = {
     const formData = await request.formData()
     const name = formData.get('name')
 
-    if (!name) return fail(406)
+    if (!name || !name?.toString().trim()) return fail(406)
     const { data, error: err } = await supabase
       .from('leaderboard')
       .insert([{
