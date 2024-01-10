@@ -79,7 +79,7 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Dürre",
-    description: "In Hafghanistan droht eine Lebensmittelkrise aufgrund von Dürre und schlechten Erntebedingungen. Eine Zuname von Armut, Gesundheitsproblemen, sozialen Unruhen steht bevor. ",
+    description: "In Hafghanistan droht eine Lebensmittelkrise aufgrund von Dürre und schlechten Erntebedingungen. Eine Zunahme von Armut, Gesundheitsproblemen uns sozialen Unruhen ist zu befürchten.",
     image: '12.jpg',
     option1: {
       description: "Mit der Unterstützung von Erstweltländern führe ich in Hafghanistan moderne, nachhaltige Landwirtschaftstechniken und -praktiken ein.",
@@ -154,10 +154,10 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Wasserkrise in Mumabi",
-    description: "In der schnell wachsenden Stadt Mumabi in Indoria leiden die Einwohner unter Wasserknappheit und mangelnder sanitärer Infrastruktur, was zu Gesundheitsrisiken und Umweltproblemen führt.",
+    description: "In der schnell wachsenden Stadt Mumabi in Indoria leiden die Menschen unter Wasserknappheit und mangelnder sanitärer Infrastruktur, was zu Gesundheitsrisiken und Umweltproblemen führt.",
     image: '16.jpg',
     option1: {
-      description: "Ich starte einen grossangelegten Bau von Staudämmen zur Wasserregulierung und zur Energiegewinnung.",
+      description: "Ich beginne mit dem Bau von Staudämmen zur Wasserregulierung und Energiegewinnung. ",
       explanation: "Während die Lösung das Wasserproblem und die Energieversorgung beheben kann, hat es potenziell negative Auswirkungen auf die Umwelt. Der Stausee zerstört Ökosysteme und führt zur Umsiedlung von Gemeinden. Es besteht zudem das Risiko, dass landwirtschaftliche Flächen flussabwärts austrocknen.",
       consequences: {
         economy: 10,
@@ -179,7 +179,7 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Bestlé Verpackung",
-    description: "Der Lebensmittelkonzern Bestlé steht vor der Entscheidung, entweder weiterhin kostengünstige, aber umweltschädliche Plastikverpackungen zu verwenden oder auf teurere, biologisch abbaubare Verpackungsmaterialien umzusteigen. Er will so die Nachhaltigkeit fördern und die Umweltbelastung reduzieren.",
+    description: "Der Lebensmittelkonzern Bestlé steht vor der Entscheidung, zwischen günstigen Plastikverpackungen und teureren, biologisch abbaubaren Alternativen.",
     image: '17.jpg',
     option1: {
       description: "Als Präsident schreibe ich vor, dass Bestlé Plastikverpackungen beibehalten muss.",
@@ -204,10 +204,10 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Gleichstellung Mädchen und Frauen",
-    description: "In einer ländlichen Gemeinde in Mongoria sind Mädchen und Frauen unverhältnismässig von Bildungsmangel, frühzeitiger Heirat und geschlechtsspezifischer Gewalt betroffen. Du musst dich entscheiden, um die Ungleichheit zu bekämpfen.",
+    description: "In Mongoria leiden Mädchen und Frauen unter mangelnder Bildung, früher Heirat und geschlechtsspezifischer Gewalt. Setze Massnahmen gegen diese Missstände um.",
     image: '14.jpg',
     option1: {
-      description: "Ich konzentriere mich auf Bildungsprogramme in den betroffenen Regionen, um Mädchen und jungen Frauen Zugang zu Schulbildung und Berufsausbildung zu ermöglichen.",
+      description: "Ich konzentriere mich auf Bildungsprogramme in den betroffenen Regionen, um Mädchen und jungen Frauen den Zugang zu schulischer und beruflicher Bildung zu ermöglichen.",
       explanation: "Durch die Erhöhung der Beschäftigungsfähigkeit und des Einkommenspotenzials der Frauen ergibt sich eine positivie, wirtschaftliche Entwicklung der Gemeinde. Durch nachhaltige Bildung & Gleichstellung der Geschlecher verringert sich die Anzahl von Kinderhochzeiten.",
       consequences: {
         economy: 5,
@@ -229,7 +229,7 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Verhütungsmittel",
-    description: "Eine ländliche Gemeinde in Luruguay steht vor der Entscheidung, wie sie den Zugang zu Verhütungsmitteln verbessern kann. Für die Gemeinde hast du beschränkte Ressourcen und musst entscheiden, welche Strategie du verfolgst, um die Gesundheit und das Wohlergehen der Bevölkerung zu verbessern.",
+    description: "In einem kleinen Dorf in Luruguay musst du entscheiden, wie der Zugang zu Verhütungsmitteln trotz begrenzter Ressourcen verbessert werden kann.",
     image: '18.jpg',
     option1: {
       description: "Ich konzentriere die wenigen Ressourcen auf die Bereitstellung von Verhütungsmitteln.",
@@ -254,7 +254,7 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Energiekrise",
-    description: "Krassland greift unerwartet die Gurkaine an. Viele Länder boykottieren den Gasexport von Krassland. Andere Energien sind dringendst gefragt, ein kalter Winter steht vor der Türe.",
+    description: "Krassland greift unerwartet die Gurkaine an. Als Reaktion boykottieren zahlreiche Länder den Gasexport aus Krassland. Die Nachfrage nach alternativen Energiequellen ist dringend, besonders da ein kalter Winter bevorsteht.",
     image: '08.jpg',
     option1: {
       description: "Ich kratze alles Geld zusammen und führe Investitionen in Wasser- und Windkraft aus.",  
@@ -293,7 +293,7 @@ export const scenarios: ScenarioProps[] = [
     },
     option2: {
       description: "Ich wähle langfristige Wiederaufbaustrategien nach einer umfassenden Schadensanalyse, um Infrastruktur und Gemeinschaft widerstandsfähiger gegen Naturkatastrophen zu machen.",
-      explanation: "Die Verzögerung bei der Soforthilfe in führt zu einem höheren Verlust an Menschenleben. Langfristige Pläne allein können die akuten Bedürfnisse nicht rechtzeitig erfüllen, was zu grösseren menschlichen Tragödien führt.",
+      explanation: "Nach der Katastrophe mache ich eine gründliche Schadensanalyse und entwickle langfristige Wiederaufbaustrategien. Mein Ziel ist es, die Infrastruktur und die Gemeinschaft widerstandsfähiger gegen Naturkatastrophen zu machen.",
       consequences: {
         economy: 0,
         environment: 0,
@@ -332,7 +332,7 @@ export const scenarios: ScenarioProps[] = [
     description: "Für ausgestorben geglaubt, tauchen plötzlich Berichte über Schattenleoparden im Regenwald auf.",
     image: '02.jpg',
     option1: {
-      description: "Ich beschliesse, das Gebiet zu schützen und international als Naturschutzgebiet zu deklarieren. Forscher werden finanziert, um den Schattenleoparden zu erforschen und Schutzmassnahmen zu entwickeln.",
+      description: "Ich beschliesse das Gebiet als internationales Naturschutzgebiet zu deklarieren. Forscher erhalten finanzielle Unterstützung für die Erforschung des Schattenleoparden und die Entwicklung von Schutzmassnahmen.",
       explanation: "Die Entscheidung, das Gebiet zu schützen und als Naturschutzgebiet zu deklarieren, zieht Wilderer und rücksichtslose Touristen an. Dies gefährdet die Schattenleoparden und führt zu einem Anstieg der menschlichen Einflüsse, trotz finanzieller Forschungsunterstützung.",
       consequences: {
         economy: 20,
@@ -342,7 +342,7 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description: "Ich halte die Entdeckung der Schattenleoparden geheim, um Wilderei und übermässigen Tourismus zu vermeiden. Im Stillen finanziere ich Forschung, um effektive Schutzmassnahmen zu entwickeln, bevor ich die Information öffentlich mache.",
+      description: "Ich halte die Entdeckung der Schattenleoparden geheim, um Wilderei und übermässigen Tourismus zu verhindern. Im Geheimen finanziere ich Forschung, um Schutzmassnahmen zu entwickeln, bevor ich an die Öffentlichkeit gehe.",
       explanation: "Die geheime Entscheidung, die Schattenleopardenentdeckung vorerst zu verschweigen, bewahrt sie vor Wilderei und übermässigem Tourismus. Durch finanzierte Forschung entstehen effektive Schutzmassnahmen, bevor die Information öffentlich wird, was langfristig zum Schutz der Art beiträgt.",
       consequences: {
         economy: 0,
@@ -379,10 +379,10 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Erneuerbare Energie in Wiederlanden",
-    description: "Der Ausbau von Wind- und Solarenergie in der Wiederlanden hat dazu geführt, dass mittlerweile 70% des Energiebedarfs aus erneuerbaren Quellen gedeckt werden. Die Bevölkerung ist aber unzufrieden und der Meinung, dass ihr Land durch die Windräder und Solarzellen verwüstet wird. ",
+    description: "Trotz des Ausbaus der Wind- und Solarenergie in den Wiederlanden, die inzwischen 70 Prozent des Energiebedarfs aus erneuerbaren Quellen decken, ist die Bevölkerung unzufrieden. Viele sehen ihr Land durch Windräder und Solaranlagen verwüstet.",
     image: '11.jpg',
     option1: {
-      description: "Um Bedenken der Bevölkerung bezüglich Landschaftsverwüstung zu adressieren, reguliere ich den weiteren Ausbau von Wind- und Solarenergie strenger. Strenge Richtlinien und sorgfältige Prüfung neuer Projekte sollen die Landschaft bewahren und Unzufriedenheit verringern.",
+      description: "Ich reguliere den Ausbau von Wind- und Solarenergie strenger, um Bedenken bezüglich Landschaftsverwüstung zu adressieren. Strenge Richtlinien und sorgfältige Überprüfung neuer Projekte sollen die Landschaft bewahren und Unzufriedenheit verringern.",
       explanation: "Die Entscheidung, den Ausbau von Wind- und Solarenergie stärker zu regulieren, um die Landschaft zu schützen, führt zu einem Rückgang neuer Projekte in diesen Bereichen. Obwohl die visuelle Verschandelung minimiert wird, verlangsamt sich der Fortschritt im Bereich erneuerbare Energien. Es könnte jedoch zu einer erhöhten Zufriedenheit in der Bevölkerung führen, da ihre Bedenken ernst genommen wurden.",
       consequences: {
         economy: 0,
@@ -407,7 +407,7 @@ export const scenarios: ScenarioProps[] = [
     description: "Astronomen haben einen unbekannten Planeten entdeckt, der lebensfreundliche Bedingungen aufweist und eine Alternative zur Erde sein könnte.",
     image: '22.jpg',
     option1: {
-      description: "Ich leite die Entwicklung in innovative Raumfahrttechnologien, um eine bemannte Mission zum lebensfreundlichen Planeten zu ermöglichen und eine nachhaltige menschliche Kolonie zu gründen.",
+      description: "Ich leite die Entwicklung neuer Raumfahrttechnologien, um Menschen auf den Planeten zu schicken. Dort sollen sie eine neue Kolonie gründen.",
       explanation: "Die Investition in die Raumfahrt hat positive Auswirkungen auf die Wirtschaft, da neue Technologien und Arbeitsplätze geschaffen werden. Jedoch hat es eine schlechte Auswirkung auf die Umwelt, da durch die Raumfahrmissionen schädliche Chemikalien in die Atmosphäre gelangen. Die Gesellschaft ist aber aufgeregt wegen der spannenden Entdeckung und Möglichkeiten, die die neue Kolonie bringen könnte.",
       consequences: {
         economy: 5,
@@ -417,19 +417,19 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description: "Ich investiere verstärkt in Umweltschutzmassnahmen für die Erde, um den ökologischen Fussabdruck zu verringern und nachhaltige Technologien zu entwickeln, während ich den neuen Planeten als eine Option für die Zukunft erforschen.",
+      description: "Ich investiere mehr Geld in Umweltschutzmassnahmen auf der Erde, um unsere Auswirkungen auf die Umwelt zu reduzieren. Gleichzeitig arbeite ich an der Entwicklung umweltfreundlicher Technologien. Die Erkundung eines neuen Planeten ist für mich eine mögliche Option für die Zukunft.",
       explanation:"Die Entscheidung, in Umweltschutzmassnahmen zu investieren, wirkt sich positiv auf die Umwelt aus und trägt dazu bei, den ökologischen Fussabdruck zu verringern. Das führt jedoch kurzfristig zu wirtschaftlichen Herausforderungen, da gewinnorientierte Aktivitäten eingeschränkt werden. Die Gesellschaft schätzt die Bemühungen im Umweltschutz, während die Forschung am neuen Planeten als eine vielversprechende Option für die Zukunft betrachtet wird.",
       consequences: {
         economy: -10,
         environment: 10,
-        society: -5,
+        society: 5,
         health: 0
       }
     }
   },
   {
     title: "Invasive Flora",
-    description: "Eine invasive Spezies bedroht die heimische Flora und Fauna in einem wichtigen Naturreservat. Handlungsbedarf besteht, um das Ökosystem zu schützen.",
+    description: "Eine invasive Pflanze breitet sich rasant in einem bedeutenden Naturgebiet aus und stellt eine ernsthafte Bedrohung für die einheimische Flora dar. Um das natürliche Gleichgewicht zu wahren, ist dringedes Handeln erforderlich.",
     image: '06.jpg',
     option1: {
       description: "Ich mobilisiere Ressourcen für eine gross angelegte Entfernung der invasiven Spezies, um das Gleichgewicht des Naturreservats wiederherzustellen.",
@@ -454,10 +454,10 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Autobahn im Giant Canyon",
-    description: "Bürger in der Nähe des Giant Canyons wollen eine Autobahn quer durch die Felsen um schneller von A zu B zu kommen. Die gibt grosse Proteste von Naturschützern und Umweltaktivisten, welche gegen den Bau sind.",
+    description: "Die Anwohner des Giant Canyon wollen eine Autobahn durch die Felsen, um schneller von A nach B zu kommen. Doch Naturschützer und Umweltaktivisten protestieren gegen den Bau.",
     image: '23.jpg',
     option1: {
-      description: "Ich lehne den Bau der Autobahn ab und fördere den Ausbau öffentlicher Verkehrsmittel, um Umweltauswirkungen zu minimieren.",
+      description: "Ich bin gegen den Autobahnbau und befürworte stattdessen den Ausbau öffentlicher Verkehrsmittel, um die Umweltauswirkungen zu reduzieren.",
       explanation: "Die Ablehnung des Autobahnbaus wird von Naturschützern und Umweltaktivisten begrüsst, da dies die Integrität des Giant Canyons schützt. Der Fokus auf öffentlichen Verkehr wird als umweltfreundliche Alternative unterstützt und trägt zur Reduzierung von Verkehrsbelastung und Umweltauswirkungen bei. Diese Entscheidung könnte jedoch auf Widerstand von Bürgern stossen, die die Autobahnbefürworten.",
       consequences: {
         economy: 0,
@@ -478,11 +478,11 @@ export const scenarios: ScenarioProps[] = [
     }
   },
   {
-    title: "Bing Bong Trend",
-    description: "Ein Bing Bong Trend führt dazu, dass sich viele Menschen sich selber gröbere Verletzungen zutun, was zu einer Überbelastung der lokalen Krankenhäuser führt.",
+    title: "TockTick Trend",
+    description: "Ein TockTick Trend führt dazu, dass sich viele Menschen selbst schwere Verletzungen zufügen, was zu einer Überlastug der lokalen Krankenhäuser führt.",
     image: '31.jpg',
     option1: {
-      description: "Ich implementiere gezielte Aufklärungskampagnen und psychologische Unterstützungsmassnahmen, um die Menschen über die Risiken des Bing Bong Trends aufzuklären. Gleichzeitig stärke ich die Verfügbarkeit von psychologischen Gesundheitsdiensten, um Menschen in Krisensituationen zu helfen und die Überlastung der Krankenhäuser zu reduzieren.",
+      description: "Ich kläre über die Risiken des Tock-Tick-Trends auf, biete psychologische Unterstützung an und verstärke die Verfügbarkeit von Gesundheitsdiensten, um die Krankenhäuser zu entlasten.",
       explanation:"Die Aufklärung und psychologische Unterstützung erhöhen das Bewusstsein für die Risiken des Bing Bong Trends. Dies führt zu einer abnehmenden Zahl selbst zugefügter Verletzungen und entlastet die Krankenhäuser. Die gestärkte Verfügbarkeit von psychologischen Gesundheitsdiensten unterstützt Menschen in Krisensituationen, und langfristig wird auf eine nachhaltige Reduzierung der selbst zugefügten Verletzungen hingearbeitet.",
       consequences: {
         economy: 0,
@@ -492,22 +492,22 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description: "Ich erlasse strengere Vorschriften und Gesetze, die den Bing Bong Trend einschränken und gegebenenfalls kriminalisieren. Durch verstärkte Überwachung und Sanktionen versuche ich, die Anzahl der selbst zugefügten Verletzungen zu verringern und somit die Belastung für die lokalen Krankenhäuser zu reduzieren.",
-      explanation: "Die strengeren Vorschriften führen zur Abnahme des Bing Bong Trends durch Abschreckungseffekte. Krankenhäuser werden kurzfristig entlastet, aber die Einschränkung persönlicher Freiheiten führt zu Unzufriedenheit und sozialen Spannungen.",
+      description: "Ich verbanne TokTik weltweit, damit die Leute nicht auf mehr dumme Gedanken kommen. Das löst in der Gesellschaft grosse Aufregung aus, weil die App von vielen genutzt wird.",
+      explanation: "Ein Verbot bringt nichts, denn der Trend setzt sich einfach auf einem anderen sozialen Kanal fort. Die Krankenhäuser werden kurzfristig entlastet, aber die Zahl der Verletzten steigt schnell wieder an. Das Verbot führt auch zu sozialen Spannungen.",
       consequences: {
         economy: 0,
         environment: 0,
         society: -20,
-        health: -5
+        health: -10
       }
     }
   },
   {
     title: "Abfallmanagement",
-    description: "In einer Küstenstadt in Hailand musst du entscheiden, wie das Abfallmanagement verbessert werden kann, um die Verschmutzung der Ozeane zu minimieren.",
+    description: "In einer Küstenstadt in Hailand muss entschieden werden, wie das Abfallmanagement optimiert werden kann, um die Verschmutzung der Meere zu minimieren.",
     image: '04.jpg',
     option1: {
-      description: "Ich unterstütze ein Recyclingprogramm, das die Wiederverwendung von Materialien fördert und illegale Müllentsorgung streng bestraft. Dies könnte den Plastikmüll reduzieren und die Meeresumwelt schützen.",
+      description: "Ich befürworte ein Recyclingprogramm, das die Wiederverwendung von Materialien fördert und illegale Müllentsorgung streng bestraft.",
       explanation:"Die Investition in ein effizientes Recyclingprogramm und die Förderung der Wiederverwendung von Materialien zeigen schnelle Erfolge. Plastikmüll wird reduziert, illegale Müllentsorgung wird durch strenge Strafen minimiert, und die Meeresumwelt erfährt eine positive Veränderung. Die Bevölkerung schätzt die Bemühungen zur Umweltschonung, und die Stadt wird als Vorreiter im nachhaltigen Abfallmanagement angesehen.",
       consequences: {
         economy: -20,
@@ -529,7 +529,7 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Gesundheit in Quenia",
-    description:"In einer abgelegenen Region in Quenia hast du begrenzte Mittel, um die Gesundheitsvorsorge zu verbessern. Die Bevölkerung leidet unter mangelnder medizinischer Versorgung, und du musst entscheiden, wie die begrenzten Ressourcen am effektivsten eingesetzt werden.",
+    description: "In einer abgelegenen Region Renias stehen nur begrenzte Mittel zur Verbesserung der Gesundheitsversorgung zur Verfügung. Die Bevölkerung leidet unter unzureichender medizinischer Versorgung und es ist deine Aufgabe, die begrenzten Mittel optimal einzusetzen.",
     image: '18.jpg',
     option1: {
       description: "Ich investiere in den Aufbau von Gesundheitszentren, die grundlegende medizinische Versorgung und Impfprogramme anbieten. ",
@@ -554,7 +554,7 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Urbanisierung",
-    description:"In Ton Dong musst du entscheiden, wie die Urbanisierung gestaltet wird, um den Bedarf an Wohnraum zu decken und gleichzeitig die Umweltauswirkungen zu minimieren.",
+    description:"In Ton Dong muss eine Entscheidung darüber getroffen werden, wie die Urbanisierung gestaltet werden soll, um den Bedarf an Wohnraum zu decken und gleichzeitig die Auswirkungen auf die Umwelt zu minimieren.",
     image: '10.jpg',
     option1: {
       description: "Ich fördere vertikales Bauen, um den begrenzten Platz effizient zu nutzen. Dies könnte zu einer schnellen Bereitstellung von Wohnraum führen, aber die Ressourcen für Infrastruktur und Energie sind hoch.",
@@ -582,7 +582,7 @@ export const scenarios: ScenarioProps[] = [
     description:"In einer ländlichen Region in Ähmopien steht die Bevölkerung vor Ernährungssicherheitsproblemen. Du musst entscheiden, wie die Landwirtschaft gefördert werden kann, um die Ernährung der Bevölkerung zu sichern.",
     image: '24.jpg',
     option1: {
-      description: "Ich unterstütze den Einsatz von gentechnisch veränderten Pflanzen, um die Ernteerträge zu steigern und die Nahrungssicherheit kurzfristig zu verbessern. Dies birgt jedoch Risiken für die Umwelt und die traditionelle Landwirtschaft.",
+      description: "Ich unterstütze den Einsatz der Gentechnik bei Pflanzen zur Steigerung der Ernteerträge und zur kurzfristigen Verbesserung der Ernährungssicherheit",
       explanation: "Trotz der kurzfristigen Verbesserung der Nahrungssicherheit durch gentechnisch veränderte Pflanzen treten langfristige Umweltprobleme auf. Der Einsatz dieser Pflanzen birgt Risiken für die natürliche Umwelt und führt zu einem Verlust traditioneller Anbaumethoden. Die ökologische Vielfalt könnte gefährdet sein, was langfristig zu weiteren Problemen führen könnte.",
       consequences: {
         economy: 0,
@@ -592,7 +592,7 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description:"Ich fördere den Einsatz traditioneller Anbaumethoden, unterstütze lokale Bauerngenossenschaften und setze auf nachhaltige landwirtschaftliche Praktiken. Dies könnte langfristig zu einer stabilen und nachhaltigen Ernährungssicherheit führen.",
+      description: "Ich befürworte traditionelle Anbaumethoden, unterstütze lokale Bauerngenossenschaften und setze auf nachhaltige Landwirtschaft.",
       explanation: "Die Förderung traditioneller Anbaumethoden und nachhaltiger landwirtschaftlicher Praktiken trägt langfristig zu einer stabilen Ernährungssicherheit bei. Lokale Bauerngenossenschaften werden gestärkt, was zu einer nachhaltigen wirtschaftlichen Entwicklung führt. Die Umwelt wird geschont, und die ländliche Gemeinschaft kann auf eine langfristige, nachhaltige Nahrungssicherheit hoffen.",
       consequences: {
         economy: 0,
@@ -628,36 +628,11 @@ export const scenarios: ScenarioProps[] = [
     }
   },
   {
-    title: "Fischsterben",
-    description:"In Dorwegen herrscht eine Überfischung und gleichzeitiges Fischsterben.",
-    image: '26.jpg',
-    option1: {
-      description: "Ich erlasse strikte Fangquoten und schaffe Schutzgebiete, um die Fischbestände zu erhalten.",
-      explanation: "Die Einführung von Fangquoten und Schutzgebieten in Dorwegen führt zu langfristiger Erholung der Fischbestände und nachhaltiger Fischerei. Obwohl kurzfristige wirtschaftliche Einbussen möglich sind, profitieren Fischer langfristig von stabilen Ressourcen und einer gesunden Umwelt.",
-      consequences: {
-        economy: -10,
-        environment: 10,
-        society: 0,
-        health: 0
-      }
-    },
-    option2: {
-      description:"Ich fördere den Ausbau der Fischereiindustrie, um wirtschaftliches Wachstum zu fördern.",
-      explanation: "Die Förderung des Fischereiausbaus bringt kurzfristige Gewinne, birgt jedoch das Risiko von Überfischung und ökologischen Schäden. Dies könnte zu langfristigen Problemen für Fischer führen und die Umwelt nachhaltig beeinträchtigen.",
-      consequences: {
-        economy: 20,
-        environment: -20,
-        society: 5,
-        health: 0
-      }
-    }
-  },
-  {
     title: "Elektroschrott",
-    description:"In einem aufstrebenden Technologiestaat in Müdkorea stehst du vor der Herausforderung, den steigenden Elektronikschrott zu bewältigen und gleichzeitig die Umweltauswirkungen zu minimieren.",
+    description:"In Müdkorea, einem aufstrebenden Technologiestaat, muss der zunehmende Elektronikschrott bewältigt und die Umweltbelastung minimiert werden.",
     image: '17.jpg',
     option1: {
-      description: "Ich fördere das Recycling von Elektronikgeräten und setze strenge Umweltauflagen für Elektronikhersteller. Dies könnte zu einer Reduzierung von Elektronikschrott und umweltfreundlicheren Produkten führen, erfordert jedoch internationale Zusammenarbeit.",
+      description: "Ich fördere das Recycling von Elektronikgeräten und setze strenge Umweltauflagen für Elektronikhersteller. ",
       explanation: "Die Förderung des Elektronik-Recyclings und die Einführung strenger Umweltauflagen für Elektronikhersteller in Müdkorea führen zu einer Reduzierung von Elektronikschrott und umweltfreundlicheren Produkten. Diese Massnahmen erfordern internationale Zusammenarbeit und tragen langfristig zu einer nachhaltigen Elektronikindustrie bei.",
       consequences: {
         economy: 10,
@@ -667,7 +642,7 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description:"Ich ermutige zu regelmässigem Upgrade und Austausch von Elektronikgeräten, um wirtschaftliches Wachstum zu fördern. Dies könnte kurzfristig zu höheren Verkaufszahlen führen, birgt jedoch das Risiko von Umweltauswirkungen.",
+      description:"Ich ermutige zu regelmässigem Upgrade und Austausch von Elektronikgeräten, um wirtschaftliches Wachstum zu fördern.",
       explanation: "Die Förderung von regelmässigem Upgrade und Austausch von Elektronikgeräten führt kurzfristig zu höheren Verkaufszahlen und wirtschaftlichem Wachstum. Jedoch birgt dies das Risiko von verstärktem Elektronikschrott und negativen Umweltauswirkungen, da die Lebensdauer der Geräte verkürzt wird.",
       consequences: {
         economy: 20,
@@ -679,10 +654,10 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Rassismus im Gesundheitswesen",
-    description: "In Sheden stehst du vor der beunruhigenden Realität, dass schwarze Bürgerinnen und Bürger nicht den gleichen medizinischen Standard im Krankenhaus erhalten wie ihre weissen Mitbürgerinnen und Mitbürger. ",
+    description: "In Sheden ist man mit der Tatsache konfrontiert, dass schwarze Bürger im Krankenhaus nicht den gleichen medizinischen Standard erhalten wie ihre weissen Mitbürger.",
     image: '05.jpg',
     option1: {
-      description: "Ich sensibilisiere medizinisches Personal, um Vorurteile abzubauen und die kulturelle Kompetenz zu stärken. Dabei werden klare Richtlinien eingeführt, um einen einheitlichen medizinischen Standard für alle Patienten sicherzustellen",
+      description: "Ich sensibilisiere das medizinische Personal für kulturelle Vielfalt und fördere einen einheitlichen medizinischen Standard durch klare Richtlinien.",
       explanation: "Obwohl die Sensibilisierungskampagne gestartet wurde, bleibt der Einfluss begrenzt. Die Schulungen zeigen nur geringe Fortschritte, und trotz klaren Richtlinien und Überwachungsmechanismen gibt es weiterhin Unterschiede in der medizinischen Behandlung. Die rassistische Ungleichheit im Gesundheitswesen von Sheden bleibt bestehen, und die erhofften Veränderungen treten nicht in dem Masse ein, wie erhofft.",
       consequences: {
         economy: 0,
@@ -692,7 +667,7 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description: "Ich fördere Vielfalt im Gesundheitswesen durch strukturelle Veränderungen. Unabhängige Überprüfungen der medizinischen Standards sollen Diskriminierung bei der Behandlung verhindern. Das Ziel ist eine langfristige Verbesserung von Gleichstellung und Vielfalt im Gesundheitssektor.",
+      description: "Ich fördere Vielfalt im Gesundheitswesen durch strukturelle Veränderungen und unabhängige Überprüfungen medizinischer Standards, um Diskriminierung zu verhindern und langfristig die Gleichstellung zu verbessern.",
       explanation: "Die strukturellen Veränderungen und die Förderung von Diversität im Gesundheitswesen von Sheden zeigen erhebliche positive Auswirkungen. Eine vielfältigere Belegschaft entsteht, und die unabhängigen Überprüfungen der medizinischen Standards gewährleisten eine gleichberechtigte Behandlung für alle Patientinnen und Patienten, unabhängig von ihrer Hautfarbe. Diese Entscheidung legt einen soliden Grundstein für anhaltende Gleichstellung und Vielfalt im Gesundheitssektor von Sheden.",
       consequences: {
         economy: 0,
@@ -704,7 +679,7 @@ export const scenarios: ScenarioProps[] = [
   },
   {
     title: "Schutz des Eukalyptuswaldes",
-    description: "In Margentinien schreitet die rücksichtslose Abholzung eines bedeutenden Eukalyptuswaldes rasant voran. Die indigenen Völker verlieren ihren Lebensraum, was schwerwiegende Auswirkungen auf ihre traditionelle Lebensweise hat. Du musst Massnahmen ergreifen, um den Landraub und die Verletzung der indigenen Rechte zu stoppen.",
+    description: "Die rücksichtslose Abholzung eines bedeutenden Eukalyptuswaldes in Margentinien bedroht den Lebensraum indigener Völker. Es sind dringende Massnahmen erforderlich, um den Landraub zu stoppen und die Rechte der Indigenen zu schützen.",
     image: '02.jpg',
     option1: {
       description: "Ich verbiete sofort die Abholzung des Eukalyptuswaldes und schütze die indigenen Völker. Mit geschützten Gebieten und alternativen Einkommensquellen erhalte ich den sozialen Zusammenhalt und bewahre die Umweltintegrität des Waldes.",
@@ -717,7 +692,7 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description: "Ich erlaube eine kontrollierte Abholzung unter strengen Umweltauflagen, um wirtschaftliche Entwicklung zu fördern. Ein Teil der Einnahmen wird für Kompensationsmassnahmen zur Unterstützung der indigenen Völker verwendet. Ich plane alternative Lebensräume und setze Massnahmen um, um die indigene Gemeinschaft bei Veränderungen zu helfen und die Umweltauswirkungen zu minimieren.",  
+      description: "Die rücksichtslose Abholzung eines bedeutenden Eukalyptuswaldes in Argentinien bedroht den Lebensraum indigener Völker. Es sind dringende Massnahmen erforderlich, um den Landraub zu stoppen und die Rechte der Indigenen zu schützen.",  
       explanation: "Die kontrollierte Abholzung unter strengen Umweltauflagen ermöglicht wirtschaftliche Entwicklungen, während ein Teil der Einnahmen die indigenen Völker unterstützt. Kompensationsmassnahmen helfen bei der Bewältigung der Veränderungen, und die Planung alternativer Lebensräume mildert die Auswirkungen auf die indigene Gemeinschaft.",
       consequences: {
         economy: 10,
@@ -757,7 +732,7 @@ export const scenarios: ScenarioProps[] = [
     description: "In Derbien sind Ausschreitungen zwischen Derben und Grosovaren ausgebrochen. Die Spannungen zwischen den beiden Gruppen haben sich verschärft, und die Situation eskaliert.",
     image: '19.jpg',
     option1: {
-      description: "Ich entscheide mich für einen Dialog zwischen den Derben und Grosovaren, um friedliche Lösungen zu finden. Vermittlungsbemühungen und Gespräche werden intensiviert, um zu einer friedlichen Koexistenz beizutragen.",
+      description: "Ich setze auf Dialog und verstärkte Gespräche zwischen Derben und Grosovaren, um eine friedliche Lösung zu finden.",
       explanation: "Die Entscheidung für einen Dialog zwischen den Derben und Grosovaren zeigt positive Auswirkungen auf die langfristige gesellschaftliche Stabilität. Durch Vermittlungsbemühungen und verstärkte Gespräche wird versucht, friedliche Lösungen zu finden. Diese Massnahmen tragen dazu bei, die Spannungen zu reduzieren und eine friedliche Koexistenz zwischen den Gruppen zu fördern. Die Aussicht auf langfristige Harmonie und Zusammenarbeit steigt, obwohl es Zeit und Geduld erfordert.",
       consequences: {
         economy: -10,
@@ -778,36 +753,11 @@ export const scenarios: ScenarioProps[] = [
     }
   },
   {
-    title: "Derben vs. Grosovaren",
-    description: "In Derbien sind Ausschreitungen zwischen Derben und Grosovaren ausgebrochen. Die Spannungen zwischen den beiden Gruppen haben sich verschärft, und die Situation eskaliert.",
-    image: '19.jpg',
-    option1: {
-      description: "Ich entscheide mich für einen Dialog zwischen den Derben und Grosovaren, um friedliche Lösungen zu finden. Vermittlungsbemühungen und Gespräche werden intensiviert, um zu einer friedlichen Koexistenz beizutragen.",
-      explanation: "Die Entscheidung für einen Dialog zwischen den Derben und Grosovaren zeigt positive Auswirkungen auf die langfristige gesellschaftliche Stabilität. Durch Vermittlungsbemühungen und verstärkte Gespräche wird versucht, friedliche Lösungen zu finden. Diese Massnahmen tragen dazu bei, die Spannungen zu reduzieren und eine friedliche Koexistenz zwischen den Gruppen zu fördern. Die Aussicht auf langfristige Harmonie und Zusammenarbeit steigt, obwohl es Zeit und Geduld erfordert.",
-      consequences: {
-        economy: 0,
-        environment: 0,
-        society: -10,
-        health: 0
-      }
-    },
-    option2: {
-      description: "Ich setze auf eine härtere Gangart und verstärkst die Sicherheitskräfte, um die Ausschreitungen zu unterdrücken. Dies könnte kurzfristig zu einer gewissen Stabilität führen, birgt jedoch das Risiko einer weiteren Eskalation und tieferen Spaltungen in der Gesellschaft.",
-      explanation: "Die Entscheidung für eine härtere Gangart und verstärkte Sicherheitskräfte bringt kurzfristige Ruhe, da Ausschreitungen unterdrückt werden. Jedoch eskaliert die Lage weiter, führt zu massiven Unruhen und stösst auf starken Widerstand in der Bevölkerung. Proteste brechen aus, Spaltungen vertiefen sich, und ein Putsch verschärft die Situation, was zu einem ernsthaften Zusammenbruch der Gesellschaft führt. Das erhöhte Misstrauen und der Unmut hinterlassen langanhaltende Instabilität und Unsicherheit in Derbien.",
-      consequences: {
-        economy: 0,
-        environment: 0,
-        society: -10,
-        health: 0
-      }
-    }
-  },
-  {
     title: "LGTBQ+ Rechte ",
-    description: "In Foland werden Mitglieder der LGBTQ+-Gemeinschaft, insbesondere Homosexuelle, zunehmend verfolgt und diskriminiert. Die Regierung steht vor der Herausforderung, wie sie mit dieser Menschenrechtsverletzung umgehen soll.",
+    description: "In Foland sind LGBTQ+-Angehörige, insbesondere Homosexuelle, zunehmend Verfolgung und Diskriminierung ausgesetzt. Die Regierung steht vor der Herausforderung, angemessen darauf zu reagieren.",
     image: '21.jpg',
     option1: {
-      description: "Ich setzte auf einen umfassenden gesetzgeberischen und gesellschaftlichen Wandel. Durch die Einführung von Gesetzen, die die Rechte von LGBTQ+-Personen schützen, und durch Sensibilisierungskampagnen versuche ich, die Akzeptanz und Gleichbehandlung zu fördern.",
+      description: "Ich setze auf einen umfassenden Wandel durch Gesetze zum Schutz der Rechte von LGBTQ+ und Sensibilisierungskampagnen zur Förderung von Akzeptanz und Gleichbehandlung.",
       explanation: "In Foland wurden neue Gesetze eingeführt, um die Rechte der LGBTQ+-Gemeinschaft zu schützen. Durch Aufklärungskampagnen in der Gesellschaft wird die Akzeptanz und Gleichbehandlung gefördert. Diese Massnahmen haben bereits positive Veränderungen bewirkt und tragen dazu bei, dass die Gesellschaft in Foland langfristig toleranter und inklusiver wird.",
       consequences: {
         economy: 0,
