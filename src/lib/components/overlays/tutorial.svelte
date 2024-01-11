@@ -167,10 +167,7 @@
 						<div class="absolute right-0 -bottom-8 -translate-y-full -z-10 -rotate-180">
 							<TutorialArrow delay={duration} {duration} />
 						</div>
-						<p class="tutorial">
-							hier kannst du dich für eine option entscheiden.
-							<br />Klicke auf eine Option und klicke auf weiter.
-						</p>
+						<p class="tutorial">hier kannst du dich für eine option entscheiden.</p>
 						<div class="grid place-content-center mt-4">
 							<ButtonTutorial text="Ok" on:click={nextStep} />
 						</div>

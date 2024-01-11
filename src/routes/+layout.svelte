@@ -39,7 +39,12 @@
 				type="button"
 				aria-label="Zur Startseite"
 				class="w-6 h-6 rounded-max bg-white-soft p-1"
-				on:click={() => (showModal = true)}
+				on:click={() => {
+					window.scrollTo(0, 0);
+					setTimeout(() => {
+						showModal = true;
+					}, 350);
+				}}
 			>
 				<HomeIcon />
 			</button>
@@ -52,13 +57,10 @@
 	{#if showModal}
 		<div
 			transition:fly={{ duration: 350, y: 200 }}
-			class="absolute inset-0 bg-black-soft bg-opacity-75 p-8 z-[100]"
+			class="absolute inset-0 bg-black-soft bg-opacity-75 z-[100]"
 		>
-			<div class="container grid place-content-center h-full relative">
-				<article
-					class="p-6 rounded-card bg-white-plain absolute left-0 right-0 top-1/2 translate-y-[calc(50vh_-_50%)]"
-					style={`top: ${scrollY}px`}
-				>
+			<div class="container grid place-content-start h-full relative pt-20">
+				<article class="p-6 rounded-card bg-white-plain max-w-xs mx-auto">
 					<h2>Bist du sicher?</h2>
 					<p>Willst du wirklich zum Startbildschirm zurückkehren?</p>
 					<p>Dein ganzer Spielfortschritt geht verloren.</p>
