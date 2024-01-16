@@ -64,7 +64,10 @@
 				class:bg-white-plain={step === 2}
 				bind:this={gameScoreElem}
 			>
-				<div class="flex gap-x-2 justify-evenly container pt-block-page">
+				<div
+					class="flex gap-x-2 justify-evenly container pt-block-page transition"
+					class:opacity-30={step !== 2}
+				>
 					<img class="w-12" src={economyIconTutorial} alt="Design element" role="presentation" />
 					<img
 						class="w-12"
@@ -104,7 +107,7 @@
 					isDark={step !== 4}
 				/>
 				<div class="grid place-content-end mt-4">
-					<PrimaryButton text="Weiter" isTutorial={step !== 4} />
+					<PrimaryButton text="Weiter" isTutorial={$showTutorial} />
 				</div>
 			</div>
 
@@ -177,12 +180,15 @@
 		{:else}
 			<!-- Game Score, step 5 & 6 -->
 			<div
-				class="pb-block-page relative transition bg-black-plain bg-opacity-75"
+				class="pb-block-page relative transition"
 				class:z-10={step === 6}
 				class:-z-10={step !== 6}
 				class:bg-white-plain={step === 6}
 				bind:this={gameScoreElem}
 			>
+				{#if step !== 6}
+					<span class="block absolute inset-0 bg-black-plain bg-opacity-75 transition"> </span>
+				{/if}
 				<div class="flex gap-x-2 justify-evenly container pt-block-page">
 					<img class="w-12" src={economyIconTutorial} alt="Design element" role="presentation" />
 					<img
@@ -203,7 +209,7 @@
 					environment={tutorialScenario.option1.consequences.environment}
 					society={tutorialScenario.option1.consequences.society}
 					health={tutorialScenario.option1.consequences.health}
-					isTutorial={true}
+					isTutorial={$showTutorial}
 				/>
 			</div>
 			<div class="container absolute inset-0 z-50">

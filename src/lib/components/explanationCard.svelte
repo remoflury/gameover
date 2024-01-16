@@ -20,7 +20,7 @@
 	class:bg-white-soft={!isTutorial}
 	style={`margin-top: ${$gameScore.height}px`}
 >
-	<div class="max-w-[3rem] flex justify-center mb-8 mx-auto">
+	<div class="max-w-[3rem] flex justify-center mb-8 mx-auto" class:opacity-40={isTutorial}>
 		<LightBulb />
 	</div>
 	<h1 class="text-center">Erklärung</h1>
@@ -31,5 +31,5 @@
 		<EffectCategory type="society" effect={society} />
 		<EffectCategory type="health" effect={health} />
 	</div>
-	<CurrentScore />
+	<CurrentScore {isTutorial} />
 </article>

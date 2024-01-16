@@ -8,12 +8,13 @@
 	export let title: string = '';
 	export let type: 'button' | 'submit' = 'submit';
 	export let isTutorial = false;
+	console.log(isTutorial);
 </script>
 
 <button
 	class=" bg-turqoise-dark text-white-soft font-bold rounded-max py-3 px-12 flex gap-x-4 items-center"
 	class:bg-opacity-75={isTutorial}
-	class:opacity-75={isTutorial}
+	class:opacity-40={isTutorial}
 	{title}
 	{type}
 	aria-label={ariaLabel}
