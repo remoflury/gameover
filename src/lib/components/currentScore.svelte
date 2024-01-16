@@ -3,11 +3,14 @@
 	import { getTotalScore } from '$lib/utils/generalUtils';
 	import StarIcon from '$lib/assets/starIcon.svelte';
 
-	let pElem: HTMLParagraphElement;
+	export let isTutorial = false;
 </script>
 
 <div class="flex justify-center items-center gap-x-4">
-	<figure class="w-[26px] aspect-square rounded-max overflow-hidden bg-gray p-[6px]">
+	<figure
+		class="w-[26px] aspect-square rounded-max overflow-hidden bg-gray p-[6px]"
+		class:opacity-40={isTutorial}
+	>
 		<StarIcon />
 	</figure>
 

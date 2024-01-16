@@ -66,8 +66,7 @@
 	// function, to only be able to open one accordion at a time
 	createAccordionContext();
 	onMount(() => {
-		// TODO uncomment next line
-		// if ($gameStore.isPlaying === false) return goto('/');
+		if ($gameStore.isPlaying === false) return goto('/');
 		if (isGameOver()) return goto('/game-over');
 		newRound();
 	});
