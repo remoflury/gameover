@@ -692,7 +692,7 @@ export const scenarios: ScenarioProps[] = [
       }
     },
     option2: {
-      description: "Die rücksichtslose Abholzung eines bedeutenden Eukalyptuswaldes in Argentinien bedroht den Lebensraum indigener Völker. Es sind dringende Massnahmen erforderlich, um den Landraub zu stoppen und die Rechte der Indigenen zu schützen.",  
+      description: "Ich erlaube kontrollierte Abholzung unter Umweltauflagen für die wirtschaftliche Entwicklung. Ein Teil der Einnahmen fliesst in die Entschädigung indigener Völker. Zusätzlich plane ich alternative Lebensräume, um den Wandel zu unterstützen und die Umweltauswirkungen zu minimieren.",  
       explanation: "Die kontrollierte Abholzung unter strengen Umweltauflagen ermöglicht wirtschaftliche Entwicklungen, während ein Teil der Einnahmen die indigenen Völker unterstützt. Kompensationsmassnahmen helfen bei der Bewältigung der Veränderungen, und die Planung alternativer Lebensräume mildert die Auswirkungen auf die indigene Gemeinschaft.",
       consequences: {
         economy: 10,
