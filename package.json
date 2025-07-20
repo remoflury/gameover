@@ -34,5 +34,8 @@
 	"dependencies": {
 		"@supabase/supabase-js": "^2.38.5",
 		"svelte-toasts": "^1.1.2"
+	},
+	"engines": {
+		"node": "22.x"
 	}
 }
